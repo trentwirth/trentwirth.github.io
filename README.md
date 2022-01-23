@@ -17,7 +17,7 @@ Before working at Northeastern, I got my PhD at Brown University working with Bi
 
 In my free time, I like to go on hikes with my wife, Christina, and my dog, Tasha, enjoy good food and beer, and run D&D games for my friends.
 
-### Social Media Links
+## Social Media Links
 
 Find me on [LinkedIn](https://www.linkedin.com/in/trenton-wirth-1204a8aa/), [ResearchGate](https://www.researchgate.net/profile/Trenton-Wirth), [GitHub](https://github.com/trentwirth), and [Google Scholar](https://scholar.google.com/citations?user=HdJAPMkAAAAJ&hl=en).
 
