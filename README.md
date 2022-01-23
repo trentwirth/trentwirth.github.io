@@ -7,9 +7,11 @@ Welcome to my personal website!
 ## About Me
 I'm a post-doctoral researcher interested in the study of perception and action from a behavioral dynamics perspective.
 
-Currently I'm working with Jon Matthis at Northeastern University studying the visual control of locomotion over complex terrain. There, I've built an Augmented Reality stepping stone paradigm to look at the complex relation ship between eye movements and foot placement. With Jon, I co-founded the [FreeMoCap](http://freemocap.org/) Foundation, a nonprofit dedicated to creating markerless, free and open source motion capture system that could be used by anyone.
+Currently I'm working with Jon Matthis at Northeastern University studying the visual control of locomotion over complex terrain. 
 
-My hope is to leverage the the scientific paradigm and the methods that Jon and I are developing with FreeMoCap found a comprehensive research program that will unveil the complex interaction between human vision and movement.
+At Northeastern I've built an Augmented Reality stepping stone paradigm to look at the complex relationship between eye movements and foot placement. With this paradigm, I'm hoping to unveil complex interactions between human vision and locomotion.
+
+With Jon, I co-founded the [FreeMoCap](http://freemocap.org/) Foundation, a nonprofit dedicated to creating markerless, free and open source motion capture system that could be used by anyone.
 
 Before working at Northeastern, I got my PhD at Brown University working with Bill Warren, where my doctoral thesis explored self-organization in human crowds. 
 
