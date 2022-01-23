@@ -1,3 +1,5 @@
+# Trenton Wirth, PhD
+
 Welcome to my personal website!
 
 <img width="296" alt="trentSuitedUp_NEU_Smaller" src="https://user-images.githubusercontent.com/62706609/150700552-0b0d61eb-4426-4aee-bb02-3754384199d1.png">
