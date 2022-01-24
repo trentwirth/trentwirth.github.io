@@ -19,8 +19,6 @@ In my free time, I like to go on hikes with my wife, Christina, and my dog, Tash
 
 ## Social Media Links
 
-Find me on [LinkedIn](https://www.linkedin.com/in/trenton-wirth-1204a8aa/), [ResearchGate](https://www.researchgate.net/profile/Trenton-Wirth), [GitHub](https://github.com/trentwirth), and [Google Scholar](https://scholar.google.com/citations?user=HdJAPMkAAAAJ&hl=en).
-
-If you're brave, and don't mind me liking tweets about D&D, follow me on [Twitter](https://twitter.com/trent_wirth).
+Find me on [Twitter](https://twitter.com/trent_wirth), [LinkedIn](https://www.linkedin.com/in/trenton-wirth-1204a8aa/), [ResearchGate](https://www.researchgate.net/profile/Trenton-Wirth), [GitHub](https://github.com/trentwirth), and [Google Scholar](https://scholar.google.com/citations?user=HdJAPMkAAAAJ&hl=en).
 
 If you'd like to email me, you can reach me at (all one word) t DOT wirth AT northeastern DOT edu
