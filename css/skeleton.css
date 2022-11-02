@@ -378,6 +378,11 @@ form {
   height: auto;
 }
 
+.full-bleed{
+  box-shadow: 0 0 0 100vmax #121212;
+  clip-path: inset(0 -100vmax);
+}
+
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
