@@ -384,6 +384,12 @@ form {
   clip-path: inset(0 -100vmax);
 }
 
+.box-color-filled {
+  background-color: #121212;
+  color: white;
+  text-align: center;
+}
+
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
