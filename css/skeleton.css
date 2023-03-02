@@ -161,7 +161,7 @@ a {
   color: #571AEE; }
 a:hover {
   color: #1aee48; }
-
+a:link { text-decoration: none;}
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -301,6 +301,14 @@ label > .label-body {
   font-size: 28px;
   font-weight: normal;
   text-align: center;
+}
+
+.header a {
+  color:#fff;
+}
+
+.header a:hover {
+  color:#1aee48;
 }
 
 .header ul {
@@ -529,9 +537,5 @@ h1 a {
   color: #571AEE;
 }
 
-/* Add a hover effect if you want */
-.ai:hover {
-  color: #1aee48;
-}
 
 
