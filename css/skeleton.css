@@ -222,7 +222,33 @@ input[type="button"].button-primary:focus {
   background-color: #1EAEDB;
   border-color: #1EAEDB; }
 
-
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.buttons a {
+  padding: 10px 20px;
+  background-color: #571AEE;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 10px;
+}
+.buttons a:hover {
+  background-color: #1aee48;
+}
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 input[type="email"],
@@ -564,3 +590,50 @@ h1 {
   font-family: 'Montserrat', Arial, sans-serif;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-pic {
+  max-width: 200px;
+  margin: 20px;
+}
+.about-me {
+  max-width: 800px;
+  margin: 20px;
+  text-align: center;
+}
+.buttons {
+  display: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.buttons a {
+  padding: 10px 20px;
+  background-color: #571AEE;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 10px;
+}
+.buttons a:hover {
+  background-color: #1aee48;
+}
+.resume-cv {
+  text-align: center;
+  margin-top: 20px;
+}
+.socials {
+  text-align: center;
+  margin-top: 20px;
+}
+.socials h6 {
+  margin-bottom: 20px;
+}
+.socials p {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
