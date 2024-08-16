@@ -617,6 +617,8 @@ h1 {
   text-decoration: none;
   border-radius: 5px;
   margin: 10px;
+  width: 180px;
+  text-align: center;
 }
 .buttons a:hover {
   background-color: #1aee48;
