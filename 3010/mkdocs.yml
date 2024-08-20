@@ -1,0 +1,61 @@
+site_name: PSYC 3010 - Programming for the Behavioral Sciences
+site_url: https://trentwirth.github.io/3010/
+repo_url: https://github.com/trentwirth/trentwirth.github.io
+site_dir: 'site'
+theme:
+  name: material
+  features:
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.sections
+  - navigation.indexes
+  - navigation.top
+  - search.suggest
+  - search.highlight
+  - content.tabs.link
+  - content.code.annotation
+  - content.code.copy
+  language: en
+  palette:
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+
+nav: 
+  - Home: 
+    - index.md
+    - About: about.md
+  - Learning Paths: 
+    - Learning Paths: learning_paths/index.md
+    - Step 1: learning_paths/Step_01.md
+    - Step 2: learning_paths/Step_02.md
+  - Assistance:
+    - assistance/index.md
+  - Licenses:
+    - licenses/index.md
+
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
