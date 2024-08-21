@@ -1,4 +1,4 @@
-site_name: PSYC 3010 - Programming for the Behavioral Sciences
+site_name: PSYC 3010 - Programming for Behavioral Scientists
 site_url: https://trentwirth.github.io/3010/
 repo_url: https://github.com/trentwirth/trentwirth.github.io
 site_dir: 'site'
@@ -47,6 +47,7 @@ nav:
     - Step 2: learning_paths/Step_02.md
   - Assistance:
     - assistance/index.md
+    - assistance/copilot.md
   - Licenses:
     - licenses/index.md
 

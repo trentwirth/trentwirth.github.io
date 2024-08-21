@@ -9,7 +9,7 @@ The course content for this project is licensed under a [Creative Commons Attrib
 This means that you are free to:
 
 - **Share** — copy and redistribute the material in any medium or format, as long as you give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-    - *Credit can be made to* `PSYC 3010 - Programming for the Behavioral Sciences by Trenton D Wirth`
+    - *Credit can be made to* `PSYC 3010 - Programming for Behavioral Scientists by Trenton D Wirth`
 - **Adapt** — remix, transform, and build upon the material, as long as you distribute your contributions under the same license as the original.
 - **NonCommercial** — you may not use the material for commercial purposes.
 - **ShareAlike** — if you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.

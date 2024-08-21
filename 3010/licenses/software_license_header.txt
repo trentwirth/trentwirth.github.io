@@ -1,4 +1,4 @@
-PSYC 3010 - Programming for the Behavioral Sciences
+PSYC 3010 - Programming for Behavioral Scientists
 Copyright (C) 2024  Trenton D Wirth
 
 This program is free software: you can redistribute it and/or modify

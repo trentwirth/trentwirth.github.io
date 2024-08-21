@@ -1,4 +1,4 @@
-PSYC 3010 - Programming for the Behavioral Sciences (c) 2024 by Trenton D Wirth
+PSYC 3010 - Programming for Behavioral Scientists (c) 2024 by Trenton D Wirth
 
 PSYC 3010 - Programming for the Behavioral Sciences is licensed under a
 Creative Commons Attribution-NonCommercial-NoDerivs 4.0 Unported License.
