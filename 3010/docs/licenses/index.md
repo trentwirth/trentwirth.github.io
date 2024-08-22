@@ -1,7 +1,4 @@
 # Project Licenses
-
-> All Licenses associated with this project can be found at this URL: `place-holder`
-
 ## Course Content
 
 The course content for this project is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/). You can find the full text of the license [here](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
