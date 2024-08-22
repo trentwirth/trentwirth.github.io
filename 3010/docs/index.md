@@ -1,17 +1,9 @@
-# Welcome to MkDocs
+# Welcome to PSYC 3010 - Programming for Behavioral Scientists
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This webpage will be used as the virtual textbook and our guide through learning Python.
 
-## Commands
+This is publicly facing, so that anyone can access it!
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+To get started learning, click on the `Learning Paths` tab above. You probably want to start with `Step 01`
 
-## Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.

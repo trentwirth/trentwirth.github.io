@@ -2,7 +2,7 @@
 
 ## Some Basic Concepts
 
-### What is a Computer?
+### **What is a Computer?**
 
 If you think about it, you computer is a magic rock (aren't we all?)! It's a rock that can do math, remember things, and even talk to other rocks!
 
@@ -16,12 +16,9 @@ In order for software to operate, it needs to know where to find the data it nee
 
 The file system is the way that data is stored on your computer. Think of the filing system like addresses on a street. Each file on your computer has an address, and the file system is the way that the computer knows where to find the data it needs.
 
-??? Tip "Object Oriented Programming"
-    When we talk about "object oriented programming", we will re-touch on this street address analogy. Not only does your computer keep track of files, but it can also keep track of smaller things like variables or "objects" in a program. 
-
 To further understand the basics of the file system, we need to know what a "directory" and a "file" are.
 
-### What is a "Directory"?
+### **What is a "Directory"?**
 
 A directory is a place where files are stored. Think of a directory like a folder on your computer (for all intents and purposes, directory == folder). A directory can contain other directories, as well as files.
 
@@ -30,7 +27,7 @@ Directories are important because this allows us to provide distinct and organiz
 !!! Tip "Scientific Programming"
     File cleanliness and organization is particularly important in scientific programming. This is because we often need to share our code with others, or come back to it after a long period of time. If our code is not organized, it can be very difficult for us - or anyone else! - to understand what is going on.
 
-### What is a "File" and "File Extension"?
+### **What is a "File" and "File Extension"?**
 
 A file is a collection of data that is stored on your computer. Files can contain text, images, videos, or any other type of data. Files are stored in directories, and each file has a name that is unique within the directory.
 
@@ -48,13 +45,13 @@ I'm a huge fan of the `.md` file extension, which is a markdown file - it's a gr
 
 ## Tools we'll be using throughout this learning path:
 
-### Google Colab
+### **Google Colab**
 
 Google Colab, or "Colab Notebooks" is a completely free tool that allows you to write and execute Python code in your web browser. It is a great tool for learning Python, as it allows you to write and run code without having to install anything on your computer. It is also a great tool for sharing code with others, as you can easily share a link to your notebook with others, and they can view and run your code without having to install anything on their computer.
 
 For a lot of the work we will be doing in our class, we will be using Google Colab. You can access Google Colab [here](https://colab.research.google.com/), and assignments will often be shared with you as a link to a Google Colab notebook.
 
-### VSCode
+### **VSCode**
 
 Visual Studio Code (very often referred to as "VSCode") is a free code editor that is available for Windows, Mac, and Linux. It built and supported by Microsoft, and is a very powerful tool that can be customized to fit your needs. For the purposes of our class, we will most often be using Google Colab, but having VSCode installed on your machine will enable you to work on your code locally - this will be an optional path that you can take if you want to work on your code outside of Google Colab!
 
@@ -63,7 +60,7 @@ You can download VSCode [here](https://code.visualstudio.com/).
 > Note: You do not want to download Visual Studio, which is a different product. Make sure you are downloading **Visual Studio Code** (VSCode).
 
 
-### GitHub
+### **GitHub**
 
 GitHub is a website that allows you to store and share your code with others. It is a great tool for collaborating on code with others, and for sharing your code with the world.
 
