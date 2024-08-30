@@ -58,11 +58,13 @@ Use the `mkdir` command again:
 > This creates a directory within a directory, also known as a subdirectory.
 
 6. **Create a file called `test_1.md` in the `this_is_a_directory_within_a_directory` directory**:
-Use the `touch` command:
+Use the `New-Item` command:
      ```sh
-     touch a_folder_is_a_directory/this_is_a_directory_within_a_directory/test_1.md
+     New-Item -Name "test_1.md" -ItemType File
      ```
-> `touch` is used to create new files. In this case, we're creating a Markdown file (`.md`) named `test_1` inside the `this_is_a_directory_within_a_directory` directory.
+> `New-Item` is a command that tells the computer we want to make a new file. `-Name` and `-ItemType` are both parameters that you need to feed the `New-Item` command in order for it to work. In this case, we feed each parameter an "argument" in the space after it is presented, where "test_1.md" is the argument for the parameter `-Name` that specifies the file name.
+>
+> By default, this will create the file in your current directory. You can add an input parameter called "`-Path`" if you want to create a file in a particular location, like this: -Path `"C:\Users\wirthtd\downloads"`  
 
 ### **Navigate to the `a_folder_is_a_directory` directory in the VSCode file explorer**
 
@@ -84,6 +86,7 @@ You should be able to see the directory/folder structure in the file explorer on
 
 1. **Open the file**:
    - Double-click on `test_1.md` to open it in the editor.
+   - This is a markdown (`.md`) file, you can learn more about markdown [here](https://www.markdownguide.org/)
 
 ## Intro to Python
 
