@@ -45,6 +45,7 @@ nav:
     - Learning Paths: learning_paths/index.md
     - Step 1: learning_paths/Step_01.md
     - Step 2: learning_paths/Step_02.md
+    - Step 3: learning_paths/Step_03.md
   - Assistance:
     - assistance/index.md
     - assistance/copilot.md
