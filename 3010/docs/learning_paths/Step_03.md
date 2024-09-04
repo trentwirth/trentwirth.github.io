@@ -1,6 +1,35 @@
 # Step 3
 
-In Step 3, we will learn about different data types in Python and how to work with variables. Data types and variables are the building blocks of any programming language, and understanding them is essential for writing code!
+In Step 3, first, we will install `Anaconda` as well as a new version of `Python` onto each of your machines. 
+
+After that, we will learn about different data types in Python and how to work with variables. Data types and variables are the building blocks of any programming language, and understanding them is essential for writing code!
+
+## Installing `Anaconda` and `Python`
+
+You might be wondering, what's `Anaconda`? `Anaconda` is a free and open-source distribution of Python ([and R](https://www.r-project.org/)) programming languages for scientific computing, that aims to simplify environment creation and management. Look back to Step 2 if you need a refresher on `Python Environments`.
+
+### AI Exercise: Install `Anaconda` and `Python`
+
+I'd like for you to explore using an AI Chatbot to help you do technical IT tasks, like installing software.
+
+Take the following prompt to either [Microsoft Copilot](https://copilot.microsoft.com) or [ChatGPT](htps://chatgpt.com) - if you go to Copilot, make sure to use your student credentials (if you have them) to login and get access to the best version of Copilot. Note: This best version doesn't maintain a chat history, so if you want to keep a record of your conversation, you should take notes.
+
+Here's the prompt (*make sure you tell it if you have a Windows machine or a Mac*):
+
+```
+I'm a psychology student who is new to VSCode and Python. 
+I need to install Anaconda and Python, 
+and I want to do it through the VSCode terminal. 
+If that doesn't work, we can try other methods. 
+
+I have a _____ machine. Can you help me with this?
+```
+
+### Exercise: 
+
+Work with the Chatbot to get the software installed on your machine. If you're doing this in class and you run into issues, let your professor know!
+
+Once you've installed `Anaconda` and `Python`, you're ready to move on to the next section!
 
 ## Introduction to Python Data Types
 
