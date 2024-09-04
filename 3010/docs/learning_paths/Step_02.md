@@ -111,38 +111,6 @@ A *Python environment* is a setup that includes the Python interpreter, librarie
 Using Python Environments on a project-to-project basis is a good practice to get into early on, and it is a critical concept in scientific software development!
 > Reflect: Why might this be important in scientific software development?
 
-??? Tip "Setting Up a Python Environment"
-     > This is a bit advanced - we'll do this eventually, but if you want to play around with environment set up you should go ahead!!
-
-     1. **Install Python**: Download and install Python [from the official website](https://www.python.org/downloads/).
-
-     2. **Create a Virtual Environment**:
-
-          - Open your terminal or command prompt.
-          - Navigate to your project directory.
-          - Run `python -m venv env` (where `env` is the name of your environment).
-
-     3. **Activate the Virtual Environment**:
-
-          - On Windows: `.\env\Scripts\activate`
-          - On macOS/Linux: `source env/bin/activate`
-
-     4. **Install Libraries**: Use `pip install <library_name>` to add necessary libraries.
-
-     *Example*
-
-     ```bash
-     # Create a virtual environment
-     python -m venv myenv
-
-     # Activate the virtual environment
-     source myenv/bin/activate  # On macOS/Linux
-     .\myenv\Scripts\activate  # On Windows
-
-     # Install a library
-     pip install numpy
-     ```
-
 ### Python "Libraries"
 
 Python has a rich ecosystem of "libraries" that extend its capabilities - this is one of the greatest advantages of Python, and is a result of it being the largest free and open source programming language in the world. 
@@ -183,3 +151,37 @@ x = 10
 
 ## Exercise
 Go to [this Google Colab Notebook](https://colab.research.google.com/drive/1YJDwmEiYFeDrfHM_-xMiwwymplbkpe3R?usp=sharing) and work through importing a Python library, and exploring some Python syntax & variables.
+
+### Bonus
+
+??? Tip "Setting Up a Python Environment"
+     > This is a bit advanced - we'll do this together eventually, but if you want to play around with environment set up you should go ahead!!
+
+     1. **Install Python**: Download and install Python [from the official website](https://www.python.org/downloads/).
+
+     2. **Create a Virtual Environment**:
+
+          - Open your terminal or command prompt.
+          - Navigate to your project directory.
+          - Run `python -m venv env` (where `env` is the name of your environment).
+
+     3. **Activate the Virtual Environment**:
+
+          - On Windows: `.\env\Scripts\activate`
+          - On macOS/Linux: `source env/bin/activate`
+
+     4. **Install Libraries**: Use `pip install <library_name>` to add necessary libraries.
+
+     *Example*
+
+     ```bash
+     # Create a virtual environment
+     python -m venv myenv
+
+     # Activate the virtual environment
+     source myenv/bin/activate  # On macOS/Linux
+     .\myenv\Scripts\activate  # On Windows
+
+     # Install a library
+     pip install numpy
+     ```
