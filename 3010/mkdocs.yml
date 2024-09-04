@@ -46,9 +46,13 @@ nav:
     - Step 1: learning_paths/Step_01.md
     - Step 2: learning_paths/Step_02.md
     - Step 3: learning_paths/Step_03.md
+    - Step 4: learning_paths/Step_04.md
   - Assistance:
     - assistance/index.md
     - assistance/copilot.md
+  - Coding Assignments:
+    - coding_assignments/index.md
+    - coding_assignments/coding_assignment_01.md
   - Licenses:
     - licenses/index.md
 
