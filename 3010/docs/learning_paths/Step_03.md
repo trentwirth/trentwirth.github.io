@@ -18,7 +18,7 @@ Here's the prompt (*make sure you tell it if you have a Windows machine or a Mac
 
 ```
 I'm a psychology student who is new to VSCode and Python. 
-I need to install Anaconda and Python, 
+I need to install Anaconda and Python version 3.12, 
 and I want to do it through the VSCode terminal. 
 If that doesn't work, we can try other methods. 
 
