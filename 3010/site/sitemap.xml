@@ -21,6 +21,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://trentwirth.github.io/3010/coding_assignments/</loc>
+         <lastmod>2024-09-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://trentwirth.github.io/3010/coding_assignments/coding_assignment_01/</loc>
+         <lastmod>2024-09-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://trentwirth.github.io/3010/learning_paths/</loc>
          <lastmod>2024-09-04</lastmod>
          <changefreq>daily</changefreq>
@@ -37,6 +47,11 @@
     </url>
     <url>
          <loc>https://trentwirth.github.io/3010/learning_paths/Step_03/</loc>
+         <lastmod>2024-09-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://trentwirth.github.io/3010/learning_paths/Step_04/</loc>
          <lastmod>2024-09-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
