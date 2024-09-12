@@ -164,6 +164,60 @@ Write a Python program that prints the numbers from 1 to 20. For multiples of th
         else:
             print(i)
     ```
+### Exercise 4: Counting Vowels
+
+Write a Python program that counts the number of vowels in a given string.
+
+??? Tip "Hint" 
+    You can use a for loop to iterate over each character in the string and a conditional statement to check if the character is a vowel.
+
+??? Tip "Solution" 
+    Here is one solution to the problem:
+    ```python
+    string = "This is a sample string"
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in string:
+        if char in vowels:
+            count += 1
+    print(f"The number of vowels in the string is: {count}")
+    ```
+
+### Exercise 5: Reverse a String
+
+Write a Python program that reverses a given string using a for loop.
+
+??? Tip "Hint" 
+    You can use a for loop to iterate over the string in reverse order and build a new string.
+
+??? Tip "Solution" 
+    Here's a possible solution:
+    ```python
+    string = "Hello, World!"
+    reversed_string = ""
+    for char in string:
+        reversed_string = char + reversed_string
+    print(f"The reversed string is: {reversed_string}")
+    ```
+
+    *Think*: Why does this solution work?
+
+### Exercise 6: Multiplication Table with F-Strings
+
+Write a Python program that generates a multiplication table for numbers 1-5, using f-strings.
+
+??? Tip "Hint" 
+    You can use nested `for` loops to generate the multiplication table for numbers 1-5.
+
+??? Tip "Solution"
+    Here's a possible solution:
+    ```python
+    for i in range(1, 6):
+        for j in range(1, 6):
+            print(f"{i} x {j} = {i * j}") # Print a new line after each row
+    ```
+
+    This solution uses nested `for` loops to generate the multiplication table for numbers 1-5. The outer loop iterates over the numbers 1-5 for the first multiplier, and the inner loop iterates over the numbers 1-5 again for the second number, generating a table of all multiplication results.
 
 ## Reflect
 

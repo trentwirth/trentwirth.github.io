@@ -785,6 +785,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#exercise-4-counting-vowels" class="md-nav__link">
+    Exercise 4: Counting Vowels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-5-reverse-a-string" class="md-nav__link">
+    Exercise 5: Reverse a String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-6-multiplication-table-with-f-strings" class="md-nav__link">
+    Exercise 6: Multiplication Table with F-Strings
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1187,6 +1208,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#exercise-4-counting-vowels" class="md-nav__link">
+    Exercise 4: Counting Vowels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-5-reverse-a-string" class="md-nav__link">
+    Exercise 5: Reverse a String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-6-multiplication-table-with-f-strings" class="md-nav__link">
+    Exercise 6: Multiplication Table with F-Strings
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1342,6 +1384,56 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </code></pre></div>
+</details>
+<h3 id="exercise-4-counting-vowels">Exercise 4: Counting Vowels<a class="headerlink" href="#exercise-4-counting-vowels" title="Permanent link">&para;</a></h3>
+<p>Write a Python program that counts the number of vowels in a given string.</p>
+<details class="tip">
+<summary>Hint</summary>
+<p>You can use a for loop to iterate over each character in the string and a conditional statement to check if the character is a vowel.</p>
+</details>
+<details class="tip">
+<summary>Solution</summary>
+<p>Here is one solution to the problem:
+<div class="highlight"><pre><span></span><code><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;This is a sample string&quot;</span>
+<span class="n">vowels</span> <span class="o">=</span> <span class="s2">&quot;aeiouAEIOU&quot;</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">string</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">vowels</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The number of vowels in the string is: </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
+<h3 id="exercise-5-reverse-a-string">Exercise 5: Reverse a String<a class="headerlink" href="#exercise-5-reverse-a-string" title="Permanent link">&para;</a></h3>
+<p>Write a Python program that reverses a given string using a for loop.</p>
+<details class="tip">
+<summary>Hint</summary>
+<p>You can use a for loop to iterate over the string in reverse order and build a new string.</p>
+</details>
+<details class="tip">
+<summary>Solution</summary>
+<p>Here's a possible solution:
+<div class="highlight"><pre><span></span><code><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span>
+<span class="n">reversed_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">string</span><span class="p">:</span>
+    <span class="n">reversed_string</span> <span class="o">=</span> <span class="n">char</span> <span class="o">+</span> <span class="n">reversed_string</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The reversed string is: </span><span class="si">{</span><span class="n">reversed_string</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><em>Think</em>: Why does this solution work?</p>
+</details>
+<h3 id="exercise-6-multiplication-table-with-f-strings">Exercise 6: Multiplication Table with F-Strings<a class="headerlink" href="#exercise-6-multiplication-table-with-f-strings" title="Permanent link">&para;</a></h3>
+<p>Write a Python program that generates a multiplication table for numbers 1-5, using f-strings.</p>
+<details class="tip">
+<summary>Hint</summary>
+<p>You can use nested <code>for</code> loops to generate the multiplication table for numbers 1-5.</p>
+</details>
+<details class="tip">
+<summary>Solution</summary>
+<p>Here's a possible solution:
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> x </span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># Print a new line after each row</span>
+</code></pre></div></p>
+<p>This solution uses nested <code>for</code> loops to generate the multiplication table for numbers 1-5. The outer loop iterates over the numbers 1-5 for the first multiplier, and the inner loop iterates over the numbers 1-5 again for the second number, generating a table of all multiplication results.</p>
 </details>
 <h2 id="reflect">Reflect<a class="headerlink" href="#reflect" title="Permanent link">&para;</a></h2>
 <p>Think about how loops and conditional statements can be used to solve problems. What are some real-world scenarios where these concepts might be useful?</p>
