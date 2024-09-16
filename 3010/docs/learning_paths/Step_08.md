@@ -123,7 +123,7 @@ print(result)
 
 This function takes two strings and returns a new string that is the concatenation of the two input strings.
 
-??? Tip "Easier String Concatenation"
+??? Tip "String Concatenation"
 
     [You can follow this link](https://www.w3schools.com/python/python_strings_concatenate.asp) to see more about string concatenation in Python.
 

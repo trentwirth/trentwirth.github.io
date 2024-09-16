@@ -124,7 +124,7 @@ describe_pet(animal_type="dog", pet_name="Rufus")
 Note that when I specify the arguments (inputs), I can change the order and the function will work just fine:
 
 ```python
-describe_pet(pet_name="Rufus", animal_type="dog")
+describe_pet(pet_name="Django", animal_type="dog")
 ```
 
 So, in the code below, I can define the function and use the function twice in a row, changing the order of the arguments:
@@ -133,14 +133,14 @@ So, in the code below, I can define the function and use the function twice in a
 def describe_pet(animal_type, pet_name):
     print(f"I have a {animal_type} named {pet_name}.")
 
-describe_pet(animal_type="dog", pet_name="Buddy")
-describe_pet(pet_name="Whiskers", animal_type="cat")
+describe_pet(animal_type="dog", pet_name="Sherlock")
+describe_pet(pet_name="Watson", animal_type="cat")
 ```
 
 This will output:
 
 ```
-I have a dog named Buddy. I have a cat named Whiskers.
+I have a dog named Sherlock. I have a cat named Watson.
 ```
 
 
