@@ -148,11 +148,51 @@ I have a dog named Buddy. I have a cat named Whiskers.
 
 1. **Define a Function**: Write a function called `square` that takes a number as a parameter and returns its square.
 
+    ??? Tip "Solution"
+        ```python
+        def square(number):
+            return number * number
+
+        result = square(5)
+        print(result)
+        ```
+
 2. **Call a Function**: Write a function called `multiply` that takes two numbers as parameters and returns their product. Call the function with different arguments and print the results.
+
+    ??? Tip "Solution"
+        ```python
+        def multiply(a, b):
+            return a * b
+
+        result1 = multiply(3, 4)
+        result2 = multiply(5, 2)
+        print(result1)
+        print(result2)
+        ```
 
 3. **Default Parameters**: Write a function called `greet_user` that takes a name as a parameter and prints a greeting message. If no name is provided, it should use "User" as the default name.
 
+    ??? Tip "Solution"
+        ```python
+        def greet_user(name="User"):
+            print(f"Hello, {name}!")
+
+        greet_user("Alice")
+        greet_user()
+        ```
+
 4. **Keyword Arguments**: Write a function called `make_sandwich` that takes a list of ingredients and prints a message describing the sandwich. Call the function using keyword arguments to specify the ingredients in different orders.
+
+    ??? Tip "Solution"
+        ```python
+        def make_sandwich(ingredients):
+            print("Sandwich with:")
+            for ingredient in ingredients:
+                print(f"- {ingredient}")
+
+        make_sandwich(ingredients=["bread", "cheese", "tomato"])
+        make_sandwich(ingredients=["tomato", "bread", "cheese"])
+        ```
 
 ## Reflect
 
