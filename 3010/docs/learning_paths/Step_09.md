@@ -170,3 +170,9 @@ In this step, we learned about:
 
 Understanding these concepts is essential for becoming a proficient programmer and writing reliable code.
 
+## Bonus
+
+Because of time pressure, we can only spend on class day focused on debugging. I've created a bonus coding assignment that you can work on to practice - this will not be graded but you can ask me questions about it.
+
+You can download the file following this link: [Debugging Bonus Assignment](../files/bonus_debugging.ipynb)
+
