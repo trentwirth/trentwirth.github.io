@@ -11,10 +11,14 @@
         <link rel="canonical" href="https://trentwirth.github.io/3010/learning_paths/Step_09/">
       
       
+        <link rel="prev" href="../Step_08/">
+      
+      
+        <link rel="next" href="../bonus_printing/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
@@ -22,10 +26,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -227,10 +231,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -371,13 +377,9 @@
       
     
     
-    
-    
+    <li class="md-nav__item md-nav__item--nested">
       
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
+        
         
         
         
@@ -396,8 +398,7 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -443,6 +444,8 @@
       
   
   
+    
+  
   
     
     
@@ -469,19 +472,17 @@
       
         
       
-    
-    
-    
-    
-      
+        
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
@@ -496,14 +497,13 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Learning Paths
@@ -676,6 +676,182 @@
                 
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Step 9
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Step 9
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-debugging" class="md-nav__link">
+    Introduction to Debugging
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction to Debugging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-errors" class="md-nav__link">
+    Types of Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-in-vscode" class="md-nav__link">
+    Debugging in VSCode
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging in VSCode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-debugger" class="md-nav__link">
+    Setting Up the Debugger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-breakpoints" class="md-nav__link">
+    Using Breakpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-error-outputs" class="md-nav__link">
+    Reading Error Outputs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1-syntax-error" class="md-nav__link">
+    Exercise 1: Syntax Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2-runtime-error" class="md-nav__link">
+    Exercise 2: Runtime Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3-logical-error" class="md-nav__link">
+    Exercise 3: Logical Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4-using-breakpoints" class="md-nav__link">
+    Exercise 4: Using Breakpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-5-reading-error-outputs" class="md-nav__link">
+    Exercise 5: Reading Error Outputs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflect" class="md-nav__link">
+    Reflect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
     <li class="md-nav__item">
       <a href="../bonus_printing/" class="md-nav__link">
@@ -715,13 +891,9 @@
       
     
     
-    
-    
+    <li class="md-nav__item md-nav__item--nested">
       
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
+        
         
         
         
@@ -740,8 +912,7 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -801,13 +972,9 @@
       
     
     
-    
-    
+    <li class="md-nav__item md-nav__item--nested">
       
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
+        
         
         
         
@@ -826,8 +993,7 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -903,13 +1069,9 @@
       
     
     
-    
-    
+    <li class="md-nav__item md-nav__item--nested">
       
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
+        
         
         
         
@@ -1108,13 +1270,20 @@
 
 <h1 id="step-9">Step 9<a class="headerlink" href="#step-9" title="Permanent link">&para;</a></h1>
 <p>In Step 9, we will focus on debugging Python code using Visual Studio Code (VSCode) and Jupyter Notebooks (<code>.ipynb</code> files). Debugging is an essential skill for any programmer, as it helps identify and fix errors in the code.</p>
+<blockquote>
+<p>Note: This is the kind of thing that it really helps to watch someone demonstrate what debugging looks like. I've done my best to include images, but attending class and asking questions is uniquely important for this Step.</p>
+</blockquote>
 <h2 id="introduction-to-debugging">Introduction to Debugging<a class="headerlink" href="#introduction-to-debugging" title="Permanent link">&para;</a></h2>
-<p>Debugging is the process of finding and fixing errors or bugs in your code. Bugs can be syntax errors, runtime errors, or logical errors. Understanding how to debug effectively will save you time and frustration.</p>
+<p>Debugging is the process of finding and fixing errors or "bugs" in your code. Bugs can be syntax errors, runtime errors, or logical errors. Understanding how to debug effectively will save you time and frustration.</p>
+<details class="tip">
+<summary>Why "bug"?</summary>
+<p>The term "bug" originated in the early days of computing when an actual insect (a moth) caused a malfunction in a computer. Since then, the term has been used to describe any unexpected behavior in software.</p>
+</details>
 <h3 id="types-of-errors">Types of Errors<a class="headerlink" href="#types-of-errors" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Syntax Errors</strong>: These occur when the code is not written correctly according to the language's rules. For example, missing a colon at the end of an <code>if</code> statement.</li>
+<li><strong>Syntax Errors</strong>: These occur when the code is not written correctly according to the language's rules. For example, missing a colon at the end of an <code>if</code> statement (Trent does this all the time...).</li>
 <li><strong>Runtime Errors</strong>: These occur when the code is executed and something goes wrong, such as dividing by zero.</li>
-<li><strong>Logical Errors</strong>: These occur when the code runs without crashing but produces incorrect results. These are often the hardest to find.</li>
+<li><strong>Logical Errors</strong>: These occur when the code runs without crashing - in other words, telling you that something is wrong - but produces incorrect results. These are often the hardest to find.</li>
 </ol>
 <h2 id="debugging-in-vscode">Debugging in VSCode<a class="headerlink" href="#debugging-in-vscode" title="Permanent link">&para;</a></h2>
 <p>VSCode provides powerful tools for debugging Python code, including support for Jupyter Notebooks. Here are the steps to debug a <code>.ipynb</code> file in VSCode.</p>
@@ -1127,9 +1296,56 @@
 <h3 id="using-breakpoints">Using Breakpoints<a class="headerlink" href="#using-breakpoints" title="Permanent link">&para;</a></h3>
 <p>Breakpoints allow you to pause the execution of your code at specific lines, so you can inspect the state of your program.</p>
 <ol>
-<li><strong>Set a Breakpoint</strong>: Click in the gutter (the space to the left of the line numbers) next to the line where you want to set a breakpoint. A red dot will appear.</li>
-<li><strong>Start Debugging</strong>: Click on the Run and Debug icon in the Activity Bar on the side of VSCode, then click on the green play button to start debugging.</li>
-<li><strong>Inspect Variables</strong>: When the code execution pauses at a breakpoint, you can hover over variables to see their current values or use the Variables pane to inspect them.</li>
+<li>
+<p><strong>Set a Breakpoint</strong>: Click in the gutter (the space to the left of the line numbers) next to the line where you want to set a breakpoint. A red dot will appear.</p>
+<ul>
+<li>
+<p>The "Gutter" is the region to the left of the line numbers in the editor.
+<img alt="alt text" src="../../images/gutter.png" /></p>
+</li>
+<li>
+<p>Hover your mouse over the gutter to see the breakpoint icon.
+<img alt="alt text" src="../../images/break_point_appears.png" /></p>
+</li>
+<li>
+<p>Click the dimmed breakpoint icon to set a breakpoint.
+<img alt="alt text" src="../../images/break_point_made.png" /></p>
+</li>
+<li>
+<p>Click the down arrow near the play button for the cell, and you will see the option to "Debug Cell"
+<img alt="alt text" src="../../images/debug_cell.png" /></p>
+</li>
+<li>
+<p>When you see the line highlighted in yellow, you have successfully set a breakpoint and you're now in debug mode!
+<img alt="alt text" src="../../images/debug_mode.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Start Debugging</strong>: Now, you can walk through your code line by line. You can use the buttons in the debug toolbar to continue, step into, over, out, restart, or disconnect the debugger (symbols from left to right in image above).</p>
+<ul>
+<li>The "Continue" button will run the code until the next breakpoint.</li>
+<li>The "Step Over" button will run the next line of code.</li>
+<li>The "Step Into" button will go into the next function call.</li>
+<li>The "Step Out" button will run until the current function returns.</li>
+<li>The "Restart" button will restart the debugger.</li>
+<li>The "Disconnect" button will stop the debugger.</li>
+</ul>
+</li>
+<li>
+<p><strong>Inspect Variables</strong>: When the code execution pauses at a breakpoint, you can hover over variables to see their current values or use the Variables pane to inspect them.</p>
+<ul>
+<li>To the left of the notebook, you will see the "Variables" tab. Click on it to see the variables in the current scope.</li>
+<li>
+<p>Note: in a Jupyter Notebook, the first time you run through the cell, your variables wont be identified yet, but they will be after the first run through. This means that if your code relies on a variable that is defined in a specific sequence, you'll need to restart the kernel and run the cell again.
+<img alt="alt text" src="../../images/variable_space.png" /></p>
+</li>
+<li>
+<p>You can also check variables and test code in the debug console (located at the bottom of VSCode). This is a great and useful way to test code without having to run the entire cell again or update your notebook.
+<img alt="alt text" src="../../images/debug_console.png" /></p>
+</li>
+</ul>
+</li>
 </ol>
 <h3 id="reading-error-outputs">Reading Error Outputs<a class="headerlink" href="#reading-error-outputs" title="Permanent link">&para;</a></h3>
 <p>When an error occurs, VSCode will display an error message in the terminal or output pane. Understanding these messages is crucial for debugging.</p>
@@ -1140,29 +1356,43 @@
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
 <p>Now, let's practice debugging with some exercises. Each exercise contains code with intentional errors. Your task is to find and fix the errors.</p>
 <h3 id="exercise-1-syntax-error">Exercise 1: Syntax Error<a class="headerlink" href="#exercise-1-syntax-error" title="Permanent link">&para;</a></h3>
+<p>Goal: Find and fix the syntax error.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
 
 <span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Hint</strong>: Look for missing punctuation.</p>
+<details class="tip">
+<summary>Hint</summary>
+<p>Look for missing punctuation.</p>
+</details>
 <h3 id="exercise-2-runtime-error">Exercise 2: Runtime Error<a class="headerlink" href="#exercise-2-runtime-error" title="Permanent link">&para;</a></h3>
+<p>Goal: Read and understand the error.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
 
 <span class="n">result</span> <span class="o">=</span> <span class="n">divide</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Hint</strong>: Think about what happens when you divide by zero.</p>
+<details class="tip">
+<summary>Hint</summary>
+<p>Think about what happens when you divide by zero.</p>
+</details>
 <h3 id="exercise-3-logical-error">Exercise 3: Logical Error<a class="headerlink" href="#exercise-3-logical-error" title="Permanent link">&para;</a></h3>
+<p>Goal: Fix the logical error in the code.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_even</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span>
 
 <span class="n">result</span> <span class="o">=</span> <span class="n">is_even</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Is 4 even? </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Hint</strong>: Check the logic used to determine if a number is even.</p>
+<details class="tip">
+<summary>Hint</summary>
+<p>This code functions, but isn't working properly. </p>
+<p>Check the logic used to determine if a number is even - does this make sense?</p>
+</details>
 <h3 id="exercise-4-using-breakpoints">Exercise 4: Using Breakpoints<a class="headerlink" href="#exercise-4-using-breakpoints" title="Permanent link">&para;</a></h3>
+<p>Goal: Practice setting breakpoints and inspecting variables.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">sum_list</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
@@ -1173,8 +1403,13 @@
 <span class="n">result</span> <span class="o">=</span> <span class="n">sum_list</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The sum of the list is: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Task</strong>: Set a breakpoint inside the loop and inspect the value of <code>total</code> at each iteration.</p>
+<details class="tip">
+<summary>Hint</summary>
+<p>Set a breakpoint inside the loop and inspect the value of <code>total</code> at each iteration.</p>
+<p>You've likely funtionally done this with print statements before, but this is a more efficient and less permanent way to do it.</p>
+</details>
 <h3 id="exercise-5-reading-error-outputs">Exercise 5: Reading Error Outputs<a class="headerlink" href="#exercise-5-reading-error-outputs" title="Permanent link">&para;</a></h3>
+<p>Goal: Read, understand, and fix the (new) error.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_item</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
 
@@ -1182,7 +1417,10 @@
 <span class="n">result</span> <span class="o">=</span> <span class="n">get_item</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Hint</strong>: Read the error message and traceback to understand what went wrong.</p>
+<details class="tip">
+<summary>Hint</summary>
+<p>Carefully read the error message and traceback to understand what went wrong. If you don't understand the error, try asking Microsoft Copilot what the error means :) If that doesn't help, ask the professor!</p>
+</details>
 <h2 id="reflect">Reflect<a class="headerlink" href="#reflect" title="Permanent link">&para;</a></h2>
 <p>Think about how debugging can help you understand your code better and improve your problem-solving skills. What strategies can you use to debug more effectively?</p>
 <h2 id="review">Review<a class="headerlink" href="#review" title="Permanent link">&para;</a></h2>
@@ -1209,10 +1447,10 @@
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-  Back to top
-</button>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
         
       </main>
       
@@ -1239,11 +1477,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
-    
-      <script src="../../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>

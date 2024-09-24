@@ -51,7 +51,7 @@ nav:
     - Step 6: learning_paths/Step_06.md
     - Step 7: learning_paths/Step_07.md
     - Step 8: learning_paths/Step_08.md
-    #- Step 9: learning_paths/Step_09.md
+    - Step 9: learning_paths/Step_09.md
     - Bonus - Printing & F-Strings: learning_paths/bonus_printing.md
   - Assistance:
     - assistance/index.md
@@ -66,6 +66,8 @@ nav:
 
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed:
