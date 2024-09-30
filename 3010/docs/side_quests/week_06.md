@@ -1,8 +1,8 @@
-# Week 6 Garden Path: OOP Challenge
+# Week 6 Side Quest: OOP Challenge
 
 ## Introduction
 
-Welcome to the Week 6 Garden Path! This week, we challenge you to explore advanced Object-Oriented Programming (OOP) concepts by engaging with inheritance and abstract classes. You will be tasked with creating a system of classes that simulate a small ecosystem involving different types of plants.
+Welcome to the Week 6 Side Quest! This week, we challenge you to explore advanced Object-Oriented Programming (OOP) concepts by engaging with inheritance and abstract classes. You will be tasked with creating a system of classes that simulate a small ecosystem involving different types of plants.
 
 ## Task Description
 
