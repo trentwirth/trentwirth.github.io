@@ -1,4 +1,4 @@
-# Step 10: OOP - Introduction to Classes and Objects
+# Step 10
 
 Welcome to Step 10, where we take a significant conceptual leap into **Object-Oriented Programming (OOP)**. So far, you've been learning how to write Python code using variables, functions, loops, and control structures. Now, we will explore a new way of organizing and structuring your code: by using **classes** and **objects**.
 
