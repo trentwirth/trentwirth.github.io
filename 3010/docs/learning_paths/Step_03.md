@@ -1,5 +1,7 @@
 # Step 3
 
+> `!!!` Note! This Step will be re-worked in the future, I think that introducing `Anaconda` here was a mistake, unnecessarily complicated. I will re-work this to reflect making sure Python works in VSCode, because that's what really matters for at least the first 3rd of this course.
+
 In Step 3, first, we will install `Anaconda` as well as a new version of `Python` onto each of your machines. 
 
 After that, we will learn about different data types in Python and how to work with variables. Data types and variables are the building blocks of any programming language, and understanding them is essential for writing code!

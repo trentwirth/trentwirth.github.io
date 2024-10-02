@@ -1745,3 +1745,379 @@ In this step, we learned about:
 
 Understanding these concepts is essential for becoming a proficient programmer and writing reliable code.
 
+
+# Step 10: OOP - Introduction to Classes and Objects
+
+Welcome to Step 10, where we take a significant conceptual leap into **Object-Oriented Programming (OOP)**. So far, you've been learning how to write Python code using variables, functions, loops, and control structures. Now, we will explore a new way of organizing and structuring your code: by using **classes** and **objects**.
+
+## What is Object-Oriented Programming (OOP)?
+
+Object-Oriented Programming (OOP) is a programming paradigm (a style or way of programming) based on the concept of "objects." An **object** is an instance of a **class**, and a class defines the blueprint for that object.
+
+OOP focuses on using **objects** that have both **data** (also called attributes) and **behaviors** (also called methods). This is different from procedural programming, where you write sequences of instructions for the computer to follow.
+
+!!! Tip "What is an instance?"
+    An instance is an individual object created from a class. When you define a class, you're creating a blueprint, but when you create an instance, you're making an actual object based on that blueprint.
+
+    Instancing also happens when you define a variable, or a function. So when you assign a namespace to a class, you're creating an instance of that class.
+
+
+### Why OOP?
+
+OOP allows us to:
+
+- **Model real-world entities**: You can represent things like students, books, or even psychology experiments as objects in your code.
+- **Organize and reuse code**: Classes let us write modular and reusable code. Once you write a class, you can create multiple objects from it, each with its own unique data.
+- **Structure complex systems**: As projects grow larger, OOP makes it easier to manage and structure the code.
+
+## The Key Concepts of OOP
+
+There are four fundamental concepts in OOP:
+
+1. **Classes**: A blueprint for creating objects. It defines a set of attributes and methods that the objects created from the class will have.
+2. **Objects**: An instance of a class. Each object can have its own data (attributes) and can perform actions (methods).
+3. **Attributes**: Data stored in an object. Think of these as characteristics of the object.
+4. **Methods**: Functions that belong to a class. These are actions the object can perform.
+
+!!! Tip "Louder for the people in the back, what are Methods?"
+    It's written above - but methods are simply class specific functions. This is useful because you might want functions that reference attributes of the class. There will be demonstrations of this later on.
+
+## Classes and Objects in Python
+
+In Python, you define a class using the `class` keyword, and you create objects from that class by calling it like a function. Let’s take a look at an example:
+
+### Defining a Class and Creating an Object
+
+```python
+# Defining a simple class called 'Person'
+class Person:
+    # Constructor method (__init__) to initialize attributes
+    def __init__(self, name, age):
+        self.name = name  # Attribute
+        self.age = age  # Attribute
+
+    # Method to display information about the person
+    def introduce(self):
+        print(f"Hi, my name is {self.name} and I am {self.age} years old.")
+
+# Creating an object of the Person class
+person1 = Person("Alice", 30)
+
+# Using the object’s method
+person1.introduce()
+```
+
+### What’s Happening in the Code?
+
+- **class Person**: This defines a new class called `Person`.
+- **\_\_init\_\_ method**: This is a special method (also called a **constructor**) that runs when a new object is created. It initializes the object’s attributes (`name` and `age`).
+- **self**: Refers to the current instance of the class. It allows the object to reference its own attributes and methods.
+- **person1 = Person("Alice", 30)**: This creates an object (an **instance**) of the `Person` class with the name "Alice" and age 30.
+- **person1.introduce()**: Calls the method `introduce()` on the `person1` object, which prints out a message.
+
+## Key Concepts in OOP: Attributes and Methods
+
+### Attributes
+
+Attributes are variables that belong to an object. They hold information about the object, and each object can have different values for its attributes.
+
+In the previous example, `name` and `age` are attributes of the `Person` class.
+
+### Methods
+
+Methods are functions that belong to an object. They define the behaviors of the object. For example, the `introduce` method is a behavior of the `Person` class, which allows the object to introduce itself.
+
+## Let’s Build More Complex Classes
+
+### Adding More Attributes and Methods
+
+Let’s create a class that represents a **Car**, with attributes for its **brand**, **model**, and **year**, and methods to **start** and **stop** the car.
+
+```python
+# Defining a Car class
+class Car:
+    # Constructor method to initialize attributes
+    def __init__(self, brand, model, year):
+        self.brand = brand  # Attribute
+        self.model = model  # Attribute
+        self.year = year  # Attribute
+        self.is_running = False  # Attribute to track if the car is running
+
+    # Method to start the car
+    def start(self):
+        self.is_running = True
+        print(f"The {self.year} {self.brand} {self.model} has started.")
+
+    # Method to stop the car
+    def stop(self):
+        self.is_running = False
+        print(f"The {self.year} {self.brand} {self.model} has stopped.")
+
+# Creating an object of the Car class
+my_car = Car("Toyota", "Camry", 2020)
+
+# Starting the car
+my_car.start()
+
+# Stopping the car
+my_car.stop()
+```
+
+## Practice: Create Your Own Class
+
+Now it’s your turn! Create a class to represent something from your daily life. It could be a **Book**, **Laptop**, or even a **Pet**. Your class should have:
+
+- At least 3 attributes
+- At least 2 methods
+
+### Example Exercise:
+
+1. Define a class `Book` with attributes for **title**, **author**, and **year**.
+2. Add methods to **display information about the book** and **check if it’s available**.
+
+Here’s a starting point:
+
+```python
+# Your Task: Define a Book class and create objects from it
+
+class Book:
+    def __init__(self, title, author, year):
+        self.title = title
+        self.author = author
+        self.year = year
+        self.is_available = True
+
+    def display_info(self):
+        print(f"'{self.title}' by {self.author} ({self.year})")
+
+    def check_out(self):
+        if self.is_available:
+            self.is_available = False
+            print(f"'{self.title}' has been checked out.")
+        else:
+            print(f"'{self.title}' is not available.")
+
+    def return_book(self):
+        self.is_available = True
+        print(f"'{self.title}' has been returned.")
+
+# Example usage:
+book1 = Book("1984", "George Orwell", 1949)
+book1.display_info()
+book1.check_out()
+book1.return_book()
+```
+
+## Reflection: Why OOP Matters
+
+OOP is a powerful way to write code that models real-world objects and systems. It makes your code more modular, easier to maintain, and helps you think in terms of **objects and actions** rather than just **sequences of instructions**.
+
+As you move forward, keep practicing by identifying real-world objects you can model with classes and objects. This will help you internalize the concepts of OOP and become more comfortable with this new way of thinking about code!
+
+## Review
+
+- **Classes** are blueprints for creating objects.
+- **Objects** are instances of classes.
+- **Attributes** are characteristics of objects, while **methods** are actions that objects can perform.
+- OOP helps model real-world entities and organize code more effectively.
+
+# Step 11
+
+Welcome back! In Step 10, we introduced the fundamental concepts of Object-Oriented Programming (OOP) with Python classes and objects. In Step 11, we will dive deeper into these concepts to solidify your understanding and practical skills in OOP.
+
+## Review of Python Classes and Objects
+
+### Revisiting the `__init__` Method
+
+The `__init__` method is crucial in Python as it serves as the constructor for a class. It initializes the instance of the class with specific attributes. Let's revisit how to use `__init__` with different attributes.
+
+```
+class Person:
+    def __init__(self, name, age, location):
+        self.name = name
+        self.age = age
+        self.location = location
+```
+
+## Practical Exercises
+
+### Exercise 1: Creating a Person Class
+
+Create a `Person` class with attributes `name`, `age`, and `location`. Initialize these attributes using the `__init__` method.
+
+### Exercise 2: Adding Methods to the Person Class
+
+Enhance the `Person` class by adding a method `update_location` to change the person's location and a method `display_profile` to print the person's information.
+
+??? Tip "Solution"
+    ```python
+    class Person:
+        def __init__(self, name, age, location):
+            self.name = name
+            self.age = age
+            self.location = location
+
+        def update_location(self, new_location):
+            self.location = new_location
+
+        def display_profile(self):
+            print(f"Name: {self.name}, Age: {self.age}, Location: {self.location}")
+    ```
+
+## Understanding and Managing Class and Instance Attributes
+
+Let's discuss the difference between class attributes, which are shared across all instances, and instance attributes, which are unique to each instance.
+
+### Exercise 3: Class Attribute Example
+
+Add a class attribute `population` to the `Person` class to keep count of all person instances created.
+
+??? Tip "Solution"
+    ```python
+    class Person:
+        population = 0
+
+        def __init__(self, name, age, location):
+            self.name = name
+            self.age = age
+            self.location = location
+            Person.population += 1
+    ```
+
+## Simple Methods in Classes
+
+Instance methods are functions defined inside a class and are used to define the behaviors of an instance.
+
+### Exercise 4: Writing an Instance Method
+
+Write an instance method in the `Person` class that increments the person's age by one to celebrate their birthday (a `celebrate_birthday` method).
+
+??? Tip "Solution"
+    ```python
+    class Person:
+        def __init__(self, name, age, location):
+            self.name = name
+            self.age = age
+            self.location = location
+
+        def celebrate_birthday(self):
+            self.age += 1
+            print(f"Happy Birthday {self.name}, you are now {self.age}!")
+    ```
+
+You would call the `celebrate_birthday` method on a `Person` object to increment their age, like so:
+
+```python
+# Create a Person object
+alice = Person("Candice", 25, "Cincinnati Ohio")
+
+# Celebrate Alice's birthday
+alice.celebrate_birthday()
+```
+
+## Introduction to Simple Exception Handling within Methods
+
+Proper error handling is essential to prevent and manage exceptions in Python programs effectively.
+
+You can handle errors using the `try` and `except` blocks to catch exceptions and provide appropriate responses.
+
+Example in a "toy" function:
+
+```python
+def divide(a, b):
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        print("Error: Division by zero is not allowed.")
+    else:
+        print(f"The result of the division is: {result}")
+```
+
+`try` and `except` blocks are used to catch exceptions. If an exception occurs within the `try` block, the code within the `except` block is executed. Implementing exception handling in class methods is similar to the example above, and we'll practice that in the exercise below.
+
+### Exercise 5: Exception Handling in Method
+
+Implement a method in the `Person` class to set the person's age, which handles exceptions if a non-integer value is passed.
+
+??? Tip "Potential Solution"
+    ```python
+    class Person:
+        def set_age(self, age):
+            try:
+                self.age = int(age)
+            except ValueError:
+                print("Please enter a valid integer for age.")
+    ```
+
+## Class Composition
+
+### What is Class Composition?
+Class composition is a fundamental concept in Object-Oriented Programming where a class is formed using references to one or more objects of other classes in order to build more complex functionalities. This is often described as a “has-a” relationship between the composite class and the component class. For example, a `Library` has a list of `Books`.
+
+### Why Use Class Composition?
+Using class composition allows you to combine simple objects to create more complex structures. It’s a powerful method to manage complexity by breaking down problems into smaller, more manageable parts. Composition also helps in reusing code and keeping changes localized, as updating the behavior of composed objects can be done independently.
+
+## Exercise 6: Creating a Family Class Using Composition
+
+Now that you understand what class composition involves, let’s put this into practice. You will create a `Family` class that demonstrates class composition by including multiple `Person` objects. Think of a family as a group of people; this is the relationship you’ll model where a `Family` object will contain several `Person` objects.
+
+### Task Description
+
+- **Person Class**
+  - Attributes: `name`, `age`
+  - Methods:
+    - A method to display person's details.
+
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display_info(self):
+        print(f"Name: {self.name}, Age: {self.age}")
+```
+
+- **Family Class**
+  - Attributes: `members` (a list that will store instances of the `Person` class)
+  - Methods:
+    - `add_member`: Adds a new person to the family.
+    - `display_family`: Shows the information of all family members.
+
+Your task is to define the `Family` class using the `Person` class as described above. Here’s how you might start:
+
+```python
+class Family:
+    def __init__(self):
+        self.members = []
+
+    def add_member(self, person):
+        self.members.append(person)
+        print(f"Added: {person.display_info()}")
+
+    def display_family(self):
+        print("Family Members:")
+        for member in self.members:
+            member.display_info()
+```
+
+### Explanation
+
+- **Person Class**: This class represents an individual person with basic attributes like `name` and `age`.
+- **Family Class**: This class uses composition by having a list of `Person` objects. It represents a family where each member is a `Person` instance. You can add members to the family and display all members' details.
+
+This exercise will help you understand how to use class composition to structure your Python code effectively, representing real-world relationships within your programs.
+
+## Wrap-Up and Review
+
+We've covered a lot today! From enhancing our understanding of the `__init__` method to handling exceptions within class methods. It's crucial to get comfortable with these OOP basics as they form the foundation of more complex software development concepts.
+
+## Reflect
+
+Consider how these OOP principles can be applied to other programming tasks. Perhaps think about a small project where you could use classes to organize your code better.
+
+## Further Reading and Resources
+
+Look for online resources or books that delve deeper into Python OOP to expand your understanding and skills.
+
+Thank you for participating in today's session. Keep practicing, and don't hesitate to reach out with any questions as you continue your journey in Python programming!
