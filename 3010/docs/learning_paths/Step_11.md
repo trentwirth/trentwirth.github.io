@@ -1,6 +1,6 @@
 # Step 11
 
-Welcome back! In Step 10, we introduced the fundamental concepts of Object-Oriented Programming (OOP) with Python classes and objects. Today, we will dive deeper into these concepts to solidify your understanding and practical skills in OOP.
+Welcome back! In Step 10, we introduced the fundamental concepts of Object-Oriented Programming (OOP) with Python classes and objects. In Step 11, we will dive deeper into these concepts to solidify your understanding and practical skills in OOP.
 
 ## Review of Python Classes and Objects
 
@@ -8,7 +8,7 @@ Welcome back! In Step 10, we introduced the fundamental concepts of Object-Orien
 
 The `__init__` method is crucial in Python as it serves as the constructor for a class. It initializes the instance of the class with specific attributes. Let's revisit how to use `__init__` with different attributes.
 
-```
+```python
 class Person:
     def __init__(self, name, age, location):
         self.name = name

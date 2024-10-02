@@ -1923,7 +1923,7 @@ As you move forward, keep practicing by identifying real-world objects you can m
 
 # Step 11
 
-Welcome back! In Step 10, we introduced the fundamental concepts of Object-Oriented Programming (OOP) with Python classes and objects. Today, we will dive deeper into these concepts to solidify your understanding and practical skills in OOP.
+Welcome back! In Step 10, we introduced the fundamental concepts of Object-Oriented Programming (OOP) with Python classes and objects. In Step 11, we will dive deeper into these concepts to solidify your understanding and practical skills in OOP.
 
 ## Review of Python Classes and Objects
 
