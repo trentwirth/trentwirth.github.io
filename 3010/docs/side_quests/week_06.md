@@ -2,76 +2,81 @@
 
 ## Introduction
 
-Welcome to the Week 6 Side Quest! This week, we challenge you to explore advanced Object-Oriented Programming (OOP) concepts by engaging with inheritance and abstract classes. You will be tasked with creating a system of classes that simulate a small ecosystem involving different types of plants.
+Welcome to the Week 6 Side Quest! This exercise will help you explore and apply inheritance in Python's Object-Oriented Programming (OOP) by developing a hierarchy of plant classes that exhibit unique behaviors.
+
+## Understanding Inheritance in OOP
+
+### What is Inheritance?
+
+Inheritance is a key OOP feature that allows one class (a subclass) to inherit the attributes and methods from another class (known as a superclass or base class). This facilitates code reusability, reduces redundancy, and enhances the maintainability of code.
+
+### Why Use Inheritance?
+
+Inheritance allows you to write a general class with common functionality and have more specific classes extend this class, adding or modifying behaviors. This structure makes your code more modular and intuitive.
 
 ## Task Description
 
-Your challenge is to design an `Ecosystem` that consists of various types of `Plant` objects. You’ll demonstrate inheritance by creating specific plant types that inherit from a base `Plant` class and use an abstract class to define common interfaces.
+You will create a basic `Plant` class and then extend it with specific plant types, each inheriting the general characteristics of the base class but also introducing their own unique behaviors.
 
-### Requirements:
+### Part 1: Create the Plant Base Class
 
-- **Plant Abstract Class**
-  - Create an abstract class called `Plant` that defines a structure for other plant types.
-  - Attributes: `name`, `height`
-  - Abstract Methods: `grow()`, which all subclasses must implement differently based on their growth behavior.
+Start by defining a `Plant` class that will act as the base class for all specific plant types.
 
-```
-from abc import ABC, abstractmethod
+- Attributes: `name`, `height`
+- Method: `grow()`, simulates the growth of the plant.
 
-class Plant(ABC):
+```python
+class Plant:
     def __init__(self, name, height):
         self.name = name
         self.height = height
 
-    @abstractmethod
     def grow(self):
-        pass
+        self.height += 1
+        print(f"{self.name} grows to {self.height}cm tall.")
 ```
 
-- **Specific Plant Subclasses**
-  - Implement at least two specific plant subclasses (e.g., `Flower`, `Tree`) that inherit from `Plant` and provide specific implementations of the `grow()` method.
+### Part 2: Define Specific Plant Subclasses
 
-```
+Next, create specific subclasses for `Flower` and `Tree`. These subclasses will inherit the base `Plant` class by creating them and feeding in `Plant` as an argument to the class definition, and then calling a `super()` method in the `__init__` method.
+
+`super()` is used to call the superclass's (the class from which a method is inherited) methods.
+
+```python
 class Flower(Plant):
     def grow(self):
-        self.height += 2
-        print(f"The {self.name} grows quickly and is now {self.height}cm tall.")
+        super().grow()  # Calls the base class grow method
+        print(f"The {self.name} prepares to bloom.")
 
 class Tree(Plant):
     def grow(self):
-        self.height += 1
-        print(f"The {self.name} grows slowly and is now {self.height}cm tall.")
+        super().grow()  # Calls the base class grow method
+        print(f"The {self.name} stretches towards the sky.")
 ```
 
-- **Ecosystem Class**
-  - Implement an `Ecosystem` class that can contain multiple different plants and has a method to simulate passing time in which all plants grow.
+### Part 3: Adding Unique Behaviors to Subclasses
 
+Now, add unique methods to these subclasses that reflect specific behaviors not shared by all plants.
+
+- Add a `bloom()` method to the `Flower` class.
+- Add a `shed_leaves()` method to the `Tree` class.
+
+```python
+class Flower(Plant):
+    def bloom(self):
+        print(f"The {self.name} blooms with vibrant colors!")
+
+class Tree(Plant):
+    def shed_leaves(self):
+        print(f"The {self.name} sheds its leaves for the winter.")
 ```
-class Ecosystem:
-    def __init__(self):
-        self.plants = []
 
-    def add_plant(self, plant):
-        self.plants.append(plant)
+### Part 4: Integrating New Behaviors into the Growth Cycle
 
-    def pass_time(self):
-        print("Time is passing in the ecosystem...")
-        for plant in self.plants:
-            plant.grow()
-```
+Now, try to modify the `grow()` method in each subclass to include these new behaviors as part of the growth cycle.
 
 ## Advanced Challenge (Optional)
 
-- Implement a method in the `Ecosystem` that can report the total height of all plants combined, showcasing aggregate data collection.
-- Experiment with polymorphism by adding different methods or properties to the subclasses that can be called specifically in more detailed scenarios.
-
-## Resources
-
-- Python Official Documentation on Abstract Base Classes: [Link](https://docs.python.org/3/library/abc.html)
-- Tutorial on Python Inheritance and Polymorphism: [Link](https://realpython.com/inheritance-composition-python/)
-
-## Submission Guidelines
-
-Please submit your Python script file containing the `Plant`, `Flower`, `Tree`, and `Ecosystem` classes. Include a brief discussion in your submission about how inheritance and abstraction help manage complexity in software development.
-
-Let's cultivate your understanding of advanced OOP with this botanical challenge!
+Consider enhancing the `Flower` and `Tree` classes further by:
+- Implementing seasonal effects where flowers bloom only in spring and trees shed leaves only in autumn.
+- Adding additional attributes like `color` for flowers and `leaf_count` for trees to make the simulations more detailed.
