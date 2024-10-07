@@ -818,6 +818,8 @@
         
           
         
+          
+        
       
       
         
@@ -862,6 +864,20 @@
     <li class="md-nav__item">
       <a href="../../coding_assignments/coding_assignment_02/" class="md-nav__link">
         Coding Assignment 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coding_assignments/coding_assignment_03/" class="md-nav__link">
+        Coding Assignment 3
       </a>
     </li>
   
@@ -2673,6 +2689,160 @@ of course, the above code has the 0 edge case... but hopefully this gives you an
 <h2 id="further-reading-and-resources">Further Reading and Resources<a class="headerlink" href="#further-reading-and-resources" title="Permanent link">&para;</a></h2>
 <p>Look for online resources or books that delve deeper into Python OOP to expand your understanding and skills.</p>
 <p>Thank you for participating in today's session. Keep practicing, and don't hesitate to reach out with any questions as you continue your journey in Python programming!</p>
+<h1 id="step-12">Step 12<a class="headerlink" href="#step-12" title="Permanent link">&para;</a></h1>
+<p>In Step 12, we will dive into two essential programming concepts: <strong>Modular Programming</strong> and <strong>File I/O (Input/Output)</strong>. These concepts allow you to break down your code into manageable pieces and interact with files, which are crucial in scientific programming for saving and loading data.</p>
+<p>Up until now, we've focused on writing code in a single file. However, as your programs grow in complexity, it becomes challenging to manage everything in one place. Modular programming helps you organize your code into separate modules, making it easier to maintain and reuse.</p>
+<div class="admonition tip">
+<p class="admonition-title">Using a <code>.py</code> File</p>
+<p>Up until this point, we've been using python of "Jupyter" Notebooks (<code>.ipynb</code>), however, most python code is written inside of a file <em>without</em> predefined code blocks. Notebooks with codeblocks are incredibly useful for learning how to program and learn how functions work; it is a tool that you will always want in your belt! However, when you are writing a program that you want to run on its own (without you "pressing play"), you will want to write it in a <code>.py</code> file.</p>
+</div>
+<h2 id="modular-programming">Modular Programming<a class="headerlink" href="#modular-programming" title="Permanent link">&para;</a></h2>
+<p>Modular programming refers to breaking down your code into smaller, reusable pieces called <strong>modules</strong>. This makes your code more organized, easier to maintain, and promotes reusability.</p>
+<h3 id="why-use-modular-programming">Why Use Modular Programming?<a class="headerlink" href="#why-use-modular-programming" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Code Reusability</strong>: Instead of writing the same code multiple times, you can write a function or a class once and use it across multiple programs or modules.</li>
+<li><strong>Maintainability</strong>: By dividing the code into separate modules, it becomes easier to locate and fix bugs or add new features without affecting the entire program.</li>
+<li><strong>Readability</strong>: Modular code is generally more readable and easier to follow, especially in large projects.</li>
+</ul>
+<h3 id="creating-and-using-modules">Creating and Using Modules<a class="headerlink" href="#creating-and-using-modules" title="Permanent link">&para;</a></h3>
+<p>In Python, a module is simply a file that contains Python code. You can create a module by saving functions, classes, or variables in a <code>.py</code> file and then importing it into another file. </p>
+<p>To be clear, this is not in a Jupyter Notebook, but in a <code>.py</code> file - you can create a new file in VSCode and save it as <code>math_operations.py</code> and then write your functions in that file, below.</p>
+<h4 id="example-creating-and-importing-a-module">Example: Creating and Importing a Module<a class="headerlink" href="#example-creating-and-importing-a-module" title="Permanent link">&para;</a></h4>
+<p>Let's create a simple module called <code>math_operations.py</code> that contains a few basic mathematical functions.</p>
+<p><strong><code>math_operations.py</code></strong>:
+<div class="highlight"><pre><span></span><code><span class="c1"># This is a module that contains mathematical operations</span>
+
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="k">def</span> <span class="nf">subtract</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+
+<span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+
+<span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">b</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Cannot divide by zero&quot;</span>
+</code></pre></div></p>
+<p>Now, create a new python file in the same directory (folder). You can then import the <code>math_operations.py</code> module into this new Python file and use its functions:</p>
+<p><strong>Using the <code>math_operations</code> module</strong>:
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math_operations</span>
+
+<span class="n">result_add</span> <span class="o">=</span> <span class="n">math_operations</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">result_divide</span> <span class="o">=</span> <span class="n">math_operations</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Addition Result: </span><span class="si">{</span><span class="n">result_add</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Division Result: </span><span class="si">{</span><span class="n">result_divide</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="importing-specific-functions">Importing Specific Functions<a class="headerlink" href="#importing-specific-functions" title="Permanent link">&para;</a></h3>
+<p>You can also import specific functions from a module instead of the whole module.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math_operations</span> <span class="kn">import</span> <span class="n">add</span><span class="p">,</span> <span class="n">divide</span>
+
+<span class="n">result_add</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">result_divide</span> <span class="o">=</span> <span class="n">divide</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Addition Result: </span><span class="si">{</span><span class="n">result_add</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Division Result: </span><span class="si">{</span><span class="n">result_divide</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="exercises-create-and-import-modules">Exercises: Create and Import Modules<a class="headerlink" href="#exercises-create-and-import-modules" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Create a <code>string_operations.py</code> module</strong>: <ul>
+<li>Define functions like <code>count_vowels</code> and <code>reverse_string</code>.</li>
+</ul>
+</li>
+<li><strong>Import and use the module</strong>:<ul>
+<li>Write a Python script to use the functions from <code>string_operations.py</code> to process some input text.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="file-io-input-and-output">File I/O (Input and Output)<a class="headerlink" href="#file-io-input-and-output" title="Permanent link">&para;</a></h2>
+<p>File I/O refers to the process of reading from and writing to files. In Python, file handling is done using built-in functions like <code>open()</code>, <code>read()</code>, and <code>write()</code>.</p>
+<h3 id="working-with-files">Working with Files<a class="headerlink" href="#working-with-files" title="Permanent link">&para;</a></h3>
+<p>Python makes it easy to work with files using the <code>open()</code> function. When you open a file, you can choose different modes like:
+- <strong>'r'</strong>: Read mode (default) – Opens a file for reading.
+- <strong>'w'</strong>: Write mode – Opens a file for writing (creates a new file or overwrites an existing file).
+- <strong>'a'</strong>: Append mode – Opens a file for appending (adds new data at the end of the file).
+- <strong>'r+'</strong>: Read and write mode – Opens a file for both reading and writing.</p>
+<h3 id="reading-from-a-file">Reading from a File<a class="headerlink" href="#reading-from-a-file" title="Permanent link">&para;</a></h3>
+<p>The <code>read()</code> method reads the entire content of a file, and <code>readline()</code> reads one line at a time.</p>
+<h4 id="example-reading-from-a-file">Example: Reading from a File<a class="headerlink" href="#example-reading-from-a-file" title="Permanent link">&para;</a></h4>
+<p>Suppose we have a file called <code>data.txt</code> with the following content:</p>
+<p><strong><code>data.txt</code></strong>:
+<div class="highlight"><pre><span></span><code>Hello, this is a sample file.
+It contains multiple lines.
+Each line has some text.
+</code></pre></div></p>
+<p>We can read this file using Python:</p>
+<div class="admonition tip">
+<p class="admonition-title">Check your Directory</p>
+<p>Make sure the file you are trying to read is in the same directory as your Python script.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Open the file in read mode</span>
+<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+
+<span class="c1"># Read the entire file</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="c1"># Close the file</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="writing-to-a-file">Writing to a File<a class="headerlink" href="#writing-to-a-file" title="Permanent link">&para;</a></h3>
+<p>The <code>write()</code> method allows you to write content to a file. Be careful when using the write mode (<code>'w'</code>) as it will overwrite any existing content in the file.</p>
+<h4 id="example-writing-to-a-file">Example: Writing to a File<a class="headerlink" href="#example-writing-to-a-file" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Open the file in write mode</span>
+<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+
+<span class="c1"># Write to the file</span>
+<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This is the first line.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This is the second line.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Close the file</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="appending-to-a-file">Appending to a File<a class="headerlink" href="#appending-to-a-file" title="Permanent link">&para;</a></h3>
+<p>The append mode (<code>'a'</code>) allows you to add content to the end of the file without overwriting the existing content.</p>
+<h4 id="example-appending-to-a-file">Example: Appending to a File<a class="headerlink" href="#example-appending-to-a-file" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Open the file in append mode</span>
+<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
+
+<span class="c1"># Append to the file</span>
+<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This is an appended line.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Close the file</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="using-with-to-handle-files">Using <code>with</code> to Handle Files<a class="headerlink" href="#using-with-to-handle-files" title="Permanent link">&para;</a></h3>
+<p>It's a good practice to use the <code>with</code> statement when working with files. This automatically closes the file after the block of code is executed, even if an error occurs.</p>
+<h4 id="example-using-with">Example: Using <code>with</code><a class="headerlink" href="#example-using-with" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Using &#39;with&#39; to open and read a file</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
+<p>The file will be automatically closed after the block of code inside <code>with</code> is executed.</p>
+<h3 id="exercises-working-with-files">Exercises: Working with Files<a class="headerlink" href="#exercises-working-with-files" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Read a file</strong>: Create a file called <code>my_data.txt</code> and write a Python script to read and print its contents.</li>
+<li><strong>Write to a file</strong>: Write a Python script that writes user input to a file called <code>user_data.txt</code>.</li>
+<li><strong>Append to a file</strong>: Modify the script to append new user input to <code>user_data.txt</code> without overwriting the existing content.</li>
+</ol>
+<hr />
+<h2 id="reflect_7">Reflect<a class="headerlink" href="#reflect_7" title="Permanent link">&para;</a></h2>
+<p>Think about how modular programming and file I/O can help in scientific programming. Why might you want to break your code into modules? How could file I/O be useful in experiments or data analysis?</p>
+<h2 id="review_8">Review<a class="headerlink" href="#review_8" title="Permanent link">&para;</a></h2>
+<p>In this step, we covered two important topics:</p>
+<ul>
+<li><strong>Modular Programming</strong>: Breaking down code into reusable modules and importing them into other files.</li>
+<li><strong>File I/O</strong>: Reading from and writing to files in Python.</li>
+</ul>
+<p>These concepts are essential for organizing your code and handling data efficiently in larger programming projects.</p>
 
 
 
