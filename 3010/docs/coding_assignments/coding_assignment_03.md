@@ -6,30 +6,56 @@ This assignment is designed to test your ability to debug complex class structur
 
 ## Problem 1: Debugging a Class Implementation
 
-You are given a Python class that manages user profiles for a software application. The class is intended to add, update, and retrieve user information but contains multiple errors. Identify and fix a total of five errors ranging from syntax to logical issues.
+Below is a Python class called `Plant` that allows you to water, prune and display information about an instanced plant. 
 
-Here's the code:
+At the end of the code block is an example of what the code should look like... but something isn't right! There are 5 errors in the code block, you'll get 1 point for each error fixed.
 
 ```python
-class UserProfile:
-    def __init__(self, user_id: int, username: str):
-        self.user_id = user_id
-        self.username = username
-        self.profiles = {}
+class Plant:
+    def __init__(self, plant_type: str, height: float):
+        self.plant_type = plant type
+        self.height = height  # Initial height in centimeters
+        self.growth_rate = "1.0"  # Initial growth rate, height increase per watering
 
-    def add_profile(self, profile_data: dict):
-        if profile_data.id not in self.profiles:
-            self.profiles[profile_data.id] = profile_data
+    def water(self):
+        """Water the plant to increase its height by the growth rate."""
+        self.height + self.growth_rate
 
-    def get_profile(self, profile_id: int):
-        return self.profiles.get(profile_id, "Profile not found.")
+    def prune(self):
+        """Prune the plant to increase its growth rate. No pain, no gain."""
+        self.hieght -= 0.5 # Reduce the height by 0.5 cm
+        self.growth_rate = 1.0  # Increase growth rate by 1 cm per watering
 
-    def update_profile(self, profile_id: int, new_data: dict):
-        if profile_id in self.profiles:
-            self.profiles[profile_id].update(new_data)
-            return "Update successful"
-        else:
-            return "Profile not found."
+    def display_info(self):
+        """Display the current information about the plant."""
+        display_message = f"Plant Type: {self.plant_type}, Height: {self.height}cm, Growth Rate: {self.growth_rate}cm/watering"
+        print()
+
+
+# Creating instances of the Plant class
+sunflower = Plant("Sunflower", 30.0)
+rose = Plant("Rose", 20.0)
+cactus = Plant("Cactus", 50.0)
+
+# Interacting with the sunflower plant
+sunflower.water()
+sunflower.prune()
+sunflower.water()
+sunflower.display_info()
+
+# Interacting with the rose plant
+rose.prune()
+rose.display_info()
+
+# Interacting with the cactus plant
+cactus.water()
+cactus.display_info()
+
+# If your code is working correctly, the output should be:
+
+    # Plant Type: Sunflower, Height: 32.5cm, Growth Rate: 2.0cm/watering
+    # Plant Type: Rose, Height: 19.5cm, Growth Rate: 2.0cm/watering
+    # Plant Type: Cactus, Height: 51.0cm, Growth Rate: 1.0cm/watering
 ```
 
 ## Problem 2: Create a "Pet" Class
@@ -49,6 +75,13 @@ Create a class called `Pet` with attributes and methods that reflect the behavio
   - `describe`: prints a description of the pet, including all of its attributes. 
 
 Create three instances of this class with different attributes and demonstrate the functionality of the methods.
+
+!!! Tip "Practice for the Written Assessment"
+    To practice for the written assessment, before you start your implementation, either on a piece of paper or in your text editor of choice (Google/Word Doc, etc.), outline how this code should work independent of your ability to write and test the code. 
+
+    The written assessment will be just that - your ability to write out how you would solve a problem, not necessarily your ability to write the code itself. You can and should be as detailed as you can manage. 
+
+    If you'd like more practice, try writing out your solution to Problem 3 as well!
 
 ## Problem 3: Develop Two Interacting Classes
 

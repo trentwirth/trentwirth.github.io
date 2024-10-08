@@ -1069,27 +1069,53 @@
 </blockquote>
 <p>This assignment is designed to test your ability to debug complex class structures, create classes with specific behaviors and attributes, and develop interactions between multiple classes.</p>
 <h2 id="problem-1-debugging-a-class-implementation">Problem 1: Debugging a Class Implementation<a class="headerlink" href="#problem-1-debugging-a-class-implementation" title="Permanent link">&para;</a></h2>
-<p>You are given a Python class that manages user profiles for a software application. The class is intended to add, update, and retrieve user information but contains multiple errors. Identify and fix a total of five errors ranging from syntax to logical issues.</p>
-<p>Here's the code:</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">UserProfile</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">username</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">user_id</span> <span class="o">=</span> <span class="n">user_id</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span> <span class="o">=</span> <span class="p">{}</span>
+<p>Below is a Python class called <code>Plant</code> that allows you to water, prune and display information about an instanced plant. </p>
+<p>At the end of the code block is an example of what the code should look like... but something isn't right! There are 5 errors in the code block, you'll get 1 point for each error fixed.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Plant</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plant_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plant_type</span> <span class="o">=</span> <span class="n">plant</span> <span class="nb">type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>  <span class="c1"># Initial height in centimeters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">growth_rate</span> <span class="o">=</span> <span class="s2">&quot;1.0&quot;</span>  <span class="c1"># Initial growth rate, height increase per watering</span>
 
-    <span class="k">def</span> <span class="nf">add_profile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">profile_data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">profile_data</span><span class="o">.</span><span class="n">id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">[</span><span class="n">profile_data</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">profile_data</span>
+    <span class="k">def</span> <span class="nf">water</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Water the plant to increase its height by the growth rate.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">growth_rate</span>
 
-    <span class="k">def</span> <span class="nf">get_profile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">profile_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">profile_id</span><span class="p">,</span> <span class="s2">&quot;Profile not found.&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">prune</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Prune the plant to increase its growth rate. No pain, no gain.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hieght</span> <span class="o">-=</span> <span class="mf">0.5</span> <span class="c1"># Reduce the height by 0.5 cm</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">growth_rate</span> <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1"># Increase growth rate by 1 cm per watering</span>
 
-    <span class="k">def</span> <span class="nf">update_profile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">profile_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">new_data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">profile_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">[</span><span class="n">profile_id</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">new_data</span><span class="p">)</span>
-            <span class="k">return</span> <span class="s2">&quot;Update successful&quot;</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s2">&quot;Profile not found.&quot;</span>
+    <span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Display the current information about the plant.&quot;&quot;&quot;</span>
+        <span class="n">display_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Plant Type: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">plant_type</span><span class="si">}</span><span class="s2">, Height: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="si">}</span><span class="s2">cm, Growth Rate: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">growth_rate</span><span class="si">}</span><span class="s2">cm/watering&quot;</span>
+        <span class="nb">print</span><span class="p">()</span>
+
+
+<span class="c1"># Creating instances of the Plant class</span>
+<span class="n">sunflower</span> <span class="o">=</span> <span class="n">Plant</span><span class="p">(</span><span class="s2">&quot;Sunflower&quot;</span><span class="p">,</span> <span class="mf">30.0</span><span class="p">)</span>
+<span class="n">rose</span> <span class="o">=</span> <span class="n">Plant</span><span class="p">(</span><span class="s2">&quot;Rose&quot;</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">)</span>
+<span class="n">cactus</span> <span class="o">=</span> <span class="n">Plant</span><span class="p">(</span><span class="s2">&quot;Cactus&quot;</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">)</span>
+
+<span class="c1"># Interacting with the sunflower plant</span>
+<span class="n">sunflower</span><span class="o">.</span><span class="n">water</span><span class="p">()</span>
+<span class="n">sunflower</span><span class="o">.</span><span class="n">prune</span><span class="p">()</span>
+<span class="n">sunflower</span><span class="o">.</span><span class="n">water</span><span class="p">()</span>
+<span class="n">sunflower</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
+
+<span class="c1"># Interacting with the rose plant</span>
+<span class="n">rose</span><span class="o">.</span><span class="n">prune</span><span class="p">()</span>
+<span class="n">rose</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
+
+<span class="c1"># Interacting with the cactus plant</span>
+<span class="n">cactus</span><span class="o">.</span><span class="n">water</span><span class="p">()</span>
+<span class="n">cactus</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
+
+<span class="c1"># If your code is working correctly, the output should be:</span>
+
+    <span class="c1"># Plant Type: Sunflower, Height: 32.5cm, Growth Rate: 2.0cm/watering</span>
+    <span class="c1"># Plant Type: Rose, Height: 19.5cm, Growth Rate: 2.0cm/watering</span>
+    <span class="c1"># Plant Type: Cactus, Height: 51.0cm, Growth Rate: 1.0cm/watering</span>
 </code></pre></div>
 <h2 id="problem-2-create-a-pet-class">Problem 2: Create a "Pet" Class<a class="headerlink" href="#problem-2-create-a-pet-class" title="Permanent link">&para;</a></h2>
 <p>Create a class called <code>Pet</code> with attributes and methods that reflect the behavior and properties of pets. This class should include the following:</p>
@@ -1110,6 +1136,12 @@
 <li><code>describe</code>: prints a description of the pet, including all of its attributes. </li>
 </ul>
 <p>Create three instances of this class with different attributes and demonstrate the functionality of the methods.</p>
+<div class="admonition tip">
+<p class="admonition-title">Practice for the Written Assessment</p>
+<p>To practice for the written assessment, before you start your implementation, either on a piece of paper or in your text editor of choice (Google/Word Doc, etc.), outline how this code should work independent of your ability to write and test the code. </p>
+<p>The written assessment will be just that - your ability to write out how you would solve a problem, not necessarily your ability to write the code itself. You can and should be as detailed as you can manage. </p>
+<p>If you'd like more practice, try writing out your solution to Problem 3 as well!</p>
+</div>
 <h2 id="problem-3-develop-two-interacting-classes">Problem 3: Develop Two Interacting Classes<a class="headerlink" href="#problem-3-develop-two-interacting-classes" title="Permanent link">&para;</a></h2>
 <p>Create two classes, <code>Author</code> and <code>Book</code>. The <code>Author</code> class should have attributes like name and a list of books, while the <code>Book</code> class should include attributes like title, author (reference to an <code>Author</code> object), and publication year. Demonstrate how these instances interact by querying an author to list all books written by them.</p>
 <blockquote>
