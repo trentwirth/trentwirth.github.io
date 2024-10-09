@@ -1,0 +1,1808 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://trentwirth.github.io/3010/learning_paths/Step_14/">
+      
+      
+        <link rel="prev" href="../Step_13/">
+      
+      
+        <link rel="next" href="../bonus_printing/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
+    
+    
+      
+        <title>Step 14 - PSYC 3010 - Programming for Behavioral Scientists</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#step-14" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PSYC 3010 - Programming for Behavioral Scientists" class="md-header__button md-logo" aria-label="PSYC 3010 - Programming for Behavioral Scientists" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PSYC 3010 - Programming for Behavioral Scientists
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Step 14
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/trentwirth/trentwirth.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Learning Paths
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../side_quests/" class="md-tabs__link">
+        Side Quests
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../assistance/" class="md-tabs__link">
+        Assistance
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../coding_assignments/" class="md-tabs__link">
+        Coding Assignments
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../licenses/" class="md-tabs__link">
+        Licenses
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PSYC 3010 - Programming for Behavioral Scientists" class="md-nav__button md-logo" aria-label="PSYC 3010 - Programming for Behavioral Scientists" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    PSYC 3010 - Programming for Behavioral Scientists
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/trentwirth/trentwirth.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">Home</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Learning Paths</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Learning Paths
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_01/" class="md-nav__link">
+        Step 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_02/" class="md-nav__link">
+        Step 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_03/" class="md-nav__link">
+        Step 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_04/" class="md-nav__link">
+        Step 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_05/" class="md-nav__link">
+        Step 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_06/" class="md-nav__link">
+        Step 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_07/" class="md-nav__link">
+        Step 7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_08/" class="md-nav__link">
+        Step 8
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_09/" class="md-nav__link">
+        Step 9
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_10/" class="md-nav__link">
+        Step 10
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_11/" class="md-nav__link">
+        Step 11
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_12/" class="md-nav__link">
+        Step 12
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_13/" class="md-nav__link">
+        Step 13
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Step 14
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Step 14
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction-to-python-data-structures" class="md-nav__link">
+    1. Introduction to Python Data Structures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-working-with-lists" class="md-nav__link">
+    2. Working with Lists
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Working with Lists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-lists" class="md-nav__link">
+    What Are Lists?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-creating-and-modifying-lists" class="md-nav__link">
+    Example: Creating and Modifying Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-methods" class="md-nav__link">
+    List Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-working-with-lists" class="md-nav__link">
+    Exercise: Working with Lists
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-working-with-tuples" class="md-nav__link">
+    3. Working with Tuples
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Working with Tuples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-tuples" class="md-nav__link">
+    What Are Tuples?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-creating-and-accessing-tuples" class="md-nav__link">
+    Example: Creating and Accessing Tuples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-tuples" class="md-nav__link">
+    When to Use Tuples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-working-with-tuples" class="md-nav__link">
+    Exercise: Working with Tuples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-working-with-dictionaries" class="md-nav__link">
+    4. Working with Dictionaries
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Working with Dictionaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-dictionaries" class="md-nav__link">
+    What Are Dictionaries?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-creating-and-using-dictionaries" class="md-nav__link">
+    Example: Creating and Using Dictionaries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionary-methods" class="md-nav__link">
+    Dictionary Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Dictionary Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-using-dictionary-methods" class="md-nav__link">
+    Example: Using Dictionary Methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-working-with-dictionaries" class="md-nav__link">
+    Exercise: Working with Dictionaries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-working-with-sets" class="md-nav__link">
+    5. Working with Sets
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Working with Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-sets" class="md-nav__link">
+    What Are Sets?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-creating-and-using-sets" class="md-nav__link">
+    Example: Creating and Using Sets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-operations" class="md-nav__link">
+    Set Operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-working-with-sets" class="md-nav__link">
+    Exercise: Working with Sets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-final-exercise-working-with-data-structures" class="md-nav__link">
+    6. Final Exercise: Working with Data Structures
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Final Exercise: Working with Data Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    Instructions:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-reflect-and-review" class="md-nav__link">
+    7. Reflect and Review
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Reflect and Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-are-these-data-structures-important" class="md-nav__link">
+    Why Are These Data Structures Important?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bonus_printing/" class="md-nav__link">
+        Bonus - Printing & F-Strings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../side_quests/">Side Quests</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Side Quests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/week_06/" class="md-nav__link">
+        Week 6
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../assistance/">Assistance</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assistance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assistance/copilot/" class="md-nav__link">
+        Setting up GitHub Co-Pilot for Students
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../coding_assignments/">Coding Assignments</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Coding Assignments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coding_assignments/coding_assignment_01/" class="md-nav__link">
+        Coding Assignment 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coding_assignments/coding_assignment_02/" class="md-nav__link">
+        Coding Assignment 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coding_assignments/coding_assignment_03/" class="md-nav__link">
+        Coding Assignment 3
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../licenses/">Licenses</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Licenses
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction-to-python-data-structures" class="md-nav__link">
+    1. Introduction to Python Data Structures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-working-with-lists" class="md-nav__link">
+    2. Working with Lists
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Working with Lists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-lists" class="md-nav__link">
+    What Are Lists?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-creating-and-modifying-lists" class="md-nav__link">
+    Example: Creating and Modifying Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-methods" class="md-nav__link">
+    List Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-working-with-lists" class="md-nav__link">
+    Exercise: Working with Lists
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-working-with-tuples" class="md-nav__link">
+    3. Working with Tuples
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Working with Tuples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-tuples" class="md-nav__link">
+    What Are Tuples?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-creating-and-accessing-tuples" class="md-nav__link">
+    Example: Creating and Accessing Tuples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-tuples" class="md-nav__link">
+    When to Use Tuples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-working-with-tuples" class="md-nav__link">
+    Exercise: Working with Tuples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-working-with-dictionaries" class="md-nav__link">
+    4. Working with Dictionaries
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Working with Dictionaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-dictionaries" class="md-nav__link">
+    What Are Dictionaries?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-creating-and-using-dictionaries" class="md-nav__link">
+    Example: Creating and Using Dictionaries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionary-methods" class="md-nav__link">
+    Dictionary Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Dictionary Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-using-dictionary-methods" class="md-nav__link">
+    Example: Using Dictionary Methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-working-with-dictionaries" class="md-nav__link">
+    Exercise: Working with Dictionaries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-working-with-sets" class="md-nav__link">
+    5. Working with Sets
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Working with Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-sets" class="md-nav__link">
+    What Are Sets?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-creating-and-using-sets" class="md-nav__link">
+    Example: Creating and Using Sets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-operations" class="md-nav__link">
+    Set Operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-working-with-sets" class="md-nav__link">
+    Exercise: Working with Sets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-final-exercise-working-with-data-structures" class="md-nav__link">
+    6. Final Exercise: Working with Data Structures
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Final Exercise: Working with Data Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    Instructions:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-reflect-and-review" class="md-nav__link">
+    7. Reflect and Review
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Reflect and Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-are-these-data-structures-important" class="md-nav__link">
+    Why Are These Data Structures Important?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="step-14">Step 14<a class="headerlink" href="#step-14" title="Permanent link">&para;</a></h1>
+<p>In Step 14, we will explore four of the most common data structures in Python: <strong>Lists</strong>, <strong>Tuples</strong>, <strong>Dictionaries</strong>, and <strong>Sets</strong>. These data structures are essential for organizing and storing data efficiently, and you will frequently encounter them in any kind of data analysis, especially in behavioral science research.</p>
+<p>Let’s dive into each one and understand how to use them in Python!</p>
+<hr />
+<h2 id="1-introduction-to-python-data-structures">1. Introduction to Python Data Structures<a class="headerlink" href="#1-introduction-to-python-data-structures" title="Permanent link">&para;</a></h2>
+<p>Python offers a variety of ways to store and organize data. Each structure has its own use cases and advantages. In this step, we will cover:</p>
+<ul>
+<li><strong>Lists</strong>: Ordered, mutable collections of items.</li>
+<li><strong>Tuples</strong>: Ordered, immutable collections of items.</li>
+<li><strong>Dictionaries</strong>: Key-value pairs for efficient data lookup.</li>
+<li><strong>Sets</strong>: Unordered collections of unique elements.</li>
+</ul>
+<p>We’ll discuss each one in detail, provide code examples, and give you exercises to help solidify your understanding.</p>
+<hr />
+<h2 id="2-working-with-lists">2. Working with Lists<a class="headerlink" href="#2-working-with-lists" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-lists">What Are Lists?<a class="headerlink" href="#what-are-lists" title="Permanent link">&para;</a></h3>
+<p>A <strong>list</strong> is an ordered collection of items (elements). Lists are <strong>mutable</strong>, which means that the elements can be changed after the list is created. You can add, remove, and modify elements in a list.</p>
+<h3 id="example-creating-and-modifying-lists">Example: Creating and Modifying Lists<a class="headerlink" href="#example-creating-and-modifying-lists" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Creating a list of participants</span>
+<span class="n">participants</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="s2">&quot;David&quot;</span><span class="p">]</span>
+
+<span class="c1"># Accessing elements in a list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: Alice</span>
+
+<span class="c1"># Modifying elements in a list</span>
+<span class="n">participants</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Barbara&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>  <span class="c1"># Output: [&#39;Alice&#39;, &#39;Barbara&#39;, &#39;Charlie&#39;, &#39;David&#39;]</span>
+
+<span class="c1"># Adding new elements to the list</span>
+<span class="n">participants</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Eve&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>  <span class="c1"># Output: [&#39;Alice&#39;, &#39;Barbara&#39;, &#39;Charlie&#39;, &#39;David&#39;, &#39;Eve&#39;]</span>
+
+<span class="c1"># Removing an element from the list</span>
+<span class="n">participants</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Charlie&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>  <span class="c1"># Output: [&#39;Alice&#39;, &#39;Barbara&#39;, &#39;David&#39;, &#39;Eve&#39;]</span>
+</code></pre></div>
+<h3 id="list-methods">List Methods<a class="headerlink" href="#list-methods" title="Permanent link">&para;</a></h3>
+<p>Here are a few useful methods you can use with lists:
+- <strong><code>append()</code></strong>: Adds an element to the end of the list.
+- <strong><code>remove()</code></strong>: Removes the first occurrence of an element from the list.
+- <strong><code>sort()</code></strong>: Sorts the list in place.
+- <strong><code>len()</code></strong>: Returns the length of the list.</p>
+<h3 id="exercise-working-with-lists">Exercise: Working with Lists<a class="headerlink" href="#exercise-working-with-lists" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Create a List</strong>: Create a list of 5 favorite hobbies.</li>
+<li><strong>Modify the List</strong>: Add a new hobby to the list, then remove the second hobby from the list.</li>
+<li><strong>Print and Sort</strong>: Print the final list and sort it alphabetically.</li>
+</ol>
+<hr />
+<h2 id="3-working-with-tuples">3. Working with Tuples<a class="headerlink" href="#3-working-with-tuples" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-tuples">What Are Tuples?<a class="headerlink" href="#what-are-tuples" title="Permanent link">&para;</a></h3>
+<p>A <strong>tuple</strong> is similar to a list, but it is <strong>immutable</strong>, meaning that once a tuple is created, its elements cannot be changed. Tuples are useful when you want to store a collection of items that should not be modified.</p>
+<h3 id="example-creating-and-accessing-tuples">Example: Creating and Accessing Tuples<a class="headerlink" href="#example-creating-and-accessing-tuples" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Creating a tuple</span>
+<span class="n">coordinates</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># Accessing elements in a tuple</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">coordinates</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: 10</span>
+
+<span class="c1"># Tuples are immutable, so you cannot modify them</span>
+<span class="c1"># The following line would raise an error:</span>
+<span class="c1"># coordinates[0] = 15  # Uncommenting this will raise a TypeError</span>
+
+<span class="c1"># You can create a tuple with a single element by adding a comma at the end</span>
+<span class="n">single_element_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">42</span><span class="p">,)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">single_element_tuple</span><span class="p">)</span>  <span class="c1"># Output: (42,)</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tuple Syntax</p>
+<p>Notice that Tuples are created using parentheses <code>()</code> and elements are separated by commas, where as Lists are created using square brackets <code>[]</code>. This distinction is important to remember when working with these data structures!</p>
+</div>
+<h3 id="when-to-use-tuples">When to Use Tuples<a class="headerlink" href="#when-to-use-tuples" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use a <strong>tuple</strong> when you have a collection of items that should not change.</li>
+<li>Tuples are often used to represent fixed collections, such as geographical coordinates or RGB color values.</li>
+</ul>
+<h3 id="exercise-working-with-tuples">Exercise: Working with Tuples<a class="headerlink" href="#exercise-working-with-tuples" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Create a Tuple</strong>: Create a tuple that contains your birthdate (day, month, year).</li>
+<li><strong>Access Elements</strong>: Print the day, month, and year individually by accessing the tuple elements.</li>
+<li><strong>Experiment</strong>: Try modifying the tuple (and note why it doesn’t work).</li>
+</ol>
+<hr />
+<h2 id="4-working-with-dictionaries">4. Working with Dictionaries<a class="headerlink" href="#4-working-with-dictionaries" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-dictionaries">What Are Dictionaries?<a class="headerlink" href="#what-are-dictionaries" title="Permanent link">&para;</a></h3>
+<p>A <strong>dictionary</strong> is a collection of <strong>key-value pairs</strong>. Each key is associated with a value, and you can use the key to quickly access the corresponding value. Dictionaries are <strong>mutable</strong>, so you can change the values associated with keys after the dictionary is created.</p>
+<h3 id="example-creating-and-using-dictionaries">Example: Creating and Using Dictionaries<a class="headerlink" href="#example-creating-and-using-dictionaries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Creating a dictionary to store survey responses</span>
+<span class="n">survey_responses</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Alice&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="s2">&quot;Bob&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="s2">&quot;Charlie&quot;</span><span class="p">:</span> <span class="mi">6</span>
+<span class="p">}</span>
+
+<span class="c1"># Accessing a value by its key</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">survey_responses</span><span class="p">[</span><span class="s2">&quot;Bob&quot;</span><span class="p">])</span>  <span class="c1"># Output: 7</span>
+
+<span class="c1"># Modifying a value</span>
+<span class="n">survey_responses</span><span class="p">[</span><span class="s2">&quot;Bob&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">survey_responses</span><span class="p">)</span>  <span class="c1"># Output: {&#39;Alice&#39;: 5, &#39;Bob&#39;: 8, &#39;Charlie&#39;: 6}</span>
+
+<span class="c1"># Adding a new key-value pair</span>
+<span class="n">survey_responses</span><span class="p">[</span><span class="s2">&quot;David&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">survey_responses</span><span class="p">)</span>  <span class="c1"># Output: {&#39;Alice&#39;: 5, &#39;Bob&#39;: 8, &#39;Charlie&#39;: 6, &#39;David&#39;: 9}</span>
+
+<span class="c1"># Removing a key-value pair</span>
+<span class="k">del</span> <span class="n">survey_responses</span><span class="p">[</span><span class="s2">&quot;Charlie&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">survey_responses</span><span class="p">)</span>  <span class="c1"># Output: {&#39;Alice&#39;: 5, &#39;Bob&#39;: 8, &#39;David&#39;: 9}</span>
+</code></pre></div>
+<h3 id="dictionary-methods">Dictionary Methods<a class="headerlink" href="#dictionary-methods" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>keys()</code></strong>: Returns a list of all keys in the dictionary.</li>
+<li><strong><code>values()</code></strong>: Returns a list of all values in the dictionary.</li>
+<li><strong><code>items()</code></strong>: Returns a list of key-value pairs (tuples).</li>
+</ul>
+<h4 id="example-using-dictionary-methods">Example: Using Dictionary Methods<a class="headerlink" href="#example-using-dictionary-methods" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Getting all keys in the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">survey_responses</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>  <span class="c1"># Output: dict_keys([&#39;Alice&#39;, &#39;Bob&#39;, &#39;David&#39;])</span>
+
+<span class="c1"># Getting all values in the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">survey_responses</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>  <span class="c1"># Output: dict_values([5, 8, 9])</span>
+
+<span class="c1"># Getting key-value pairs as tuples</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">survey_responses</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>  <span class="c1"># Output: dict_items([(&#39;Alice&#39;, 5), (&#39;Bob&#39;, 8), (&#39;David&#39;, 9)])</span>
+</code></pre></div>
+<h3 id="exercise-working-with-dictionaries">Exercise: Working with Dictionaries<a class="headerlink" href="#exercise-working-with-dictionaries" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Create a Dictionary</strong>: Create a dictionary with the names of three friends and their favorite colors.</li>
+<li><strong>Modify the Dictionary</strong>: Change one friend's favorite color and add a new friend with their favorite color.<blockquote>
+<p>Hint, use the <a href="https://www.w3schools.com/python/ref_dictionary_update.asp"><code>update()</code> method (this is a clickable link)</a> to add a new key-value pair to the dictionary as well as to update an existing key-value pair.</p>
+</blockquote>
+</li>
+<li><strong>Print and Access</strong>: Print the dictionary and access the favorite color of one of your friends.</li>
+</ol>
+<hr />
+<h2 id="5-working-with-sets">5. Working with Sets<a class="headerlink" href="#5-working-with-sets" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-sets">What Are Sets?<a class="headerlink" href="#what-are-sets" title="Permanent link">&para;</a></h3>
+<p>A <strong>set</strong> is an unordered collection of <strong>unique elements</strong>. Sets are useful when you want to store items without duplicates and don't care about the order of the elements. Sets are <strong>mutable</strong>, but you cannot access elements by index like in lists.</p>
+<blockquote>
+<p>Online resource for sets can be found <a href="https://www.w3schools.com/python/python_sets.asp">here</a></p>
+</blockquote>
+<h3 id="example-creating-and-using-sets">Example: Creating and Using Sets<a class="headerlink" href="#example-creating-and-using-sets" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Creating a set of participants</span>
+<span class="n">participants</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="s2">&quot;David&quot;</span><span class="p">}</span>
+
+<span class="c1"># Adding a new element to the set</span>
+<span class="n">participants</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Eve&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>  <span class="c1"># Output: {&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;David&#39;, &#39;Eve&#39;}</span>
+
+<span class="c1"># Trying to add a duplicate element (it will have no effect)</span>
+<span class="n">participants</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>  <span class="c1"># Output: {&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;David&#39;, &#39;Eve&#39;}</span>
+
+<span class="c1"># Removing an element from the set</span>
+<span class="n">participants</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;David&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>  <span class="c1"># Output: {&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;Eve&#39;}</span>
+</code></pre></div>
+<h3 id="set-operations">Set Operations<a class="headerlink" href="#set-operations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>add()</code></strong>: Adds an element to the set.</li>
+<li><strong><code>remove()</code></strong>: Removes an element from the set.</li>
+<li><strong><code>union()</code></strong>: Returns a new set containing all elements from two sets (without duplicates).</li>
+<li><strong><code>intersection()</code></strong>: Returns a new set containing only elements found in both sets.</li>
+</ul>
+<h3 id="exercise-working-with-sets">Exercise: Working with Sets<a class="headerlink" href="#exercise-working-with-sets" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Create a Set</strong>: Create a set of favorite fruits.</li>
+<li><strong>Add Elements</strong>: Add a new fruit to the set and attempt to add a duplicate fruit.</li>
+<li><strong>Perform Set Operations</strong>: Create a second set of fruits and find the <strong>union</strong> and <strong>intersection</strong> of the two sets.</li>
+</ol>
+<hr />
+<h2 id="6-final-exercise-working-with-data-structures">6. Final Exercise: Working with Data Structures<a class="headerlink" href="#6-final-exercise-working-with-data-structures" title="Permanent link">&para;</a></h2>
+<p>Now that you’ve learned about lists, tuples, dictionaries, and sets, let's wrap up with a final exercise that brings these concepts together.</p>
+<h3 id="instructions">Instructions:<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Create a Class System for Participants</strong>:</p>
+<ul>
+<li>Create a <code>Participant</code> class that stores the name, age, and favorite hobby of each participant.</li>
+<li>Use a <strong>list</strong> to store a collection of <code>Participant</code> objects.</li>
+</ul>
+</li>
+<li>
+<p><strong>Store Data in a Dictionary</strong>:</p>
+<ul>
+<li>Create a dictionary where the keys are participant names and the values are tuples containing their age and favorite hobby.</li>
+</ul>
+</li>
+<li>
+<p><strong>Use a Set for Unique Hobbies</strong>:</p>
+<ul>
+<li>Extract all unique hobbies from the participants and store them in a <strong>set</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Final Output</strong>:</p>
+<ul>
+<li>Print the list of participants.</li>
+<li>Print the dictionary mapping names to participant details.</li>
+<li>Print the set of unique hobbies.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Practice for your Written Assessment</p>
+<p>To practice for the written assessment, outline how you would solve this problem before you start your implementation. You can write out your solution on a piece of paper or in your text editor of choice (Google/Word Doc, etc.). Be as detailed as you can manage. Once you're done with this, then use your outline to implement the solution - how close were you? What did you forget? Answering these questions will help you prepare for the written assessment!</p>
+</div>
+<details class="tip"><summary>Potential Solution</summary><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Participant</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">hobby</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hobby</span> <span class="o">=</span> <span class="n">hobby</span>
+
+<span class="c1"># List to store participants</span>
+<span class="n">participants</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">Participant</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="s2">&quot;Reading&quot;</span><span class="p">),</span>
+    <span class="n">Participant</span><span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;Cycling&quot;</span><span class="p">),</span>
+    <span class="n">Participant</span><span class="p">(</span><span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="s2">&quot;Reading&quot;</span><span class="p">),</span>
+    <span class="n">Participant</span><span class="p">(</span><span class="s2">&quot;David&quot;</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="s2">&quot;Swimming&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="c1"># Dictionary to map participant names to their age and hobby</span>
+<span class="n">participant_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">hobby</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participant_dict</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Set to store unique hobbies</span>
+<span class="n">unique_hobbies</span> <span class="o">=</span> <span class="p">{</span><span class="n">p</span><span class="o">.</span><span class="n">hobby</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">unique_hobbies</span><span class="p">)</span>
+
+<span class="c1">#Expected Output:</span>
+<span class="c1"># {&#39;Reading&#39;, &#39;Cycling&#39;, &#39;Swimming&#39;}</span>
+</code></pre></div>
+</details>
+<hr />
+<h2 id="7-reflect-and-review">7. Reflect and Review<a class="headerlink" href="#7-reflect-and-review" title="Permanent link">&para;</a></h2>
+<p>In this step, we covered four essential Python data structures:</p>
+<ul>
+<li><strong>Lists</strong>: Ordered, mutable collections of items, which are ideal for managing an ordered set of data that might need to be modified.</li>
+<li><strong>Tuples</strong>: Ordered but immutable collections, useful for fixed data that should not be changed once defined.</li>
+<li><strong>Dictionaries</strong>: Unordered collections of key-value pairs, which are excellent for mapping relationships, such as names to data.</li>
+<li><strong>Sets</strong>: Unordered collections of unique items, great for ensuring no duplicates and for performing mathematical set operations such as unions and intersections.</li>
+</ul>
+<h3 id="why-are-these-data-structures-important">Why Are These Data Structures Important?<a class="headerlink" href="#why-are-these-data-structures-important" title="Permanent link">&para;</a></h3>
+<p>These data structures help organize, store, and access data efficiently in Python programs, especially in scenarios where datasets are large or need to be processed in various ways. Understanding the strengths and limitations of each type of data structure is crucial for writing effective and optimized Python code.</p>
+<p>Think about how you might apply these structures in real-world projects:</p>
+<ul>
+<li><strong>Lists</strong> for managing ordered collections like participant data or survey responses.</li>
+<li><strong>Tuples</strong> for grouping related but unchangeable data, like coordinates or fixed settings.</li>
+<li><strong>Dictionaries</strong> for looking up information quickly, such as mapping survey participants to their answers.</li>
+<li><strong>Sets</strong> for managing collections where uniqueness is required, such as lists of unique hobbies or tags.</li>
+</ul>
+<p>Having a strong grasp of Python’s core data structures will help you organize and manipulate data more effectively in future projects.</p>
+<hr />
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>
