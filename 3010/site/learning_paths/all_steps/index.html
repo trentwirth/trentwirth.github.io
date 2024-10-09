@@ -453,6 +453,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -637,6 +641,34 @@
     <li class="md-nav__item">
       <a href="../Step_12/" class="md-nav__link">
         Step 12
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_13/" class="md-nav__link">
+        Step 13
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_14/" class="md-nav__link">
+        Step 14
       </a>
     </li>
   
@@ -2843,6 +2875,469 @@ Each line has some text.
 <li><strong>File I/O</strong>: Reading from and writing to files in Python.</li>
 </ul>
 <p>These concepts are essential for organizing your code and handling data efficiently in larger programming projects.</p>
+<h1 id="step-13">Step 13<a class="headerlink" href="#step-13" title="Permanent link">&para;</a></h1>
+<p>In step 12, you were introduced to modular programming and file I/O (input/output) operations. In Step 13, we will continue to explore <strong>Modules and File Operations</strong> by combining them in a cohesive manner. We’ll expand our knowledge of file handling, delve into advanced file operations, and use Python's built-in modules to work with both CSV and JSON formats. You’ll also learn how to handle errors that may occur during file processing, ensuring your programs run smoothly.</p>
+<hr />
+<h2 id="1-introduction-to-modules-and-file-operations">1. Introduction to Modules and File Operations<a class="headerlink" href="#1-introduction-to-modules-and-file-operations" title="Permanent link">&para;</a></h2>
+<p>In behavioral science and psychology, data collection is key. Working with datasets efficiently requires tools that let you organize and manage your code and data. <strong>Modules</strong> allow you to break down your code into reusable components, and <strong>File Operations</strong> enable you to save, retrieve, and process data stored in files.</p>
+<p>In this step, we’ll combine modular programming with file operations, ensuring that your programs are well-structured and can handle data in multiple formats, such as <strong>CSV</strong> and <strong>JSON</strong>.</p>
+<hr />
+<h2 id="2-importing-built-in-modules">2. Importing Built-in Modules<a class="headerlink" href="#2-importing-built-in-modules" title="Permanent link">&para;</a></h2>
+<p>Python provides various built-in modules that simplify tasks like interacting with files and directories. Let’s start with the <code>os</code> module for working with your system’s file structure.</p>
+<h3 id="the-os-module">The <code>os</code> Module<a class="headerlink" href="#the-os-module" title="Permanent link">&para;</a></h3>
+<p>The <code>os</code> module provides functions for interacting with the operating system. You can use it to navigate directories, check if files exist, and even remove or rename files.</p>
+<h4 id="example-using-os-to-work-with-files-and-directories">Example: Using <code>os</code> to Work with Files and Directories<a class="headerlink" href="#example-using-os-to-work-with-files-and-directories" title="Permanent link">&para;</a></h4>
+<p>Here’s how you can use the <code>os</code> module to interact with files and directories:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Get the current working directory</span>
+<span class="n">current_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Current Directory: </span><span class="si">{</span><span class="n">current_directory</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># List all files in the current directory</span>
+<span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">current_directory</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Files: </span><span class="si">{</span><span class="n">files</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Check if a file exists</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The file &#39;data.txt&#39; exists.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The file &#39;data.txt&#39; does not exist.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="exercise-use-os-to-check-if-a-file-exists">Exercise: Use <code>os</code> to Check if a File Exists<a class="headerlink" href="#exercise-use-os-to-check-if-a-file-exists" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Write a Python script that checks if a file called <code>experiment_data.txt</code> exists in the current directory. If the file exists, read its contents; if not, print a message saying the file is missing.</li>
+</ul>
+<hr />
+<h2 id="3-working-with-csv-files">3. Working with CSV Files<a class="headerlink" href="#3-working-with-csv-files" title="Permanent link">&para;</a></h2>
+<p>In the behavioral sciences, data often comes in <strong>CSV (Comma Separated Values)</strong> format. The <code>csv</code> module in Python makes it easy to write (create) and read (work with) CSV files. </p>
+<p>CSV files are often used because they are simple, human-readable, and compatible with many data processing tools, such as Excel.</p>
+<h3 id="writing-to-a-csv-file">Writing to a CSV File<a class="headerlink" href="#writing-to-a-csv-file" title="Permanent link">&para;</a></h3>
+<p>You can write data to a CSV file using the <code>csv.writer()</code> method. Here’s how:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="c1"># Data to write</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Occupation&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;29&#39;</span><span class="p">,</span> <span class="s1">&#39;Therapist&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;34&#39;</span><span class="p">,</span> <span class="s1">&#39;Psychologist&#39;</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="c1"># Open a CSV file for writing</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;occupation_data.csv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+
+    <span class="c1"># Write each row to the CSV file</span>
+    <span class="n">csv_writer</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="reading-from-a-csv-file">Reading from a CSV File<a class="headerlink" href="#reading-from-a-csv-file" title="Permanent link">&para;</a></h3>
+<p>To read data from a CSV file, use the <code>csv.reader()</code> function:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="c1"># Open the CSV file</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;occupation_data.csv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+
+    <span class="c1"># Loop through the rows in the CSV</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="4-working-with-json-files">4. Working with JSON Files<a class="headerlink" href="#4-working-with-json-files" title="Permanent link">&para;</a></h2>
+<p><strong>JSON (JavaScript Object Notation)</strong> is another popular format for storing structured data. It’s easy to read and write, and closely resembles Python dictionaries. JSON is commonly used for storing data in web applications and APIs.</p>
+<h3 id="writing-and-reading-json-files">Writing and Reading JSON Files<a class="headerlink" href="#writing-and-reading-json-files" title="Permanent link">&para;</a></h3>
+<p>You can use the <code>json</code> module to write and read JSON files.</p>
+<h4 id="example-writing-and-reading-json">Example: Writing and Reading JSON<a class="headerlink" href="#example-writing-and-reading-json" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1"># Writing to a JSON file</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;occupation&quot;</span><span class="p">:</span> <span class="s2">&quot;Therapist&quot;</span><span class="p">}</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+
+<span class="c1"># Reading from a JSON file</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">data_loaded</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">data_loaded</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="5-handling-file-exceptions">5. Handling File Exceptions<a class="headerlink" href="#5-handling-file-exceptions" title="Permanent link">&para;</a></h2>
+<p>When working with files, errors such as a missing file or permission issues can occur. It’s important to handle these exceptions to prevent your code from crashing.</p>
+<h3 id="example-handling-file-errors">Example: Handling File Errors<a class="headerlink" href="#example-handling-file-errors" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;nonexistent_file.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: File not found.&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">PermissionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: Permission denied.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="final-exercise-bringing-it-all-together">Final Exercise: Bringing It All Together<a class="headerlink" href="#final-exercise-bringing-it-all-together" title="Permanent link">&para;</a></h2>
+<p>Now that you've learned how to work with both CSV and JSON files, and handle file errors, let's put everything together. </p>
+<h3 id="instructions">Instructions:<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Create a Custom Module for File Operations</strong>:</p>
+<ul>
+<li>Create a <code>file_utils.py</code> file that contains functions for reading/writing both CSV and JSON files.</li>
+<li>Include error handling in this module to manage missing or corrupted files.</li>
+</ul>
+</li>
+<li>
+<p><strong>Create a Class System for Data Collection</strong>:</p>
+<ul>
+<li>Create a Python script that defines two classes: <code>User</code> and <code>Survey</code>.<ul>
+<li>The <code>User</code> class should have attributes for <code>name</code>, <code>age</code>, and <code>profession</code>.</li>
+<li>The <code>Survey</code> class should manage a collection of <code>User</code> objects and provide methods for writing the data to both CSV and JSON formats.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>File Operations</strong>:</p>
+<ul>
+<li>Collect user data and save it to <strong>both</strong> a CSV and a JSON file using your <code>file_utils.py</code> functions.</li>
+<li>Implement a function to load the saved data back into your program from either format (CSV or JSON) and print it to the console.</li>
+</ul>
+</li>
+<li>
+<p><strong>Exception Handling</strong>:</p>
+<ul>
+<li>Ensure that your program handles errors gracefully if the file does not exist or is corrupted.</li>
+<li>If the program fails to load the CSV or JSON file, it should print a user-friendly error message.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Practice for your Written Assessment</p>
+<p>To practice for the written assessment, outline how you would solve this problem before you start your implementation. You can write out your solution on a piece of paper or in your text editor of choice (Google/Word Doc, etc.). Be as detailed as you can manage. Once you're done with this, then use your outline to implement the solution - how close were you? What did you forget? Answering these questions will help you prepare for the written assessment!</p>
+</div>
+<details class="tip"><summary>Potential Solution</summary><ol>
+<li>
+<p><strong>file_utils.py</strong>:
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">def</span> <span class="nf">file_exists</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">read_json</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s2"> not found.&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">json</span><span class="o">.</span><span class="n">JSONDecodeError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: Could not decode </span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">write_json</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s2"> not found.&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">write_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>survey.py</strong>:
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">file_utils</span> <span class="kn">import</span> <span class="n">write_csv</span><span class="p">,</span> <span class="n">write_json</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">profession</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">profession</span> <span class="o">=</span> <span class="n">profession</span>
+
+<span class="k">class</span> <span class="nc">Survey</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">users</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">add_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">save_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">csv_file</span><span class="p">,</span> <span class="n">json_file</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">user</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="n">user</span><span class="o">.</span><span class="n">profession</span><span class="p">]</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">users</span><span class="p">]</span>
+        <span class="n">write_csv</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+        <span class="n">write_json</span><span class="p">(</span><span class="n">json_file</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+<span class="n">survey</span> <span class="o">=</span> <span class="n">Survey</span><span class="p">()</span>
+<span class="n">user1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="s1">&#39;Therapist&#39;</span><span class="p">)</span>
+<span class="n">user2</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="s1">&#39;Psychologist&#39;</span><span class="p">)</span>
+<span class="n">survey</span><span class="o">.</span><span class="n">add_user</span><span class="p">(</span><span class="n">user1</span><span class="p">)</span>
+<span class="n">survey</span><span class="o">.</span><span class="n">add_user</span><span class="p">(</span><span class="n">user2</span><span class="p">)</span>
+<span class="n">survey</span><span class="o">.</span><span class="n">save_data</span><span class="p">(</span><span class="s1">&#39;user_data.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;user_data.json&#39;</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+</ol>
+</details>
+<hr />
+<h2 id="reflect-and-review">Reflect and Review<a class="headerlink" href="#reflect-and-review" title="Permanent link">&para;</a></h2>
+<p>At this point, you should understand how to combine <strong>modular programming</strong> and <strong>file operations</strong> to handle data in CSV and JSON formats. You’ve also learned how to handle file-related errors to ensure your program runs smoothly even when issues arise.</p>
+<p>Reflect on how you can apply these skills in real-world behavioral science research. Handling data in various formats is crucial for data analysis and collaboration. Moreover, using <strong>modular programming</strong> makes your code more maintainable, reusable, and easier to debug.</p>
+<h1 id="step-14">Step 14<a class="headerlink" href="#step-14" title="Permanent link">&para;</a></h1>
+<p>In Step 14, we will explore four of the most common data structures in Python: <strong>Lists</strong>, <strong>Tuples</strong>, <strong>Dictionaries</strong>, and <strong>Sets</strong>. These data structures are essential for organizing and storing data efficiently, and you will frequently encounter them in any kind of data analysis, especially in behavioral science research.</p>
+<p>Let’s dive into each one and understand how to use them in Python!</p>
+<hr />
+<h2 id="1-introduction-to-python-data-structures">1. Introduction to Python Data Structures<a class="headerlink" href="#1-introduction-to-python-data-structures" title="Permanent link">&para;</a></h2>
+<p>Python offers a variety of ways to store and organize data. Each structure has its own use cases and advantages. In this step, we will cover:</p>
+<ul>
+<li><strong>Lists</strong>: Ordered, mutable collections of items.</li>
+<li><strong>Tuples</strong>: Ordered, immutable collections of items.</li>
+<li><strong>Dictionaries</strong>: Key-value pairs for efficient data lookup.</li>
+<li><strong>Sets</strong>: Unordered collections of unique elements.</li>
+</ul>
+<p>We’ll discuss each one in detail, provide code examples, and give you exercises to help solidify your understanding.</p>
+<hr />
+<h2 id="2-working-with-lists">2. Working with Lists<a class="headerlink" href="#2-working-with-lists" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-lists">What Are Lists?<a class="headerlink" href="#what-are-lists" title="Permanent link">&para;</a></h3>
+<p>A <strong>list</strong> is an ordered collection of items (elements). Lists are <strong>mutable</strong>, which means that the elements can be changed after the list is created. You can add, remove, and modify elements in a list.</p>
+<h3 id="example-creating-and-modifying-lists">Example: Creating and Modifying Lists<a class="headerlink" href="#example-creating-and-modifying-lists" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Creating a list of participants</span>
+<span class="n">participants</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="s2">&quot;David&quot;</span><span class="p">]</span>
+
+<span class="c1"># Accessing elements in a list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: Alice</span>
+
+<span class="c1"># Modifying elements in a list</span>
+<span class="n">participants</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Barbara&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>  <span class="c1"># Output: [&#39;Alice&#39;, &#39;Barbara&#39;, &#39;Charlie&#39;, &#39;David&#39;]</span>
+
+<span class="c1"># Adding new elements to the list</span>
+<span class="n">participants</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Eve&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>  <span class="c1"># Output: [&#39;Alice&#39;, &#39;Barbara&#39;, &#39;Charlie&#39;, &#39;David&#39;, &#39;Eve&#39;]</span>
+
+<span class="c1"># Removing an element from the list</span>
+<span class="n">participants</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Charlie&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>  <span class="c1"># Output: [&#39;Alice&#39;, &#39;Barbara&#39;, &#39;David&#39;, &#39;Eve&#39;]</span>
+</code></pre></div>
+<h3 id="list-methods">List Methods<a class="headerlink" href="#list-methods" title="Permanent link">&para;</a></h3>
+<p>Here are a few useful methods you can use with lists:
+- <strong><code>append()</code></strong>: Adds an element to the end of the list.
+- <strong><code>remove()</code></strong>: Removes the first occurrence of an element from the list.
+- <strong><code>sort()</code></strong>: Sorts the list in place.
+- <strong><code>len()</code></strong>: Returns the length of the list.</p>
+<h3 id="exercise-working-with-lists">Exercise: Working with Lists<a class="headerlink" href="#exercise-working-with-lists" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Create a List</strong>: Create a list of 5 favorite hobbies.</li>
+<li><strong>Modify the List</strong>: Add a new hobby to the list, then remove the second hobby from the list.</li>
+<li><strong>Print and Sort</strong>: Print the final list and sort it alphabetically.</li>
+</ol>
+<hr />
+<h2 id="3-working-with-tuples">3. Working with Tuples<a class="headerlink" href="#3-working-with-tuples" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-tuples">What Are Tuples?<a class="headerlink" href="#what-are-tuples" title="Permanent link">&para;</a></h3>
+<p>A <strong>tuple</strong> is similar to a list, but it is <strong>immutable</strong>, meaning that once a tuple is created, its elements cannot be changed. Tuples are useful when you want to store a collection of items that should not be modified.</p>
+<h3 id="example-creating-and-accessing-tuples">Example: Creating and Accessing Tuples<a class="headerlink" href="#example-creating-and-accessing-tuples" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Creating a tuple</span>
+<span class="n">coordinates</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># Accessing elements in a tuple</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">coordinates</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: 10</span>
+
+<span class="c1"># Tuples are immutable, so you cannot modify them</span>
+<span class="c1"># The following line would raise an error:</span>
+<span class="c1"># coordinates[0] = 15  # Uncommenting this will raise a TypeError</span>
+
+<span class="c1"># You can create a tuple with a single element by adding a comma at the end</span>
+<span class="n">single_element_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">42</span><span class="p">,)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">single_element_tuple</span><span class="p">)</span>  <span class="c1"># Output: (42,)</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tuple Syntax</p>
+<p>Notice that Tuples are created using parentheses <code>()</code> and elements are separated by commas, where as Lists are created using square brackets <code>[]</code>. This distinction is important to remember when working with these data structures!</p>
+</div>
+<h3 id="when-to-use-tuples">When to Use Tuples<a class="headerlink" href="#when-to-use-tuples" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use a <strong>tuple</strong> when you have a collection of items that should not change.</li>
+<li>Tuples are often used to represent fixed collections, such as geographical coordinates or RGB color values.</li>
+</ul>
+<h3 id="exercise-working-with-tuples">Exercise: Working with Tuples<a class="headerlink" href="#exercise-working-with-tuples" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Create a Tuple</strong>: Create a tuple that contains your birthdate (day, month, year).</li>
+<li><strong>Access Elements</strong>: Print the day, month, and year individually by accessing the tuple elements.</li>
+<li><strong>Experiment</strong>: Try modifying the tuple (and note why it doesn’t work).</li>
+</ol>
+<hr />
+<h2 id="4-working-with-dictionaries">4. Working with Dictionaries<a class="headerlink" href="#4-working-with-dictionaries" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-dictionaries">What Are Dictionaries?<a class="headerlink" href="#what-are-dictionaries" title="Permanent link">&para;</a></h3>
+<p>A <strong>dictionary</strong> is a collection of <strong>key-value pairs</strong>. Each key is associated with a value, and you can use the key to quickly access the corresponding value. Dictionaries are <strong>mutable</strong>, so you can change the values associated with keys after the dictionary is created.</p>
+<h3 id="example-creating-and-using-dictionaries">Example: Creating and Using Dictionaries<a class="headerlink" href="#example-creating-and-using-dictionaries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Creating a dictionary to store survey responses</span>
+<span class="n">survey_responses</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Alice&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="s2">&quot;Bob&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="s2">&quot;Charlie&quot;</span><span class="p">:</span> <span class="mi">6</span>
+<span class="p">}</span>
+
+<span class="c1"># Accessing a value by its key</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">survey_responses</span><span class="p">[</span><span class="s2">&quot;Bob&quot;</span><span class="p">])</span>  <span class="c1"># Output: 7</span>
+
+<span class="c1"># Modifying a value</span>
+<span class="n">survey_responses</span><span class="p">[</span><span class="s2">&quot;Bob&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">survey_responses</span><span class="p">)</span>  <span class="c1"># Output: {&#39;Alice&#39;: 5, &#39;Bob&#39;: 8, &#39;Charlie&#39;: 6}</span>
+
+<span class="c1"># Adding a new key-value pair</span>
+<span class="n">survey_responses</span><span class="p">[</span><span class="s2">&quot;David&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">survey_responses</span><span class="p">)</span>  <span class="c1"># Output: {&#39;Alice&#39;: 5, &#39;Bob&#39;: 8, &#39;Charlie&#39;: 6, &#39;David&#39;: 9}</span>
+
+<span class="c1"># Removing a key-value pair</span>
+<span class="k">del</span> <span class="n">survey_responses</span><span class="p">[</span><span class="s2">&quot;Charlie&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">survey_responses</span><span class="p">)</span>  <span class="c1"># Output: {&#39;Alice&#39;: 5, &#39;Bob&#39;: 8, &#39;David&#39;: 9}</span>
+</code></pre></div>
+<h3 id="dictionary-methods">Dictionary Methods<a class="headerlink" href="#dictionary-methods" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>keys()</code></strong>: Returns a list of all keys in the dictionary.</li>
+<li><strong><code>values()</code></strong>: Returns a list of all values in the dictionary.</li>
+<li><strong><code>items()</code></strong>: Returns a list of key-value pairs (tuples).</li>
+</ul>
+<h4 id="example-using-dictionary-methods">Example: Using Dictionary Methods<a class="headerlink" href="#example-using-dictionary-methods" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Getting all keys in the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">survey_responses</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>  <span class="c1"># Output: dict_keys([&#39;Alice&#39;, &#39;Bob&#39;, &#39;David&#39;])</span>
+
+<span class="c1"># Getting all values in the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">survey_responses</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>  <span class="c1"># Output: dict_values([5, 8, 9])</span>
+
+<span class="c1"># Getting key-value pairs as tuples</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">survey_responses</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>  <span class="c1"># Output: dict_items([(&#39;Alice&#39;, 5), (&#39;Bob&#39;, 8), (&#39;David&#39;, 9)])</span>
+</code></pre></div>
+<h3 id="exercise-working-with-dictionaries">Exercise: Working with Dictionaries<a class="headerlink" href="#exercise-working-with-dictionaries" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Create a Dictionary</strong>: Create a dictionary with the names of three friends and their favorite colors.</li>
+<li><strong>Modify the Dictionary</strong>: Change one friend's favorite color and add a new friend with their favorite color.<blockquote>
+<p>Hint, use the <a href="https://www.w3schools.com/python/ref_dictionary_update.asp"><code>update()</code> method (this is a clickable link)</a> to add a new key-value pair to the dictionary as well as to update an existing key-value pair.</p>
+</blockquote>
+</li>
+<li><strong>Print and Access</strong>: Print the dictionary and access the favorite color of one of your friends.</li>
+</ol>
+<hr />
+<h2 id="5-working-with-sets">5. Working with Sets<a class="headerlink" href="#5-working-with-sets" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-sets">What Are Sets?<a class="headerlink" href="#what-are-sets" title="Permanent link">&para;</a></h3>
+<p>A <strong>set</strong> is an unordered collection of <strong>unique elements</strong>. Sets are useful when you want to store items without duplicates and don't care about the order of the elements. Sets are <strong>mutable</strong>, but you cannot access elements by index like in lists.</p>
+<blockquote>
+<p>Online resource for sets can be found <a href="https://www.w3schools.com/python/python_sets.asp">here</a></p>
+</blockquote>
+<h3 id="example-creating-and-using-sets">Example: Creating and Using Sets<a class="headerlink" href="#example-creating-and-using-sets" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Creating a set of participants</span>
+<span class="n">participants</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="s2">&quot;David&quot;</span><span class="p">}</span>
+
+<span class="c1"># Adding a new element to the set</span>
+<span class="n">participants</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Eve&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>  <span class="c1"># Output: {&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;David&#39;, &#39;Eve&#39;}</span>
+
+<span class="c1"># Trying to add a duplicate element (it will have no effect)</span>
+<span class="n">participants</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>  <span class="c1"># Output: {&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;David&#39;, &#39;Eve&#39;}</span>
+
+<span class="c1"># Removing an element from the set</span>
+<span class="n">participants</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;David&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>  <span class="c1"># Output: {&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;Eve&#39;}</span>
+</code></pre></div>
+<h3 id="set-operations">Set Operations<a class="headerlink" href="#set-operations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>add()</code></strong>: Adds an element to the set.</li>
+<li><strong><code>remove()</code></strong>: Removes an element from the set.</li>
+<li><strong><code>union()</code></strong>: Returns a new set containing all elements from two sets (without duplicates).</li>
+<li><strong><code>intersection()</code></strong>: Returns a new set containing only elements found in both sets.</li>
+</ul>
+<h3 id="exercise-working-with-sets">Exercise: Working with Sets<a class="headerlink" href="#exercise-working-with-sets" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Create a Set</strong>: Create a set of favorite fruits.</li>
+<li><strong>Add Elements</strong>: Add a new fruit to the set and attempt to add a duplicate fruit.</li>
+<li><strong>Perform Set Operations</strong>: Create a second set of fruits and find the <strong>union</strong> and <strong>intersection</strong> of the two sets.</li>
+</ol>
+<hr />
+<h2 id="6-final-exercise-working-with-data-structures">6. Final Exercise: Working with Data Structures<a class="headerlink" href="#6-final-exercise-working-with-data-structures" title="Permanent link">&para;</a></h2>
+<p>Now that you’ve learned about lists, tuples, dictionaries, and sets, let's wrap up with a final exercise that brings these concepts together.</p>
+<h3 id="instructions_1">Instructions:<a class="headerlink" href="#instructions_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Create a Class System for Participants</strong>:</p>
+<ul>
+<li>Create a <code>Participant</code> class that stores the name, age, and favorite hobby of each participant.</li>
+<li>Use a <strong>list</strong> to store a collection of <code>Participant</code> objects.</li>
+</ul>
+</li>
+<li>
+<p><strong>Store Data in a Dictionary</strong>:</p>
+<ul>
+<li>Create a dictionary where the keys are participant names and the values are tuples containing their age and favorite hobby.</li>
+</ul>
+</li>
+<li>
+<p><strong>Use a Set for Unique Hobbies</strong>:</p>
+<ul>
+<li>Extract all unique hobbies from the participants and store them in a <strong>set</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Final Output</strong>:</p>
+<ul>
+<li>Print the list of participants.</li>
+<li>Print the dictionary mapping names to participant details.</li>
+<li>Print the set of unique hobbies.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Practice for your Written Assessment</p>
+<p>To practice for the written assessment, outline how you would solve this problem before you start your implementation. You can write out your solution on a piece of paper or in your text editor of choice (Google/Word Doc, etc.). Be as detailed as you can manage. Once you're done with this, then use your outline to implement the solution - how close were you? What did you forget? Answering these questions will help you prepare for the written assessment!</p>
+</div>
+<details class="tip"><summary>Potential Solution</summary><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Participant</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">hobby</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hobby</span> <span class="o">=</span> <span class="n">hobby</span>
+
+<span class="c1"># List to store participants</span>
+<span class="n">participants</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">Participant</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="s2">&quot;Reading&quot;</span><span class="p">),</span>
+    <span class="n">Participant</span><span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;Cycling&quot;</span><span class="p">),</span>
+    <span class="n">Participant</span><span class="p">(</span><span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="s2">&quot;Reading&quot;</span><span class="p">),</span>
+    <span class="n">Participant</span><span class="p">(</span><span class="s2">&quot;David&quot;</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="s2">&quot;Swimming&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="c1"># Dictionary to map participant names to their age and hobby</span>
+<span class="n">participant_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">hobby</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participant_dict</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Set to store unique hobbies</span>
+<span class="n">unique_hobbies</span> <span class="o">=</span> <span class="p">{</span><span class="n">p</span><span class="o">.</span><span class="n">hobby</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">unique_hobbies</span><span class="p">)</span>
+
+<span class="c1">#Expected Output:</span>
+<span class="c1"># {&#39;Reading&#39;, &#39;Cycling&#39;, &#39;Swimming&#39;}</span>
+</code></pre></div>
+</details>
+<hr />
+<h2 id="7-reflect-and-review">7. Reflect and Review<a class="headerlink" href="#7-reflect-and-review" title="Permanent link">&para;</a></h2>
+<p>In this step, we covered four essential Python data structures:</p>
+<ul>
+<li><strong>Lists</strong>: Ordered, mutable collections of items, which are ideal for managing an ordered set of data that might need to be modified.</li>
+<li><strong>Tuples</strong>: Ordered but immutable collections, useful for fixed data that should not be changed once defined.</li>
+<li><strong>Dictionaries</strong>: Unordered collections of key-value pairs, which are excellent for mapping relationships, such as names to data.</li>
+<li><strong>Sets</strong>: Unordered collections of unique items, great for ensuring no duplicates and for performing mathematical set operations such as unions and intersections.</li>
+</ul>
+<h3 id="why-are-these-data-structures-important">Why Are These Data Structures Important?<a class="headerlink" href="#why-are-these-data-structures-important" title="Permanent link">&para;</a></h3>
+<p>These data structures help organize, store, and access data efficiently in Python programs, especially in scenarios where datasets are large or need to be processed in various ways. Understanding the strengths and limitations of each type of data structure is crucial for writing effective and optimized Python code.</p>
+<p>Think about how you might apply these structures in real-world projects:</p>
+<ul>
+<li><strong>Lists</strong> for managing ordered collections like participant data or survey responses.</li>
+<li><strong>Tuples</strong> for grouping related but unchangeable data, like coordinates or fixed settings.</li>
+<li><strong>Dictionaries</strong> for looking up information quickly, such as mapping survey participants to their answers.</li>
+<li><strong>Sets</strong> for managing collections where uniqueness is required, such as lists of unique hobbies or tags.</li>
+</ul>
+<p>Having a strong grasp of Python’s core data structures will help you organize and manipulate data more effectively in future projects.</p>
+<hr />
 
 
 

@@ -2321,3 +2321,524 @@ In this step, we covered two important topics:
 - **File I/O**: Reading from and writing to files in Python.
 
 These concepts are essential for organizing your code and handling data efficiently in larger programming projects.
+
+# Step 13
+
+In step 12, you were introduced to modular programming and file I/O (input/output) operations. In Step 13, we will continue to explore **Modules and File Operations** by combining them in a cohesive manner. We’ll expand our knowledge of file handling, delve into advanced file operations, and use Python's built-in modules to work with both CSV and JSON formats. You’ll also learn how to handle errors that may occur during file processing, ensuring your programs run smoothly.
+
+---
+
+## 1. Introduction to Modules and File Operations
+
+In behavioral science and psychology, data collection is key. Working with datasets efficiently requires tools that let you organize and manage your code and data. **Modules** allow you to break down your code into reusable components, and **File Operations** enable you to save, retrieve, and process data stored in files.
+
+In this step, we’ll combine modular programming with file operations, ensuring that your programs are well-structured and can handle data in multiple formats, such as **CSV** and **JSON**.
+
+---
+
+## 2. Importing Built-in Modules
+
+Python provides various built-in modules that simplify tasks like interacting with files and directories. Let’s start with the `os` module for working with your system’s file structure.
+
+### The `os` Module
+
+The `os` module provides functions for interacting with the operating system. You can use it to navigate directories, check if files exist, and even remove or rename files.
+
+#### Example: Using `os` to Work with Files and Directories
+
+Here’s how you can use the `os` module to interact with files and directories:
+
+```python
+import os
+
+# Get the current working directory
+current_directory = os.getcwd()
+print(f"Current Directory: {current_directory}")
+
+# List all files in the current directory
+files = os.listdir(current_directory)
+print(f"Files: {files}")
+
+# Check if a file exists
+if os.path.exists("data.txt"):
+    print("The file 'data.txt' exists.")
+else:
+    print("The file 'data.txt' does not exist.")
+```
+
+### Exercise: Use `os` to Check if a File Exists
+- Write a Python script that checks if a file called `experiment_data.txt` exists in the current directory. If the file exists, read its contents; if not, print a message saying the file is missing.
+
+---
+
+## 3. Working with CSV Files
+
+In the behavioral sciences, data often comes in **CSV (Comma Separated Values)** format. The `csv` module in Python makes it easy to write (create) and read (work with) CSV files. 
+
+CSV files are often used because they are simple, human-readable, and compatible with many data processing tools, such as Excel.
+
+### Writing to a CSV File
+
+You can write data to a CSV file using the `csv.writer()` method. Here’s how:
+
+```python
+import csv
+
+# Data to write
+data = [
+    ['Name', 'Age', 'Occupation'],
+    ['Alice', '29', 'Therapist'],
+    ['Bob', '34', 'Psychologist']
+]
+
+# Open a CSV file for writing
+with open('occupation_data.csv', mode='w', newline='') as file:
+    csv_writer = csv.writer(file)
+    
+    # Write each row to the CSV file
+    csv_writer.writerows(data)
+```
+
+### Reading from a CSV File
+
+To read data from a CSV file, use the `csv.reader()` function:
+
+```python
+import csv
+
+# Open the CSV file
+with open('occupation_data.csv', mode='r') as file:
+    csv_reader = csv.reader(file)
+    
+    # Loop through the rows in the CSV
+    for row in csv_reader:
+        print(row)
+```
+
+---
+
+## 4. Working with JSON Files
+
+**JSON (JavaScript Object Notation)** is another popular format for storing structured data. It’s easy to read and write, and closely resembles Python dictionaries. JSON is commonly used for storing data in web applications and APIs.
+
+### Writing and Reading JSON Files
+
+You can use the `json` module to write and read JSON files.
+
+#### Example: Writing and Reading JSON
+```python
+import json
+
+# Writing to a JSON file
+data = {"name": "Alice", "age": 30, "occupation": "Therapist"}
+with open("data.json", "w") as file:
+    json.dump(data, file)
+
+# Reading from a JSON file
+with open("data.json", "r") as file:
+    data_loaded = json.load(file)
+    print(data_loaded)
+```
+
+---
+
+## 5. Handling File Exceptions
+
+When working with files, errors such as a missing file or permission issues can occur. It’s important to handle these exceptions to prevent your code from crashing.
+
+### Example: Handling File Errors
+```python
+try:
+    with open("nonexistent_file.txt", "r") as file:
+        content = file.read()
+except FileNotFoundError:
+    print("Error: File not found.")
+except PermissionError:
+    print("Error: Permission denied.")
+```
+
+---
+
+## Final Exercise: Bringing It All Together
+
+Now that you've learned how to work with both CSV and JSON files, and handle file errors, let's put everything together. 
+
+### Instructions:
+
+1. **Create a Custom Module for File Operations**:
+    - Create a `file_utils.py` file that contains functions for reading/writing both CSV and JSON files.
+    - Include error handling in this module to manage missing or corrupted files.
+
+2. **Create a Class System for Data Collection**:
+    - Create a Python script that defines two classes: `User` and `Survey`.
+        - The `User` class should have attributes for `name`, `age`, and `profession`.
+        - The `Survey` class should manage a collection of `User` objects and provide methods for writing the data to both CSV and JSON formats.
+
+3. **File Operations**:
+    - Collect user data and save it to **both** a CSV and a JSON file using your `file_utils.py` functions.
+    - Implement a function to load the saved data back into your program from either format (CSV or JSON) and print it to the console.
+
+4. **Exception Handling**:
+    - Ensure that your program handles errors gracefully if the file does not exist or is corrupted.
+    - If the program fails to load the CSV or JSON file, it should print a user-friendly error message.
+
+!!! Tip "Practice for your Written Assessment"
+    To practice for the written assessment, outline how you would solve this problem before you start your implementation. You can write out your solution on a piece of paper or in your text editor of choice (Google/Word Doc, etc.). Be as detailed as you can manage. Once you're done with this, then use your outline to implement the solution - how close were you? What did you forget? Answering these questions will help you prepare for the written assessment!
+
+??? Tip "Potential Solution"
+    1. **file_utils.py**:
+    ```python
+    import os
+    import csv
+    import json
+
+    def file_exists(file_path):
+        return os.path.exists(file_path)
+
+    def read_json(file_path):
+        try:
+            with open(file_path, "r") as file:
+                return json.load(file)
+        except FileNotFoundError:
+            print(f"Error: {file_path} not found.")
+        except json.JSONDecodeError:
+            print(f"Error: Could not decode {file_path}.")
+
+    def write_json(file_path, data):
+        with open(file_path, "w") as file:
+            json.dump(data, file)
+
+    def read_csv(file_path):
+        try:
+            with open(file_path, "r") as file:
+                return list(csv.reader(file))
+        except FileNotFoundError:
+            print(f"Error: {file_path} not found.")
+
+    def write_csv(file_path, data):
+        with open(file_path, "w", newline="") as file:
+            writer = csv.writer(file)
+            writer.writerows(data)
+    ```
+
+    2. **survey.py**:
+    ```python
+    from file_utils import write_csv, write_json
+
+    class User:
+        def __init__(self, name, age, profession):
+            self.name = name
+            self.age = age
+            self.profession = profession
+
+    class Survey:
+        def __init__(self):
+            self.users = []
+
+        def add_user(self, user):
+            self.users.append(user)
+
+        def save_data(self, csv_file, json_file):
+            data = [[user.name, user.age, user.profession] for user in self.users]
+            write_csv(csv_file, data)
+            write_json(json_file, data)
+
+    survey = Survey()
+    user1 = User('Alice', 29, 'Therapist')
+    user2 = User('Bob', 34, 'Psychologist')
+    survey.add_user(user1)
+    survey.add_user(user2)
+    survey.save_data('user_data.csv', 'user_data.json')
+    ```
+
+---
+
+## Reflect and Review
+
+At this point, you should understand how to combine **modular programming** and **file operations** to handle data in CSV and JSON formats. You’ve also learned how to handle file-related errors to ensure your program runs smoothly even when issues arise.
+
+Reflect on how you can apply these skills in real-world behavioral science research. Handling data in various formats is crucial for data analysis and collaboration. Moreover, using **modular programming** makes your code more maintainable, reusable, and easier to debug.
+
+# Step 14
+
+In Step 14, we will explore four of the most common data structures in Python: **Lists**, **Tuples**, **Dictionaries**, and **Sets**. These data structures are essential for organizing and storing data efficiently, and you will frequently encounter them in any kind of data analysis, especially in behavioral science research.
+
+Let’s dive into each one and understand how to use them in Python!
+
+---
+
+## 1. Introduction to Python Data Structures
+
+Python offers a variety of ways to store and organize data. Each structure has its own use cases and advantages. In this step, we will cover:
+
+- **Lists**: Ordered, mutable collections of items.
+- **Tuples**: Ordered, immutable collections of items.
+- **Dictionaries**: Key-value pairs for efficient data lookup.
+- **Sets**: Unordered collections of unique elements.
+
+We’ll discuss each one in detail, provide code examples, and give you exercises to help solidify your understanding.
+
+---
+
+## 2. Working with Lists
+
+### What Are Lists?
+
+A **list** is an ordered collection of items (elements). Lists are **mutable**, which means that the elements can be changed after the list is created. You can add, remove, and modify elements in a list.
+
+### Example: Creating and Modifying Lists
+
+```python
+# Creating a list of participants
+participants = ["Alice", "Bob", "Charlie", "David"]
+
+# Accessing elements in a list
+print(participants[0])  # Output: Alice
+
+# Modifying elements in a list
+participants[1] = "Barbara"
+print(participants)  # Output: ['Alice', 'Barbara', 'Charlie', 'David']
+
+# Adding new elements to the list
+participants.append("Eve")
+print(participants)  # Output: ['Alice', 'Barbara', 'Charlie', 'David', 'Eve']
+
+# Removing an element from the list
+participants.remove("Charlie")
+print(participants)  # Output: ['Alice', 'Barbara', 'David', 'Eve']
+```
+
+### List Methods
+
+Here are a few useful methods you can use with lists:
+- **`append()`**: Adds an element to the end of the list.
+- **`remove()`**: Removes the first occurrence of an element from the list.
+- **`sort()`**: Sorts the list in place.
+- **`len()`**: Returns the length of the list.
+
+### Exercise: Working with Lists
+1. **Create a List**: Create a list of 5 favorite hobbies.
+2. **Modify the List**: Add a new hobby to the list, then remove the second hobby from the list.
+3. **Print and Sort**: Print the final list and sort it alphabetically.
+
+---
+
+## 3. Working with Tuples
+
+### What Are Tuples?
+
+A **tuple** is similar to a list, but it is **immutable**, meaning that once a tuple is created, its elements cannot be changed. Tuples are useful when you want to store a collection of items that should not be modified.
+
+### Example: Creating and Accessing Tuples
+
+```python
+# Creating a tuple
+coordinates = (10, 20)
+
+# Accessing elements in a tuple
+print(coordinates[0])  # Output: 10
+
+# Tuples are immutable, so you cannot modify them
+# The following line would raise an error:
+# coordinates[0] = 15  # Uncommenting this will raise a TypeError
+
+# You can create a tuple with a single element by adding a comma at the end
+single_element_tuple = (42,)
+print(single_element_tuple)  # Output: (42,)
+```
+
+!!! Tip "Tuple Syntax"
+    Notice that Tuples are created using parentheses `()` and elements are separated by commas, where as Lists are created using square brackets `[]`. This distinction is important to remember when working with these data structures!
+
+### When to Use Tuples
+
+- Use a **tuple** when you have a collection of items that should not change.
+- Tuples are often used to represent fixed collections, such as geographical coordinates or RGB color values.
+
+### Exercise: Working with Tuples
+1. **Create a Tuple**: Create a tuple that contains your birthdate (day, month, year).
+2. **Access Elements**: Print the day, month, and year individually by accessing the tuple elements.
+3. **Experiment**: Try modifying the tuple (and note why it doesn’t work).
+
+---
+
+## 4. Working with Dictionaries
+
+### What Are Dictionaries?
+
+A **dictionary** is a collection of **key-value pairs**. Each key is associated with a value, and you can use the key to quickly access the corresponding value. Dictionaries are **mutable**, so you can change the values associated with keys after the dictionary is created.
+
+### Example: Creating and Using Dictionaries
+
+```python
+# Creating a dictionary to store survey responses
+survey_responses = {
+    "Alice": 5,
+    "Bob": 7,
+    "Charlie": 6
+}
+
+# Accessing a value by its key
+print(survey_responses["Bob"])  # Output: 7
+
+# Modifying a value
+survey_responses["Bob"] = 8
+print(survey_responses)  # Output: {'Alice': 5, 'Bob': 8, 'Charlie': 6}
+
+# Adding a new key-value pair
+survey_responses["David"] = 9
+print(survey_responses)  # Output: {'Alice': 5, 'Bob': 8, 'Charlie': 6, 'David': 9}
+
+# Removing a key-value pair
+del survey_responses["Charlie"]
+print(survey_responses)  # Output: {'Alice': 5, 'Bob': 8, 'David': 9}
+```
+
+### Dictionary Methods
+
+- **`keys()`**: Returns a list of all keys in the dictionary.
+- **`values()`**: Returns a list of all values in the dictionary.
+- **`items()`**: Returns a list of key-value pairs (tuples).
+
+#### Example: Using Dictionary Methods
+
+```python
+# Getting all keys in the dictionary
+print(survey_responses.keys())  # Output: dict_keys(['Alice', 'Bob', 'David'])
+
+# Getting all values in the dictionary
+print(survey_responses.values())  # Output: dict_values([5, 8, 9])
+
+# Getting key-value pairs as tuples
+print(survey_responses.items())  # Output: dict_items([('Alice', 5), ('Bob', 8), ('David', 9)])
+```
+
+### Exercise: Working with Dictionaries
+1. **Create a Dictionary**: Create a dictionary with the names of three friends and their favorite colors.
+2. **Modify the Dictionary**: Change one friend's favorite color and add a new friend with their favorite color.
+> Hint, use the [`update()` method (this is a clickable link)](https://www.w3schools.com/python/ref_dictionary_update.asp) to add a new key-value pair to the dictionary as well as to update an existing key-value pair.
+3. **Print and Access**: Print the dictionary and access the favorite color of one of your friends.
+
+---
+
+## 5. Working with Sets
+
+### What Are Sets?
+
+A **set** is an unordered collection of **unique elements**. Sets are useful when you want to store items without duplicates and don't care about the order of the elements. Sets are **mutable**, but you cannot access elements by index like in lists.
+
+> Online resource for sets can be found [here](https://www.w3schools.com/python/python_sets.asp)
+
+### Example: Creating and Using Sets
+
+```python
+# Creating a set of participants
+participants = {"Alice", "Bob", "Charlie", "David"}
+
+# Adding a new element to the set
+participants.add("Eve")
+print(participants)  # Output: {'Alice', 'Bob', 'Charlie', 'David', 'Eve'}
+
+# Trying to add a duplicate element (it will have no effect)
+participants.add("Alice")
+print(participants)  # Output: {'Alice', 'Bob', 'Charlie', 'David', 'Eve'}
+
+# Removing an element from the set
+participants.remove("David")
+print(participants)  # Output: {'Alice', 'Bob', 'Charlie', 'Eve'}
+```
+
+### Set Operations
+
+- **`add()`**: Adds an element to the set.
+- **`remove()`**: Removes an element from the set.
+- **`union()`**: Returns a new set containing all elements from two sets (without duplicates).
+- **`intersection()`**: Returns a new set containing only elements found in both sets.
+
+### Exercise: Working with Sets
+1. **Create a Set**: Create a set of favorite fruits.
+2. **Add Elements**: Add a new fruit to the set and attempt to add a duplicate fruit.
+3. **Perform Set Operations**: Create a second set of fruits and find the **union** and **intersection** of the two sets.
+
+---
+
+## 6. Final Exercise: Working with Data Structures
+
+Now that you’ve learned about lists, tuples, dictionaries, and sets, let's wrap up with a final exercise that brings these concepts together.
+
+### Instructions:
+
+1. **Create a Class System for Participants**:
+    - Create a `Participant` class that stores the name, age, and favorite hobby of each participant.
+    - Use a **list** to store a collection of `Participant` objects.
+
+2. **Store Data in a Dictionary**:
+    - Create a dictionary where the keys are participant names and the values are tuples containing their age and favorite hobby.
+
+3. **Use a Set for Unique Hobbies**:
+    - Extract all unique hobbies from the participants and store them in a **set**.
+
+4. **Final Output**:
+    - Print the list of participants.
+    - Print the dictionary mapping names to participant details.
+    - Print the set of unique hobbies.
+
+!!! Tip "Practice for your Written Assessment"
+    To practice for the written assessment, outline how you would solve this problem before you start your implementation. You can write out your solution on a piece of paper or in your text editor of choice (Google/Word Doc, etc.). Be as detailed as you can manage. Once you're done with this, then use your outline to implement the solution - how close were you? What did you forget? Answering these questions will help you prepare for the written assessment!
+
+??? Tip "Potential Solution"
+
+    ```python
+    class Participant:
+        def __init__(self, name, age, hobby):
+            self.name = name
+            self.age = age
+            self.hobby = hobby
+
+    # List to store participants
+    participants = [
+        Participant("Alice", 29, "Reading"),
+        Participant("Bob", 34, "Cycling"),
+        Participant("Charlie", 27, "Reading"),
+        Participant("David", 31, "Swimming")
+    ]
+
+    # Dictionary to map participant names to their age and hobby
+    participant_dict = {p.name: (p.age, p.hobby) for p in participants}
+    print(participant_dict)
+    ```
+
+    ```python
+    # Set to store unique hobbies
+    unique_hobbies = {p.hobby for p in participants}
+    print(unique_hobbies)
+    
+    #Expected Output:
+    # {'Reading', 'Cycling', 'Swimming'}
+    ```
+    
+---
+
+## 7. Reflect and Review
+
+In this step, we covered four essential Python data structures:
+
+- **Lists**: Ordered, mutable collections of items, which are ideal for managing an ordered set of data that might need to be modified.
+- **Tuples**: Ordered but immutable collections, useful for fixed data that should not be changed once defined.
+- **Dictionaries**: Unordered collections of key-value pairs, which are excellent for mapping relationships, such as names to data.
+- **Sets**: Unordered collections of unique items, great for ensuring no duplicates and for performing mathematical set operations such as unions and intersections.
+
+### Why Are These Data Structures Important?
+
+These data structures help organize, store, and access data efficiently in Python programs, especially in scenarios where datasets are large or need to be processed in various ways. Understanding the strengths and limitations of each type of data structure is crucial for writing effective and optimized Python code.
+
+Think about how you might apply these structures in real-world projects:
+
+- **Lists** for managing ordered collections like participant data or survey responses.
+- **Tuples** for grouping related but unchangeable data, like coordinates or fixed settings.
+- **Dictionaries** for looking up information quickly, such as mapping survey participants to their answers.
+- **Sets** for managing collections where uniqueness is required, such as lists of unique hobbies or tags.
+
+Having a strong grasp of Python’s core data structures will help you organize and manipulate data more effectively in future projects.
+
+---
