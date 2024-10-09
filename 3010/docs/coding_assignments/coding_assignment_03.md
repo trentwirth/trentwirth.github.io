@@ -8,7 +8,9 @@ This assignment is designed to test your ability to debug complex class structur
 
 Below is a Python class called `Plant` that allows you to water, prune and display information about an instanced plant. 
 
-At the end of the code block is an example of what the code should look like... but something isn't right! There are 5 errors in the code block, you'll get 1 point for each error fixed.
+At the end of the code block is an example of what the code should look like... but something isn't right! 
+
+> Hint: There are 6 errors in the code block
 
 ```python
 class Plant:
