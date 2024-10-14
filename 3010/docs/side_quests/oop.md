@@ -1,4 +1,4 @@
-# Week 6 Side Quest: OOP Challenge
+# Side Quest: OOP Challenge
 
 ## Introduction
 

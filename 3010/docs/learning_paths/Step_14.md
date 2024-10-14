@@ -242,20 +242,46 @@ Now that you’ve learned about lists, tuples, dictionaries, and sets, let's wra
         Participant("David", 31, "Swimming")
     ]
 
+    print(participants)
+
+    # create an empty dictionary
+    participant_dict = {}
+
     # Dictionary to map participant names to their age and hobby
-    participant_dict = {p.name: (p.age, p.hobby) for p in participants}
-    print(participant_dict)
+    for participant in participant_list:
+        participant_dict[participant.name] = {"age": participant.age, "hobby": participant.hobby}
+
+    # Print the list of participants, `\n` is used to print a new line
+    print(f"participant_dict: \n {participant_dict}")
+
     ```
+
+    Loop through the dictionary to extract unique hobbies and store them in a set:
 
     ```python
     # Set to store unique hobbies
-    unique_hobbies = {p.hobby for p in participants}
-    print(unique_hobbies)
-    
+    unique_hobbies = set()
+
+    for details in participant_dict.values():
+        unique_hobbies.add(details['hobby'])
+
+    print(f"unique_hobbies: \n {unique_hobbies}")
     #Expected Output:
     # {'Reading', 'Cycling', 'Swimming'}
     ```
-    
+
+    **Alternatively**, loop through the list of participants to extract unique hobbies:
+
+    ```python
+    # Set to store unique hobbies
+    unique_hobbies = set()
+
+    for participant in participants:
+        unique_hobbies.add(participant.hobby)
+
+    print(f"unique_hobbies: \n {unique_hobbies}")
+    ```
+   
 ---
 
 ## 7. Reflect and Review

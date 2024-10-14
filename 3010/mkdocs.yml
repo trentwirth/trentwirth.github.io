@@ -41,26 +41,28 @@ nav:
   - Home: 
     - index.md
     - About: about.md
-  - Learning Paths: 
-    - Learning Paths: learning_paths/index.md
-    - Step 1: learning_paths/Step_01.md
-    - Step 2: learning_paths/Step_02.md
-    - Step 3: learning_paths/Step_03.md
-    - Step 4: learning_paths/Step_04.md
-    - Step 5: learning_paths/Step_05.md
-    - Step 6: learning_paths/Step_06.md
-    - Step 7: learning_paths/Step_07.md
-    - Step 8: learning_paths/Step_08.md
-    - Step 9: learning_paths/Step_09.md
-    - Step 10: learning_paths/Step_10.md
-    - Step 11: learning_paths/Step_11.md
-    - Step 12: learning_paths/Step_12.md
-    - Step 13: learning_paths/Step_13.md
-    - Step 14: learning_paths/Step_14.md
-    - Bonus - Printing & F-Strings: learning_paths/bonus_printing.md
+  - Learning Path: 
+    - Learning Path: learning_paths/index.md
+    - Step 1 - Your Computer: learning_paths/Step_01.md
+    - Step 2 - Intro to Python: learning_paths/Step_02.md
+    - Step 3 - Using Python: learning_paths/Step_03.md
+    - Step 4 - Operators & Expressions: learning_paths/Step_04.md
+    - Step 5 - Conditionals: learning_paths/Step_05.md
+    - Step 6 - Control Structures: learning_paths/Step_06.md
+    - Step 7 - Functions I: learning_paths/Step_07.md
+    - Step 8 - Functions II: learning_paths/Step_08.md
+    - Step 9 - Debugging: learning_paths/Step_09.md
+    - Step 10 - OOP I: learning_paths/Step_10.md
+    - Step 11 - OOP II: learning_paths/Step_11.md
+    - Step 12 - Modularity & File I/O I: learning_paths/Step_12.md
+    - Step 13 - Modularity & File I/O II: learning_paths/Step_13.md
+    - Step 14 - Data Structures I: learning_paths/Step_14.md
+    - Step 15 - Data Structuers II: learning_paths/Step_15.md
   - Side Quests:
     - Side Quests: side_quests/index.md
-    - Week 6: side_quests/week_06.md
+    - F-Strings: side_quests/bonus_printing.md
+    - Week 6 - OOP : side_quests/oop.md
+    - Week 8 - Pseudocode: side_quests/pseudocode.md
   - Assistance:
     - assistance/index.md
     - assistance/copilot.md

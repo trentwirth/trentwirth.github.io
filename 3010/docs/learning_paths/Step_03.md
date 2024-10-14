@@ -1,37 +1,26 @@
 # Step 3
 
-> `!!!` Note! This Step will be re-worked in the future, I think that introducing `Anaconda` here was a mistake, unnecessarily complicated. I will re-work this to reflect making sure Python works in VSCode, because that's what really matters for at least the first 3rd of this course.
+## Getting Python Set up in VS Code
 
-In Step 3, first, we will install `Anaconda` as well as a new version of `Python` onto each of your machines. 
+> Note: If you haven't installed VSCode yet, go back to Step 1.
 
-After that, we will learn about different data types in Python and how to work with variables. Data types and variables are the building blocks of any programming language, and understanding them is essential for writing code!
+With VSCode installed, getting Python set up is fairly straight forward. 
 
-## Installing `Anaconda` and `Python`
+- Open VSCode
+- Click on the Extensions icon on the left side of the window (it looks like a square with a few smaller squares in it)
+- Search for "Python" in the search bar
+- Click the green "Install" button on the Python extension by Microsoft
+- Once the extension is installed, click the green "Reload" button to activate the extension
 
-You might be wondering, what's `Anaconda`? `Anaconda` is a free and open-source distribution of Python ([and R](https://www.r-project.org/)) programming languages for scientific computing, that aims to simplify environment creation and management. Look back to Step 2 if you need a refresher on `Python Environments`.
+## Jupyter Notebooks
 
-### AI Exercise: Install `Anaconda` and `Python`
+You've already used a Jupyter Notebook without realizing it; all Google Colab Notebooks are Jupyter Notebooks! Jupyter Notebooks are a great way to write and run Python code in a more interactive way than a traditional script.
 
-I'd like for you to explore using an AI Chatbot to help you do technical IT tasks, like installing software.
+Jupyter compartments your code into "cells" that can be run independently of one another. This is great for debugging and testing code, as you can run a single cell to see if it works as expected.
 
-Take the following prompt to either [Microsoft Copilot](https://copilot.microsoft.com) or [ChatGPT](htps://chatgpt.com) - if you go to Copilot, make sure to use your student credentials (if you have them) to login and get access to the best version of Copilot. Note: This best version doesn't maintain a chat history, so if you want to keep a record of your conversation, you should take notes.
+There are many ways to create a new Jupyter Notebook file in VSCode, one of the easiest ways is to click `File > New File` and then either save the file with a `.ipynb` extension or `Jupyter Notebook` in the file type dropdown that pops up.
 
-Here's the prompt (*make sure you tell it if you have a Windows machine or a Mac*):
-
-```
-I'm a psychology student who is new to VSCode and Python. 
-I need to install Anaconda and Python version 3.12, 
-and I want to do it through the VSCode terminal. 
-If that doesn't work, we can try other methods. 
-
-I have a _____ machine. Can you help me with this?
-```
-
-### Exercise: 
-
-Work with the Chatbot to get the software installed on your machine. If you're doing this in class and you run into issues, let your professor know!
-
-Once you've installed `Anaconda` and `Python`, you're ready to move on to the next section!
+> Note: Any time you are prompted by VSCode to install a new package or extension relating to Python or Jupyter Notebooks, you should do so. These packages and extensions are what make Python and Jupyter Notebooks work in VSCode.
 
 ## Introduction to Python Data Types
 
@@ -119,7 +108,7 @@ Here are the different outputs for the different types we've covered in today's 
 
 Why might there be different data types in programs? (Answer below)
 
-??? Note "Answer"
+??? Tip "Answer"
     There are a lot of reasons! But here are a few that I can come up with from the perspective of a scientific programmer:
 
     1. As scientists, we work with lots of different types of data - often at the same time. We might want to construct pipelines specifically designed for a particular data type; later on in our class we'll create functions. Some functions can be are type-specific, meaning they will only work if we supply that function with the correct data type. This is a good thing, because it means we can be sure that our functions are doing what we expect them to do.

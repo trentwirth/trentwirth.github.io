@@ -265,36 +265,27 @@ Go to [this Google Colab Notebook](https://colab.research.google.com/drive/1YJDw
 
 # Step 3
 
-In Step 3, first, we will install `Anaconda` as well as a new version of `Python` onto each of your machines. 
+## Getting Python Set up in VS Code
 
-After that, we will learn about different data types in Python and how to work with variables. Data types and variables are the building blocks of any programming language, and understanding them is essential for writing code!
+> Note: If you haven't installed VSCode yet, go back to Step 1.
 
-## Installing `Anaconda` and `Python`
+With VSCode installed, getting Python set up is fairly straight forward. 
 
-You might be wondering, what's `Anaconda`? `Anaconda` is a free and open-source distribution of Python ([and R](https://www.r-project.org/)) programming languages for scientific computing, that aims to simplify environment creation and management. Look back to Step 2 if you need a refresher on `Python Environments`.
+- Open VSCode
+- Click on the Extensions icon on the left side of the window (it looks like a square with a few smaller squares in it)
+- Search for "Python" in the search bar
+- Click the green "Install" button on the Python extension by Microsoft
+- Once the extension is installed, click the green "Reload" button to activate the extension
 
-### AI Exercise: Install `Anaconda` and `Python`
+## Jupyter Notebooks
 
-I'd like for you to explore using an AI Chatbot to help you do technical IT tasks, like installing software.
+You've already used a Jupyter Notebook without realizing it; all Google Colab Notebooks are Jupyter Notebooks! Jupyter Notebooks are a great way to write and run Python code in a more interactive way than a traditional script.
 
-Take the following prompt to either [Microsoft Copilot](https://copilot.microsoft.com) or [ChatGPT](htps://chatgpt.com) - if you go to Copilot, make sure to use your student credentials (if you have them) to login and get access to the best version of Copilot. Note: This best version doesn't maintain a chat history, so if you want to keep a record of your conversation, you should take notes.
+Jupyter compartments your code into "cells" that can be run independently of one another. This is great for debugging and testing code, as you can run a single cell to see if it works as expected.
 
-Here's the prompt (*make sure you tell it if you have a Windows machine or a Mac*):
+There are many ways to create a new Jupyter Notebook file in VSCode, one of the easiest ways is to click `File > New File` and then either save the file with a `.ipynb` extension or `Jupyter Notebook` in the file type dropdown that pops up.
 
-```
-I'm a psychology student who is new to VSCode and Python. 
-I need to install Anaconda and Python version 3.12, 
-and I want to do it through the VSCode terminal. 
-If that doesn't work, we can try other methods. 
-
-I have a _____ machine. Can you help me with this?
-```
-
-### Exercise: 
-
-Work with the Chatbot to get the software installed on your machine. If you're doing this in class and you run into issues, let your professor know!
-
-Once you've installed `Anaconda` and `Python`, you're ready to move on to the next section!
+> Note: Any time you are prompted by VSCode to install a new package or extension relating to Python or Jupyter Notebooks, you should do so. These packages and extensions are what make Python and Jupyter Notebooks work in VSCode.
 
 ## Introduction to Python Data Types
 
@@ -382,7 +373,7 @@ Here are the different outputs for the different types we've covered in today's 
 
 Why might there be different data types in programs? (Answer below)
 
-??? Note "Answer"
+??? Tip "Answer"
     There are a lot of reasons! But here are a few that I can come up with from the perspective of a scientific programmer:
 
     1. As scientists, we work with lots of different types of data - often at the same time. We might want to construct pipelines specifically designed for a particular data type; later on in our class we'll create functions. Some functions can be are type-specific, meaning they will only work if we supply that function with the correct data type. This is a good thing, because it means we can be sure that our functions are doing what we expect them to do.
@@ -2842,3 +2833,206 @@ Think about how you might apply these structures in real-world projects:
 Having a strong grasp of Python’s core data structures will help you organize and manipulate data more effectively in future projects.
 
 ---
+
+# Step 15
+
+In Step 14, we introduced the four most common data structures in Python: **Lists**, **Tuples**, **Dictionaries**, and **Sets**. Now that you have a basic understanding of these structures, it's time to practice manipulating them. Data manipulation is essential in research and real-world projects, as it allows you to prepare, clean, and transform data for analysis.
+
+### 1. Working with Lists
+
+Lists are mutable, meaning you can change their elements after they've been created. Let’s explore some ways to manipulate lists.
+
+#### Adding Elements
+
+You can add new elements to a list using the `append()` and `insert()` methods.
+
+```python
+# Example: Append vs Insert
+my_list = [1, 2, 3]
+my_list.append(4)  # Adds 4 to the end
+my_list.insert(1, "inserted")  # Inserts at index 1
+
+print(my_list)
+```
+
+- **`append()`** adds the element to the **end** of the list.
+- **`insert()`** allows you to add an element at a specific position in the list. The first argument is the **index** where you want to insert the element.
+
+#### Removing Elements
+
+To remove elements, you can use the `remove()` method or the `pop()` method.
+
+- **`remove()`** deletes the first occurrence of a value.
+- **`pop()`** removes an element by **index**, which means it removes the element at a specific position in the list, rather than searching for the value itself. Every item in a list has an index that represents its position in the list, starting with 0 for the first item.
+
+For example, in the list `['apple', 'banana', 'cherry']`, 'apple' has index 0, 'banana' has index 1, and 'cherry' has index 2. If you use `pop(1)`, it will remove 'banana' because it's at index 1.
+
+```python
+# Example: Remove vs Pop
+my_list.remove(2)  # Removes the first occurrence of 2
+my_list.pop(1)  # Removes the element at index 1, which is "inserted"
+
+print(my_list)
+```
+
+### 2. Working with Tuples
+
+Tuples are immutable, meaning you cannot change their contents after creation. However, you can perform operations like slicing and **unpacking**.
+
+#### Unpacking Tuples
+
+"Unpacking" means assigning the elements of a tuple to individual variables. This allows you to break the tuple into its components and work with each one separately. For example:
+
+```python
+# Example: Tuple Unpacking
+my_tuple = (10, 20, 30)
+a, b, c = my_tuple  # Unpacks the values into a, b, c
+
+print(a, b, c)
+```
+
+- In this example, the values 10, 20, and 30 are "unpacked" from the tuple and assigned to the variables `a`, `b`, and `c`. This technique is useful when you need to work with individual components of a tuple.
+
+If the number of variables on the left doesn’t match the number of elements in the tuple, Python will raise an error.
+
+### 3. Manipulating Dictionaries
+
+Dictionaries allow you to store key-value pairs. You can add, update, and delete key-value pairs easily.
+
+#### Adding and Updating Elements
+
+You can add new key-value pairs or update existing ones by assigning a value to a key.
+
+```python
+# Example: Add and Update Dictionary
+my_dict = {"name": "Alice", "age": 25}
+my_dict["age"] = 26  # Update existing key
+my_dict["city"] = "New York"  # Add new key-value pair
+
+print(my_dict)
+```
+
+#### Removing Elements
+
+To remove an element, use the `del` statement or the `pop()` method.
+
+```python
+# Example: Delete vs Pop
+del my_dict["city"]  # Deletes the key-value pair for 'city'
+my_dict.pop("age")  # Removes 'age' key and returns its value
+
+print(my_dict)
+```
+
+#### Looping Through a Dictionary
+
+You can loop through a dictionary to access its keys and values, allowing you to manipulate or analyze its data.
+
+```python
+# Example: Looping through a dictionary
+my_dict = {"name": "Alice", "age": 26, "city": "New York"}
+
+for key, value in my_dict.items():
+    print(f"The key is {key} and the value is {value}")
+```
+
+- `my_dict.items()` returns each key-value pair as a tuple, and you can unpack it into `key` and `value` as shown in the example. This is useful for iterating over all the entries in a dictionary to access or modify the data.
+
+
+### 4. Set Operations
+
+Sets are unordered collections of unique elements. They support mathematical operations like **union**, **intersection**, and **difference**, which are helpful when comparing sets of data.
+
+#### Adding and Removing Elements
+
+```python
+# Example: Add and Remove in Set
+my_set = {1, 2, 3}
+my_set.add(4)  # Adds 4 to the set
+my_set.remove(2)  # Removes 2 from the set
+
+print(my_set)
+```
+
+#### Set Operations: Union, Intersection, Difference
+
+- **Union** combines all unique elements from two sets.
+- **Intersection** returns only the elements that are present in both sets.
+- **Difference** returns the elements that are in one set but not in the other.
+
+```python
+# Example: Set Operations
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+union_set = set1.union(set2)  # Union of two sets
+intersection_set = set1.intersection(set2)  # Intersection of two sets
+difference_set = set1.difference(set2)  # Elements in set1 but not in set2
+
+print("Union:", union_set)
+print("Intersection:", intersection_set)
+print("Difference:", difference_set)
+```
+
+- **Union**: `{1, 2, 3}` and `{3, 4, 5}` together become `{1, 2, 3, 4, 5}` because all elements are included but duplicates are removed.
+- **Intersection**: Only the number `3` appears in both sets, so the result is `{3}`.
+- **Difference**: In the difference operation, the result is `{1, 2}` because these are the elements in `set1` that are not in `set2`.
+
+### Exercises
+
+1. **Create a list of your favorite fruits** and perform the following operations:
+    - Add a new fruit to the end.
+    - Insert a fruit at the second position.
+    - Remove one fruit by its value.
+
+    ??? Tip "Solution"
+        ```python
+        fruits = ["apple", "banana", "cherry"]
+        fruits.append("orange")  # Add orange to the end
+        fruits.insert(1, "grape")  # Insert grape at the second position
+        fruits.remove("banana")  # Remove banana by value
+
+        print(fruits)
+        ```
+
+2. **Create a dictionary** that contains the names of 3 countries and their capitals. Then:
+    - Update the capital of one country.
+    - Add a new country-capital pair.
+    - Remove one country from the dictionary.
+
+    ??? Tip "Solution"
+        ```python
+        capitals = {"France": "Paris", "Japan": "Tokyo", "USA": "Washington D.C."}
+        capitals["USA"] = "Cincinnati"  # Update capital of USA
+        capitals["Germany"] = "Berlin"  # Add new country-capital pair
+        capitals.pop("USA")  # Remove USA from the dictionary
+
+        print(capitals)
+        ```
+
+3. Create a tuple of 3-4 numbers. **Given a tuple of numbers**, unpack it into individual variables and print them.
+
+    ??? Tip "Solution"
+        ```python
+        numbers = (100, 200, 300)
+        x, y, z = numbers  # Unpack the tuple into x, y, z
+
+        print(x, y, z)
+        ```
+
+4. **Create two sets of integers** and:
+    - Perform union, intersection, and difference operations.
+
+    ??? Tip "Solution"
+        ```python
+        set1 = {10, 20, 30, 40}
+        set2 = {30, 40, 50, 60}
+
+        union_set = set1.union(set2)  # Union
+        intersection_set = set1.intersection(set2)  # Intersection
+        difference_set = set1.difference(set2)  # Difference
+
+        print("Union:", union_set)
+        print("Intersection:", intersection_set)
+        print("Difference:", difference_set)
+        ```
