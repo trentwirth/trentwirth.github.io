@@ -1,4 +1,4 @@
-# Bonus: Effective Printing & F-Strings
+# Side Quest: Effective Printing & F-Strings
 
 In this bonus section, we'll explore how to use print statements to check how code changes variables, understand what the code does, and how f-strings can be used to achieve this task. This is a crucial skill for debugging and learning how your code works.
 

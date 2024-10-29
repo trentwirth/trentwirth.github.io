@@ -1,4 +1,4 @@
-# Bonus Step: Introduction to Pseudocode
+# Pseudocode
 
 ## What is Pseudocode?
 
