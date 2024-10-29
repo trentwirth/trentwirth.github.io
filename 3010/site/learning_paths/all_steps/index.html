@@ -498,6 +498,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -847,6 +849,26 @@
   
   <span class="md-ellipsis">
     Step 16 - Intro to Data Vis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Step 17 - Interactive Data Vis
   </span>
   
 
@@ -3900,6 +3922,224 @@ Each line has some text.
 </details>
 </li>
 </ol>
+<h1 id="step-16">Step 16<a class="headerlink" href="#step-16" title="Permanent link">&para;</a></h1>
+<h2 id="introduction-to-data-visualization">Introduction to Data Visualization<a class="headerlink" href="#introduction-to-data-visualization" title="Permanent link">&para;</a></h2>
+<p>In this step, we'll start exploring <strong>data visualization</strong> using Python, specifically with the <a href="https://matplotlib.org/"><code>matplotlib</code> library</a> and <a href="https://numpy.org/"><code>numpy</code></a> for data creation. Data visualization is an essential tool in data analysis—it allows you to better understand your data by uncovering patterns, trends, and outliers. In scientific research, visualizing data is especially valuable, helping to interpret experiment results, compare groups, and communicate findings effectively.</p>
+<p>We'll cover a few essential plot types: <strong>line plots</strong>, <strong>bar plots</strong>, <strong>histograms</strong>, and <strong>scatter plots</strong>. These visualizations are foundational, and you’ll likely use them to analyze data in future projects.</p>
+<h3 id="getting-started-setting-up-matplotlib-and-numpy">Getting Started: Setting Up Matplotlib and Numpy<a class="headerlink" href="#getting-started-setting-up-matplotlib-and-numpy" title="Permanent link">&para;</a></h3>
+<p>To start, make sure you have <code>matplotlib</code> installed. If you haven’t installed it yet, you can install it by running:
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span>
+</code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">The <code>!</code></p>
+<p>The <code>!</code> at the beginning of the command is used in Jupyter notebooks to things like installation commands - this will install matplotlib if it's not already installed.</p>
+</div>
+<p>Import <code>matplotlib</code> and <code>numpy</code> with the following aliases:
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</code></pre></div></p>
+<h3 id="1-line-plot">1. Line Plot<a class="headerlink" href="#1-line-plot" title="Permanent link">&para;</a></h3>
+<h4 id="use-case">Use Case<a class="headerlink" href="#use-case" title="Permanent link">&para;</a></h4>
+<p>Line plots are great for visualizing changes over time or across experimental trials. Let’s start by creating a basic line plot with synthetic data.</p>
+<h4 id="creating-a-basic-line-plot">Creating a Basic Line Plot<a class="headerlink" href="#creating-a-basic-line-plot" title="Permanent link">&para;</a></h4>
+<p>We’ll create an array of data points and visualize them:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate data</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># x-axis: from 0 to 9</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># y-axis: random integers</span>
+
+<span class="c1"># Create line plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Random Data&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;X-axis&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Y-axis&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Basic Line Plot&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Plots a as a Debugging Tool</p>
+<p>Just like when you use a print statement, when you run <code>plt.show()</code>, you should see the plot appear in your notebook - this is great for instantaneous feedback.</p>
+<p>Think about how you can use this to debug your <em>data</em> - if you're not getting the results you expect, you can visualize your data to visually inspect it, and see if something's wrong. As scientists, we build up intuitions for the "shape" of our data, and visualizing it can help us understand what's going on.</p>
+</div>
+<h4 id="breaking-it-down">Breaking it down:<a class="headerlink" href="#breaking-it-down" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>plt.plot(x, y)</code>: This function creates a line plot with <code>x</code> on the x-axis and <code>y</code> on the y-axis.</li>
+<li><code>plt.xlabel()</code>: Sets the label for the x-axis.</li>
+<li><code>plt.ylabel()</code>: Sets the label for the y-axis.</li>
+<li><code>plt.title()</code>: Sets the title of the plot.</li>
+<li><code>plt.legend()</code>: Displays the legend on the plot.</li>
+<li><code>plt.show()</code>: Displays the plot.</li>
+</ul>
+<p>You can check out the <code>plot</code> documentation for matplotlib <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html">here</a>.</p>
+<h4 id="customizing-the-line-plot">Customizing the Line Plot<a class="headerlink" href="#customizing-the-line-plot" title="Permanent link">&para;</a></h4>
+<p>Try adjusting colors, line styles, and adding markers to make the plot more informative.</p>
+<p><a href="https://matplotlib.org/stable/gallery/color/named_colors.html">Here is a web link to the named colors of matplotlib</a>, it can be a lot of fun and very useful to experiment with different colors.</p>
+<div class="admonition tip">
+<p class="admonition-title">Colors from Hex Codes</p>
+<p>You can also use hex codes to specify colors in matplotlib. For example, <code>color="#FF5733"</code> would give you a specific shade of orange.</p>
+<p>Something that I personally love to do to find unique combinations of hex code colors is to use PokePalettes, a website that generates color palettes based on Pokemon. <a href="https://pokepalettes.com/">Check it out here!</a></p>
+<p>To replace a color in a plot with a hex code, you can use the following syntax:
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#FF5733&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+</div>
+<h3 id="2-bar-plot">2. Bar Plot<a class="headerlink" href="#2-bar-plot" title="Permanent link">&para;</a></h3>
+<h4 id="use-case_1">Use Case<a class="headerlink" href="#use-case_1" title="Permanent link">&para;</a></h4>
+<p>Bar plots are useful for comparing categorical data, like response counts across different participant groups.</p>
+<h4 id="creating-a-basic-bar-plot">Creating a Basic Bar Plot<a class="headerlink" href="#creating-a-basic-bar-plot" title="Permanent link">&para;</a></h4>
+<p>Here, we’ll create a bar plot with categorical labels on the x-axis:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Data</span>
+<span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Group A&quot;</span><span class="p">,</span> <span class="s2">&quot;Group B&quot;</span><span class="p">,</span> <span class="s2">&quot;Group C&quot;</span><span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
+
+<span class="c1"># Create bar plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Groups&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Values&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Bar Plot of Categorical Data&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p>You can see the <code>bar</code> documentation for matplotlib <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html">here</a>.</p>
+<h4 id="customizing-the-bar-plot">Customizing the Bar Plot<a class="headerlink" href="#customizing-the-bar-plot" title="Permanent link">&para;</a></h4>
+<p>Experiment with changing colors, adjusting bar width, and adding values on top of each bar to emphasize comparisons.</p>
+<div class="admonition tip">
+<p class="admonition-title">Fun Example</p>
+<p>You can change the way the bars are displayed, their orientation, and other properties. For example, you can create a horizontal bar plot by using <code>plt.barh()</code> instead of <code>plt.bar()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h3 id="3-histogram">3. Histogram<a class="headerlink" href="#3-histogram" title="Permanent link">&para;</a></h3>
+<h4 id="use-case_2">Use Case<a class="headerlink" href="#use-case_2" title="Permanent link">&para;</a></h4>
+<p>Histograms are ideal for visualizing the distribution of a dataset, such as reaction times or score distributions.</p>
+<h4 id="creating-a-basic-histogram">Creating a Basic Histogram<a class="headerlink" href="#creating-a-basic-histogram" title="Permanent link">&para;</a></h4>
+<p>Using Numpy, we’ll generate a normal distribution and plot it as a histogram.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate data with a normal distribution</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># Create histogram</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;purple&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Value&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Histogram of Normally Distributed Data&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<h4 id="importance-of-bin-size">Importance of Bin Size<a class="headerlink" href="#importance-of-bin-size" title="Permanent link">&para;</a></h4>
+<p>Histograms are great data visualization tools, but it's important to understand how the bin size can be adjusted to change the level of detail in the plot, sometimes altering the interpretation of the data.</p>
+<p>You can adjust the number of bins by changing the <code>bins</code> parameter in the <code>hist()</code> function. Functionally, the number of bins determines the number of intervals (or groups) the data is divided into, the more bins, the more detailed the histogram.</p>
+<h3 id="customizing-the-histogram">Customizing the Histogram<a class="headerlink" href="#customizing-the-histogram" title="Permanent link">&para;</a></h3>
+<p>Experiment with changing colors, adjusting the number of bins, and adding labels to make the histogram more informative.</p>
+<h3 id="4-scatter-plot">4. Scatter Plot<a class="headerlink" href="#4-scatter-plot" title="Permanent link">&para;</a></h3>
+<h4 id="use-case_3">Use Case<a class="headerlink" href="#use-case_3" title="Permanent link">&para;</a></h4>
+<p>Scatter plots are useful for showing relationships between two continuous variables, like age and reaction time.</p>
+<h4 id="creating-a-basic-scatter-plot">Creating a Basic Scatter Plot<a class="headerlink" href="#creating-a-basic-scatter-plot" title="Permanent link">&para;</a></h4>
+<p>Here, we’ll create two correlated datasets and plot them against each other.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate data</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Create scatter plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Data Points&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;X Variable&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Y Variable&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Scatter Plot Example&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<h4 id="customizing-the-scatter-plot">Customizing the Scatter Plot<a class="headerlink" href="#customizing-the-scatter-plot" title="Permanent link">&para;</a></h4>
+<p>Change point size, colors, and add legends to enhance interpretability.</p>
+<div class="admonition tip">
+<p class="admonition-title">Fun Example</p>
+<p>You can change the shape of the markers in a scatter plot. For example, you can use triangles instead of circles by specifying <code>marker="^"</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Data Points&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;^&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>This is particularly useful when you have multiple datasets on the same plot and want to differentiate them.</p>
+</div>
+<h3 id="5-combining-multiple-plots-in-a-single-figure">5. Combining Multiple Plots in a Single Figure<a class="headerlink" href="#5-combining-multiple-plots-in-a-single-figure" title="Permanent link">&para;</a></h3>
+<h4 id="use-case_4">Use Case<a class="headerlink" href="#use-case_4" title="Permanent link">&para;</a></h4>
+<p>Sometimes, it’s useful to compare multiple visualizations side-by-side. Using subplots, you can arrange multiple plots in one figure.</p>
+<h4 id="creating-subplots">Creating Subplots<a class="headerlink" href="#creating-subplots" title="Permanent link">&para;</a></h4>
+<p>Below is an example of creating a line plot and a histogram in a 1x2 grid layout.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create subplots</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># Scatter Plot</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Scatter Plot&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Scatter Plot&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;X-axis&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Y-axis&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># Histogram</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Histogram&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Value&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency&quot;</span><span class="p">)</span>
+
+<span class="c1"># Adjust layout</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p>Notice how <code>axes[0]</code> and <code>axes[1]</code> are used to access the individual subplots. This allows you to customize each subplot independently.</p>
+<h2 id="a-quick-note-on-the-importance-of-clear-labels">A quick note on the importance of clear labels<a class="headerlink" href="#a-quick-note-on-the-importance-of-clear-labels" title="Permanent link">&para;</a></h2>
+<p>When creating visualizations, it's crucial to provide clear labels for the axes, titles, and legends. These labels help viewers understand the data being presented and the context of the visualization. Always ensure that your visualizations are labeled appropriately to convey the intended message effectively.</p>
+<p>Your goal should be for the plot to make sense independent of the context; such that if you were to show a data visualization depicting the relationship between age and reaction time, someone who had never seen the data before could understand what the plot is showing by reading the labels, axes, and title.</p>
+<h2 id="coding-exercise-custom-visualizations">Coding Exercise: Custom Visualizations<a class="headerlink" href="#coding-exercise-custom-visualizations" title="Permanent link">&para;</a></h2>
+<p>In this exercise, you’ll work with a dataset generated using <code>numpy</code>. Your goal is to explore different ways to visualize this data and think about what insights each visualization type can reveal. You’ll create at least <strong>two different visualizations</strong> of the dataset, using different plot types.</p>
+<h3 id="a-generate-the-data">A. Generate the Data<a class="headerlink" href="#a-generate-the-data" title="Permanent link">&para;</a></h3>
+<p>Run the code below to generate a synthetic (fake) dataset. This dataset simulates reaction times and accuracy scores from a fictional psychology experiment with 200 participants.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Setting random seed for reproducibility</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Generate participant IDs (1 through 200)</span>
+<span class="n">participant_ids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">201</span><span class="p">)</span>
+
+<span class="c1"># Generate random reaction times (in milliseconds) with a mean of 500 ms and std deviation of 50 ms</span>
+<span class="n">reaction_times</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+
+<span class="c1"># Generate random accuracy scores (out of 100) with a mean of 75 and std deviation of 10</span>
+<span class="n">accuracy_scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">75</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+
+<span class="c1"># Print first few values for each array</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Participant IDs:&quot;</span><span class="p">,</span> <span class="n">participant_ids</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reaction Times:&quot;</span><span class="p">,</span> <span class="n">reaction_times</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy Scores:&quot;</span><span class="p">,</span> <span class="n">accuracy_scores</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+</code></pre></div>
+<h3 id="b-review-your-data-visualization-options">B. Review your data visualization options<a class="headerlink" href="#b-review-your-data-visualization-options" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Line Plot</strong>: Consider visualizing reaction times across participants to see how response times vary.</li>
+<li><strong>Histogram</strong>: A histogram of reaction times or accuracy scores can help show the distribution of these values.</li>
+<li><strong>Scatter Plot</strong>: A scatter plot of accuracy vs. reaction time can show any correlation between speed and accuracy.</li>
+<li><strong>Bar Plot</strong>: You could create a bar plot of average reaction times or accuracy for groups of participants (e.g., participants 1–50, 51–100).</li>
+</ol>
+<h3 id="c-create-your-visualizations">C. Create Your Visualizations<a class="headerlink" href="#c-create-your-visualizations" title="Permanent link">&para;</a></h3>
+<p>Using <code>matplotlib</code>, create at least <strong>two different visualizations</strong> of the data. Use the examples above or come up with your own! Think about:
+- What insights does each plot type reveal?
+- How can you customize your plots to make them more informative?</p>
+<details class="tip">
+<summary>Example Starter Code</summary>
+<p>Below is an example of how you might start with a histogram. Remember to create your own additional plot(s) and customize as needed!</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Example Histogram for Reaction Times</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">reaction_times</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;skyblue&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Reaction Time (ms)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribution of Reaction Times&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Continue with your own visualizations!</span>
+</code></pre></div>
+</details>
+<h3 id="d-reflect">D. Reflect<a class="headerlink" href="#d-reflect" title="Permanent link">&para;</a></h3>
+<p>After creating your visualizations, reflect on the following:
+- What insights did each visualization reveal about the data?
+- Which visualization do you think was most effective, and​⬤</p>
+<h2 id="review_9">Review<a class="headerlink" href="#review_9" title="Permanent link">&para;</a></h2>
+<p>In this step, you learned:
+- How to create and customize <strong>line plots</strong>, <strong>bar plots</strong>, <strong>histograms</strong>, and <strong>scatter plots</strong>.
+- Basic customization techniques to make plots more readable and informative.
+- How to use <strong>subplots</strong> to compare multiple visualizations side-by-side.</p>
+<p>Data visualization is a powerful skill that will help you analyze and interpret data effectively in your research and academic work.</p>
 
 
 
