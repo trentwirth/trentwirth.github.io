@@ -254,6 +254,7 @@ print("Accuracy Scores:", accuracy_scores[:5])
 ### C. Create Your Visualizations
 
 Using `matplotlib`, create at least **two different visualizations** of the data. Use the examples above or come up with your own! Think about:
+
 - What insights does each plot type reveal?
 - How can you customize your plots to make them more informative?
 
@@ -283,6 +284,7 @@ After creating your visualizations, reflect on the following:
 ## Review
 
 In this step, you learned:
+
 - How to create and customize **line plots**, **bar plots**, **histograms**, and **scatter plots**.
 - Basic customization techniques to make plots more readable and informative.
 - How to use **subplots** to compare multiple visualizations side-by-side.
