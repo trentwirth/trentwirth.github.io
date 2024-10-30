@@ -276,8 +276,9 @@ Using `matplotlib`, create at least **two different visualizations** of the data
 ### D. Reflect
 
 After creating your visualizations, reflect on the following:
+
 - What insights did each visualization reveal about the data?
-- Which visualization do you think was most effective, and​⬤
+- Which visualization do you think was most effective, and​ why?
 
 ## Review
 
