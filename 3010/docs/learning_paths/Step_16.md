@@ -21,6 +21,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 ```
 
+??? Warning "Did your import not work?"
+    If you're having import issues, try using the following code to install the necessary packages:
+    ```python
+    %pip install matplotlib
+    ```
+    The `%` is used in Jupyter notebooks to run commands in the terminal, and `!` is used to run commands in the shell - depending on your environment, you may need to use one or the other.
+
+    If you're still having issues, try restarting VSCode and running the import commands again.
+
 ### 1. Line Plot
 
 #### Use Case

@@ -4140,6 +4140,111 @@ Each line has some text.
 - Basic customization techniques to make plots more readable and informative.
 - How to use <strong>subplots</strong> to compare multiple visualizations side-by-side.</p>
 <p>Data visualization is a powerful skill that will help you analyze and interpret data effectively in your research and academic work.</p>
+<h1 id="step-17">Step 17<a class="headerlink" href="#step-17" title="Permanent link">&para;</a></h1>
+<h2 id="interactive-data-visualization-with-ipywidgets">Interactive Data Visualization with ipywidgets<a class="headerlink" href="#interactive-data-visualization-with-ipywidgets" title="Permanent link">&para;</a></h2>
+<p>In this step, we’ll enhance our data visualizations by adding <strong>interactivity</strong> using the <code>ipywidgets</code> library. <code>ipywidgets</code> allows us to add interactive controls, such as sliders and dropdowns, that let you modify visualization parameters in real-time.</p>
+<h3 id="why-use-ipywidgets">Why Use ipywidgets?<a class="headerlink" href="#why-use-ipywidgets" title="Permanent link">&para;</a></h3>
+<p>Interactive visualizations are especially useful for exploring data dynamically. Rather than generating a new plot for every change, you can use widgets to modify aspects of the plot—like adjusting data ranges, selecting data subsets, or changing visual elements—right from the notebook.</p>
+<div class="admonition tip">
+<p class="admonition-title">Note - only for Notebooks!</p>
+<p><code>ipywidgets</code> is designed for use in Jupyter notebooks like Google Colab and VSCode. If you want to develop interactive visualizations for web applications, you might consider using libraries <code>Plotly</code>.</p>
+</div>
+<h3 id="getting-started-with-ipywidgets">Getting Started with ipywidgets<a class="headerlink" href="#getting-started-with-ipywidgets" title="Permanent link">&para;</a></h3>
+<p>To start, make sure <code>ipywidgets</code> is installed. You can install it by running:
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">ipywidgets</span>
+</code></pre></div></p>
+<p>Then, import the widgets and display functionality:
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</code></pre></div></p>
+<h3 id="1-basic-interactive-plot-with-a-slider">1. Basic Interactive Plot with a Slider<a class="headerlink" href="#1-basic-interactive-plot-with-a-slider" title="Permanent link">&para;</a></h3>
+<p>To introduce <code>ipywidgets</code>, let’s create an interactive line plot using a slider. This slider will control the number of data points displayed in the plot.</p>
+<h4 id="creating-interactive-line-plot">Creating Interactive Line Plot<a class="headerlink" href="#creating-interactive-line-plot" title="Permanent link">&para;</a></h4>
+<p>We’ll generate data with <code>numpy</code> and then use the <code>interact</code> function to link a slider to the number of data points.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate data</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Define plot function</span>
+<span class="k">def</span> <span class="nf">plot_sine</span><span class="p">(</span><span class="n">num_points</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="n">num_points</span><span class="p">],</span> <span class="n">y</span><span class="p">[:</span><span class="n">num_points</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;X-axis&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Sine of X&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sine Wave with </span><span class="si">{</span><span class="n">num_points</span><span class="si">}</span><span class="s2"> Points&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Create slider with interact</span>
+<span class="n">interact</span><span class="p">(</span><span class="n">plot_sine</span><span class="p">,</span> 
+         <span class="n">num_points</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> 
+                                      <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> 
+                                      <span class="n">step</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> 
+                                      <span class="n">value</span><span class="o">=</span><span class="mi">50</span><span class="p">))</span>
+</code></pre></div>
+<h4 id="explanation_1">Explanation<a class="headerlink" href="#explanation_1" title="Permanent link">&para;</a></h4>
+<p>The <code>plot_sine</code> function generates the plot, and the <code>interact</code> function links the <code>num_points</code> argument to the slider widget. Now, try moving the slider to see how it affects the plot!</p>
+<h3 id="2-creating-interactive-scatter-plots-with-dropdowns">2. Creating Interactive Scatter Plots with Dropdowns<a class="headerlink" href="#2-creating-interactive-scatter-plots-with-dropdowns" title="Permanent link">&para;</a></h3>
+<p>Next, we’ll add more complexity by allowing users to choose between different datasets. For example, this could be useful for comparing the relationship between different experimental variables.</p>
+<h4 id="generate-sample-data">Generate Sample Data<a class="headerlink" href="#generate-sample-data" title="Permanent link">&para;</a></h4>
+<p>We’ll create two sets of data for our scatter plot: a <strong>linear</strong> relationship and a <strong>quadratic</strong> relationship.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Sample data for two relationships</span>
+<span class="n">x_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">linear_y</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x_data</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># Linear relationship</span>
+<span class="n">quadratic_y</span> <span class="o">=</span> <span class="n">x_data</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># Quadratic relationship</span>
+
+<span class="c1"># Define plot function</span>
+<span class="k">def</span> <span class="nf">plot_scatter</span><span class="p">(</span><span class="n">relation_type</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span> <span class="n">linear_y</span> <span class="k">if</span> <span class="n">relation_type</span> <span class="o">==</span> <span class="s2">&quot;Linear&quot;</span> <span class="k">else</span> <span class="n">quadratic_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;X Variable&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Y Variable&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">relation_type</span><span class="si">}</span><span class="s2"> Relationship&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Create dropdown with interact</span>
+<span class="n">interact</span><span class="p">(</span><span class="n">plot_scatter</span><span class="p">,</span> <span class="n">relation_type</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Linear&quot;</span><span class="p">,</span> <span class="s2">&quot;Quadratic&quot;</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Linear&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Relationship Type&quot;</span><span class="p">))</span>
+</code></pre></div>
+<h4 id="explanation_2">Explanation<a class="headerlink" href="#explanation_2" title="Permanent link">&para;</a></h4>
+<p>The <code>plot_scatter</code> function adjusts the <code>y</code> values depending on the chosen relationship type. The dropdown menu lets users choose between the linear and quadratic datasets, updating the plot accordingly.</p>
+<h3 id="3-combining-multiple-widgets-slider-and-dropdown">3. Combining Multiple Widgets: Slider and Dropdown<a class="headerlink" href="#3-combining-multiple-widgets-slider-and-dropdown" title="Permanent link">&para;</a></h3>
+<p>Now, let’s create an interactive histogram where users can:
+- Adjust the number of bins with a slider.
+- Select the dataset to visualize with a dropdown.</p>
+<h4 id="creating-data-and-function">Creating Data and Function<a class="headerlink" href="#creating-data-and-function" title="Permanent link">&para;</a></h4>
+<p>We’ll generate two datasets: one with a <strong>normal distribution</strong> and one with a <strong>uniform distribution</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Sample datasets</span>
+<span class="n">normal_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">uniform_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># Define histogram plot function</span>
+<span class="k">def</span> <span class="nf">plot_histogram</span><span class="p">(</span><span class="n">dist_type</span><span class="p">,</span> <span class="n">bins</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">normal_data</span> <span class="k">if</span> <span class="n">dist_type</span> <span class="o">==</span> <span class="s2">&quot;Normal&quot;</span> <span class="k">else</span> <span class="n">uniform_data</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Value&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dist_type</span><span class="si">}</span><span class="s2"> Distribution with </span><span class="si">{</span><span class="n">bins</span><span class="si">}</span><span class="s2"> Bins&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Create interactive widgets</span>
+<span class="n">interact</span><span class="p">(</span><span class="n">plot_histogram</span><span class="p">,</span> 
+         <span class="n">dist_type</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Normal&quot;</span><span class="p">,</span> <span class="s2">&quot;Uniform&quot;</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Normal&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Distribution&quot;</span><span class="p">),</span>
+         <span class="n">bins</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">20</span><span class="p">))</span>
+</code></pre></div>
+<h4 id="explanation_3">Explanation<a class="headerlink" href="#explanation_3" title="Permanent link">&para;</a></h4>
+<p>This function combines a dropdown (for dataset selection) and a slider (for number of bins) to create a more interactive histogram, allowing users to explore both distribution shapes and bin adjustments.</p>
+<h3 id="reflect-and-practice">Reflect and Practice<a class="headerlink" href="#reflect-and-practice" title="Permanent link">&para;</a></h3>
+<p>After experimenting with the examples above, create your own interactive visualization:</p>
+<ol>
+<li><strong>Choose a dataset</strong>: Use <code>numpy</code> to generate a dataset (or modify one of the provided datasets, you can even use the data from <code>Step 16</code>).</li>
+<li><strong>Select a widget</strong>: Decide which widget(s) would be useful to control the data or visualization.</li>
+<li><strong>Customize</strong>: Modify the appearance or functionality to make the visualization more insightful.</li>
+</ol>
+<h3 id="review_10">Review<a class="headerlink" href="#review_10" title="Permanent link">&para;</a></h3>
+<p>In this step, you learned:
+- How to create interactive plots using <code>ipywidgets</code>.
+- Basic widgets, like sliders and dropdowns, to control plot parameters.
+- How to combine multiple widgets to create rich, interactive visualizations.</p>
+<p>Adding interactivity to data visualization lets you explore data more deeply, helping you to uncover trends and patterns more easily. You can apply these techniques to create interactive visualizations for research and data exploration, making it easier to gain insights from your data.</p>
 
 
 
