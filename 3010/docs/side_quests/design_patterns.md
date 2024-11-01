@@ -9,11 +9,13 @@ Design patterns can help make your code more **reusable**, **scalable**, and **u
 ### What Are Design Patterns?
 
 A **design pattern** is a general, reusable solution to a commonly occurring problem within a given context. Patterns are not complete code but rather templates that guide how we structure and organize code. They fall into three main categories:
+
 1. **Creational Patterns**: These deal with object creation mechanisms.
 2. **Structural Patterns**: These focus on organizing objects and classes.
 3. **Behavioral Patterns**: These manage communication between objects.
 
 In this step, we'll introduce a few foundational patterns:
+
 - **Singleton**: Ensures only one instance of a class exists.
 - **Factory**: Creates instances of different classes based on given conditions.
 - **Observer**: Helps objects communicate without being directly linked, useful for experiment settings.
@@ -159,6 +161,7 @@ In this example, the `Subject` class maintains a list of observers and notifies 
 ## Review
 
 In this step, we introduced three foundational design patterns:
+
 - **Singleton**: Ensures only one instance of a class.
 - **Factory**: Creates objects based on specific requirements.
 - **Observer**: Manages dependencies and notifies multiple objects of changes.
