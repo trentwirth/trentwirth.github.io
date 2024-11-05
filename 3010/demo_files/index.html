@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsPsych Experiment</title>
+    <script src="https://cdn.jsdelivr.net/npm/jspsych@6/jspsych.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jspsych@6/css/jspsych.css">
+</head>
+<body>
+    <script>
+        var welcome = {
+            type: 'html-keyboard-response',
+            stimulus: '<p>Welcome to this online experiment!</p><p>Press any key to continue.</p>'
+        };
+        jsPsych.init({
+            timeline: [welcome]
+        });
+    </script>
+</body>
+</html>
