@@ -500,6 +500,10 @@
       
         
       
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -869,6 +873,46 @@
   
   <span class="md-ellipsis">
     Step 17 - Interactive Data Vis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Step 18 - Online Experimentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_19/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Step 19 - The Pandas Library
   </span>
   
 
@@ -4245,6 +4289,353 @@ Each line has some text.
 - Basic widgets, like sliders and dropdowns, to control plot parameters.
 - How to combine multiple widgets to create rich, interactive visualizations.</p>
 <p>Adding interactivity to data visualization lets you explore data more deeply, helping you to uncover trends and patterns more easily. You can apply these techniques to create interactive visualizations for research and data exploration, making it easier to gain insights from your data.</p>
+<h1 id="step-18-conducting-experiments-online-and-basic-web-development">Step 18: Conducting Experiments Online and Basic Web Development<a class="headerlink" href="#step-18-conducting-experiments-online-and-basic-web-development" title="Permanent link">&para;</a></h1>
+<p>Up until this point, our course has focused on learning Python. While Python absolutely could be used to build an online research study, as we will see in this Step of the learning path, there are tools better suited to conducting online research.</p>
+<p>In this step, we will explore how behavioral science experiments can be conducted on the web. We’ll look at a few web technologies that make this possible, such as <code>jsPsych</code>, HTML, CSS, and JavaScript, and provide you with code examples you can try out. We will also introduce tools that allow for online research without requiring any coding (Google Forms).</p>
+<blockquote>
+<p>Note: This step is meant to conceptually introduce you to a different programming language, specifically JavaScript and web development lanugages (HTML and CSS). We will take a slightly deeper dive into JavaScript in Step 20 when we look at <code>jsPsych</code>!</p>
+</blockquote>
+<hr />
+<h2 id="1-experiments-on-the-web">1. Experiments on the Web<a class="headerlink" href="#1-experiments-on-the-web" title="Permanent link">&para;</a></h2>
+<p>Conducting experiments online allows researchers to reach a broader audience and collect data efficiently. While programming tools like <code>PsychoPy</code> (Python) can be used to design experiments, another accessible tool, <strong><code>jsPsych</code></strong>, simplifies the process of running experiments directly in a web browser.</p>
+<h3 id="what-is-jspsych">What is <code>jsPsych</code>?<a class="headerlink" href="#what-is-jspsych" title="Permanent link">&para;</a></h3>
+<p><code>jsPsych</code> is a JavaScript library specifically designed for creating experiments that participants can complete online. It’s flexible, widely used in psychology research, and makes it easier to control and collect data from web-based studies.</p>
+<h3 id="what-is-javascript">What is JavaScript?<a class="headerlink" href="#what-is-javascript" title="Permanent link">&para;</a></h3>
+<p><strong>JavaScript</strong> is a programming language used to create interactive elements on web pages. It’s essential for building dynamic websites and web applications. JavaScript can handle user interactions, animations, and data processing in real-time. </p>
+<p>Have you ever noticed a button change color on a website, or text appear when you hover over an image? These are examples of JavaScript in action!</p>
+<p>JavaScript is incredibly versitile for all things on the web, and can be used to create interactive elements, animations, and more. One of my favorite uses of JavaScript is called "ThreeJS" which is a library that allows you to create 3D graphics in the browser! You can check out some examples <a href="https://threejs.org/">here</a>.</p>
+<hr />
+<h2 id="2-basics-of-web-development-html-css-and-javascript">2. Basics of Web Development: HTML, CSS, and JavaScript<a class="headerlink" href="#2-basics-of-web-development-html-css-and-javascript" title="Permanent link">&para;</a></h2>
+<p>To understand how <code>jsPsych</code> functions, we’ll cover some core components of web development. Below, we’ll explore HTML, CSS, and JavaScript and provide examples you can try in <strong>VSCode</strong>.</p>
+<details class="tip">
+<summary>Web Development?</summary>
+<p>Web development can be defined as the process of building websites and web applications. It involves writing code in languages like HTML, CSS, and JavaScript to create interactive and visually appealing web pages. These technologies work together to structure content, style elements, and add interactivity to web pages.</p>
+</details>
+<h3 id="21-install-live-server-in-vscode">2.1. Install Live Server in VSCode<a class="headerlink" href="#21-install-live-server-in-vscode" title="Permanent link">&para;</a></h3>
+<p>In the Extensions sidebar, search for <strong>Live Server</strong> and install it. We'll use this extension to run our HTML files in a live server.</p>
+<hr />
+<h3 id="22-html-hypertext-markup-language">2.2. HTML (HyperText Markup Language)<a class="headerlink" href="#22-html-hypertext-markup-language" title="Permanent link">&para;</a></h3>
+<p>HTML is the standard language for creating web pages. It allows you to structure content using "tags." A "tag" is a keyword surrounded by angle brackets, like <code>&lt;tag&gt;</code>. Tags are used to define elements such as headings, paragraphs, images, and links. A sample of a common tag is <code>&lt;h1&gt;</code>, which defines a top-level heading. To close a tag, use a forward slash, like <code>&lt;/h1&gt;</code>.</p>
+<p>Here’s a basic HTML structure:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Web Experiment<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome to My Experiment!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is an experiment example using HTML, CSS, and JavaScript.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<blockquote>
+<p>Notice the tags like <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;h1&gt;</code>, and <code>&lt;p&gt;</code>. These tags structure the content and define the appearance of the webpage. <code>&lt;h1&gt;</code> is a top-level heading, and <code>&lt;p&gt;</code> is a paragraph.</p>
+</blockquote>
+<p>This code creates a basic webpage with a title and heading. Copy and paste this code into a new file with an <code>.html</code> extension, calling the file <code>index.html</code>.</p>
+<p>You can open this file in VSCode and use the <strong>Live Server</strong> extension to view it in your browser. To do so, right-click on the HTML file and select <strong>Open with Live Server</strong>.</p>
+<p>This will open up a new tab in your browser displaying the HTML content!</p>
+<hr />
+<h3 id="23-css-cascading-style-sheets">2.3. CSS (Cascading Style Sheets)<a class="headerlink" href="#23-css-cascading-style-sheets" title="Permanent link">&para;</a></h3>
+<p>CSS styles your HTML content, making it look visually appealing. You can add color, align elements, and much more.</p>
+<p>Add the following CSS to your HTML file within a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f0f8ff</span><span class="p">;</span>
+<span class="w">        </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4682b4</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#2f4f4f</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</code></pre></div>
+<details class="tip">
+<summary>The full HTML file should now look like this:</summary>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Web Experiment<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f0f8ff</span><span class="p">;</span>
+<span class="w">            </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4682b4</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#2f4f4f</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome to My Experiment!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is an experiment example using HTML, CSS, and JavaScript.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</details>
+<p>This CSS changes the background color, centers the text, and applies colors to the heading and paragraph.</p>
+<hr />
+<h3 id="24-javascript">2.4. JavaScript<a class="headerlink" href="#24-javascript" title="Permanent link">&para;</a></h3>
+<p>JavaScript adds interactivity to your webpage, such as reacting to user inputs or displaying alerts.</p>
+<p>Include this script inside your HTML file’s <code>&lt;body&gt;</code> or <code>&lt;head&gt;</code> tags:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">showAlert</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Welcome to the experiment!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;showAlert()&quot;</span><span class="p">&gt;</span>Click Me<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>This code adds a button that, when clicked, shows an alert message.</p>
+<details class="tip">
+<summary>Your full HTML file should now look like this:</summary>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Web Experiment<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f0f8ff</span><span class="p">;</span>
+<span class="w">            </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4682b4</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#2f4f4f</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">showAlert</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Welcome to the experiment!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;showAlert()&quot;</span><span class="p">&gt;</span>Click Me<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome to My Experiment!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is an experiment example using HTML, CSS, and JavaScript.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</details>
+<hr />
+<h2 id="3-play-with-web-development-tools">3. Play with Web Development Tools<a class="headerlink" href="#3-play-with-web-development-tools" title="Permanent link">&para;</a></h2>
+<p>Now that you've seen the basics of HTML, CSS, and JavaScript, let’s practice combining them to create a simple interactive page.</p>
+<p><em>Try out the coding exercise below to experiment with web development tools.</em></p>
+<h4 id="31-create-an-html-file-in-vscode-and-add-the-following-code">3.1 <strong>Create an HTML file</strong> in VSCode and add the following code:<a class="headerlink" href="#31-create-an-html-file-in-vscode-and-add-the-following-code" title="Permanent link">&para;</a></h4>
+<ul>
+<li>This code has HTML, CSS, and JavaScript sections, all within the same file.</li>
+<li>Run the code using <strong>Live Server</strong> to see the results immediately in your browser.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Interactive Web Page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f3f3f3</span><span class="p">;</span>
+<span class="w">            </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4CAF50</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4CAF50</span><span class="p">;</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">            </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">            </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">button</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#45a049</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Play with Web Development!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Click the button to see a message.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;displayMessage()&quot;</span><span class="p">&gt;</span>Click Me!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;message&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">displayMessage</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hello, you&#39;re interacting with JavaScript!&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="32-experiment-by-changing-the-following-elements">3.2 <strong>Experiment</strong> by changing the following elements:<a class="headerlink" href="#32-experiment-by-changing-the-following-elements" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>CSS Colors</strong>: Adjust colors in the CSS styles for <code>h1</code>, <code>body</code>, or <code>button</code>.</li>
+<li><strong>Message Text</strong>: Modify the message text in the JavaScript function <code>displayMessage()</code>.</li>
+</ul>
+<p>This gives you a chance to experiment with the main elements of web development in one file. By changing CSS properties, HTML structure, and JavaScript functions, you’ll start to see how these tools work together.</p>
+<div class="admonition tip">
+<p class="admonition-title"><code>jsPsych</code> in Step 20</p>
+<p>When we get to Step 20, we'll take a look of <code>jsPsych</code> - but this is a good enough intro for now!</p>
+</div>
+<hr />
+<h2 id="4-using-non-programming-tools-for-online-research">4. Using Non-Programming Tools for Online Research<a class="headerlink" href="#4-using-non-programming-tools-for-online-research" title="Permanent link">&para;</a></h2>
+<p>For researchers who prefer not to code, tools like <strong>Google Forms</strong> are useful for creating and distributing online surveys. These tools are widely used in psychological and behavioral research to gather self-report data or feedback from participants.</p>
+<h3 id="designing-effective-user-surveys">Designing Effective User Surveys<a class="headerlink" href="#designing-effective-user-surveys" title="Permanent link">&para;</a></h3>
+<p>A <strong>user survey</strong> is a structured way of gathering data about participants' thoughts, behaviors, or experiences. Well-designed surveys can reveal valuable insights into how people feel or think about a topic.</p>
+<p>To learn more about designing surveys, visit <a href="https://dscout.com/people-nerds/how-to-design-a-ux-research-survey">How to Design a UX Research Survey</a>, which covers practical tips and best practices for creating effective surveys.</p>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>HTML, CSS, and JavaScript</strong> allow us to create and style web-based experiments.</li>
+<li><strong>Playing with web development tools</strong> helps you learn through hands-on practice, experimenting with colors, structure, and interactivity.</li>
+<li><strong>Google Forms</strong> and other no-code tools provide options for collecting data without needing to write code.</li>
+<li><strong>Survey design</strong> is crucial in psychology and UX research to capture reliable and meaningful data from participants.</li>
+</ul>
+<p>This step gives you the tools to start exploring web-based research and consider how online experiments can expand your reach and capabilities in behavioral science research.</p>
+<h1 id="step-19">Step 19<a class="headerlink" href="#step-19" title="Permanent link">&para;</a></h1>
+<p>In this step, we’ll explore <strong>Pandas</strong>, a powerful Python library for data manipulation and analysis. Pandas provides tools to explore, manipulate, and analyze datasets efficiently, which is essential for behavioral scientists working with real-world data.</p>
+<p>We’ll use a CSV file named <code>happiness correlation data-2.csv</code>, which you can download below. Each row represents data from one participant, with columns capturing various aspects like age, work hours, GPA, life satisfaction, and more.</p>
+<h2 id="0-download-the-dataset">0. Download the Dataset<a class="headerlink" href="#0-download-the-dataset" title="Permanent link">&para;</a></h2>
+<p><a href="../files/happiness%20correlation%20data-2.csv">Click this link to donload the data</a></p>
+<div class="admonition tip">
+<p class="admonition-title">Familiar?</p>
+<p>This data was pulled from Stats 2002, a course at UC. If this data is familiar, it's probably because you've seen this before!</p>
+</div>
+<p><strong>IMPORTANT</strong>: Make sure to place the downloaded CSV file in the same directory as your notebook or script!</p>
+<h2 id="1-getting-started-with-pandas">1. Getting Started with Pandas<a class="headerlink" href="#1-getting-started-with-pandas" title="Permanent link">&para;</a></h2>
+<h3 id="installing-and-importing-pandas">Installing and Importing Pandas<a class="headerlink" href="#installing-and-importing-pandas" title="Permanent link">&para;</a></h3>
+<p>To use Pandas, ensure it’s installed in your Python environment. You can install it by running:</p>
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title"><code>%pip install</code></p>
+<p>If the code above doesn't work, try using <code>%pip install</code> instead of <code>!pip install</code>.</p>
+</div>
+<p>Then, import Pandas at the beginning of your notebook or script:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+<h3 id="loading-the-data">Loading the Data<a class="headerlink" href="#loading-the-data" title="Permanent link">&para;</a></h3>
+<p>Load the CSV file into a DataFrame, which is Pandas’ primary data structure for handling data tables.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Load the data from the your directory</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;happiness correlation data-2.csv&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="viewing-the-data">Viewing the Data<a class="headerlink" href="#viewing-the-data" title="Permanent link">&para;</a></h3>
+<p>Use <code>head()</code> to see the first few rows and get a feel for the structure.</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h2 id="2-exploring-the-dataset">2. Exploring the Dataset<a class="headerlink" href="#2-exploring-the-dataset" title="Permanent link">&para;</a></h2>
+<p>This dataset has columns capturing the following participant information:</p>
+<ul>
+<li><strong>age</strong>: Participant's age</li>
+<li><strong>hours_work_week</strong>: Hours worked per week</li>
+<li><strong>gpa</strong>: Participant's GPA</li>
+<li><strong>life_satisfaction</strong>: Self-reported life satisfaction score</li>
+<li><strong>desire_to_achieve</strong>: Self-reported desire to achieve</li>
+<li><strong>number_drinks</strong>: Number of alcoholic drinks consumed per week</li>
+<li><strong>stress</strong>: Self-reported stress level</li>
+</ul>
+<h3 id="basic-data-information">Basic Data Information<a class="headerlink" href="#basic-data-information" title="Permanent link">&para;</a></h3>
+<p>To get a quick summary of the dataset, including column names, data types, and any missing values:</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</code></pre></div>
+<p>To get basic descriptive statistics (mean, median, etc.) for each column:</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h2 id="3-analyzing-specific-columns">3. Analyzing Specific Columns<a class="headerlink" href="#3-analyzing-specific-columns" title="Permanent link">&para;</a></h2>
+<h3 id="calculating-the-mean-age-of-participants">Calculating the Mean Age of Participants<a class="headerlink" href="#calculating-the-mean-age-of-participants" title="Permanent link">&para;</a></h3>
+<p>Let’s calculate the average age of participants.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mean_age</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average Age:&quot;</span><span class="p">,</span> <span class="n">mean_age</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="distribution-of-life-satisfaction-scores">Distribution of Life Satisfaction Scores<a class="headerlink" href="#distribution-of-life-satisfaction-scores" title="Permanent link">&para;</a></h3>
+<p>To understand the distribution of <code>life_satisfaction</code> scores, we can use Pandas to plot a histogram (requires <code>matplotlib</code> library).</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;life_satisfaction&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Life Satisfaction Distribution&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Life Satisfaction&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="exploring-correlations">Exploring Correlations<a class="headerlink" href="#exploring-correlations" title="Permanent link">&para;</a></h3>
+<p>We may want to see how different variables relate to each other. For example, are work hours correlated with stress?</p>
+<div class="highlight"><pre><span></span><code><span class="n">correlation</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;hours_work_week&#39;</span><span class="p">,</span> <span class="s1">&#39;stress&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Correlation between hours worked and stress:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">correlation</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="grouping-data">Grouping Data<a class="headerlink" href="#grouping-data" title="Permanent link">&para;</a></h3>
+<p>We can group data to find insights, such as average Stress level by different levels of <code>desire_to_achieve</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">avg_stress_by_achievement</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;desire_to_achieve&#39;</span><span class="p">)[</span><span class="s1">&#39;stress&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stress by Desire to Achieve:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">avg_stress_by_achievement</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="4-data-cleaning-and-manipulation">4. Data Cleaning and Manipulation<a class="headerlink" href="#4-data-cleaning-and-manipulation" title="Permanent link">&para;</a></h2>
+<h3 id="calculating-letter-grades">Calculating Letter Grades<a class="headerlink" href="#calculating-letter-grades" title="Permanent link">&para;</a></h3>
+<p>Add a new column to the dataset that calculates the letter grade for each student's GPA:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">calculate_letter_grade</span><span class="p">(</span><span class="n">gpa</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">gpa</span> <span class="o">&gt;=</span> <span class="mf">3.7</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;A&#39;</span>
+    <span class="k">elif</span> <span class="n">gpa</span> <span class="o">&gt;=</span> <span class="mf">3.0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;B&#39;</span>
+    <span class="k">elif</span> <span class="n">gpa</span> <span class="o">&gt;=</span> <span class="mf">2.0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;C&#39;</span>
+    <span class="k">elif</span> <span class="n">gpa</span> <span class="o">&gt;=</span> <span class="mf">1.0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;D&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;F&#39;</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;letter_grade&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;gpa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">calculate_letter_grade</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="create-a-bar-graph-of-letter-grades">Create a Bar Graph of Letter Grades<a class="headerlink" href="#create-a-bar-graph-of-letter-grades" title="Permanent link">&para;</a></h3>
+<p>To visualize the distribution of letter grades, we can create a bar graph:</p>
+<div class="highlight"><pre><span></span><code><span class="n">grade_counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;letter_grade&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">grade_counts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Letter Grade Distribution&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Letter Grade&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h2 id="5-saving-processed-data">5. Saving Processed Data<a class="headerlink" href="#5-saving-processed-data" title="Permanent link">&para;</a></h2>
+<p>After adding a new column, it’s often useful to save the processed dataset. Here’s how to save it to a new CSV file:</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;letter_grades_added_happiness_data.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">&para;</a></h2>
+<p>In this step, you learned:</p>
+<ul>
+<li><strong>Loading</strong> a CSV file into a Pandas DataFrame</li>
+<li><strong>Exploring</strong> the data using basic summary and statistical methods</li>
+<li><strong>Analyzing</strong> specific columns and relationships between them</li>
+<li><strong>Cleaning</strong> data by handling missing values</li>
+<li><strong>Saving</strong> processed data to a new CSV file</li>
+</ul>
+<p>Pandas is a powerful tool for data analysis in Python, allowing you to work with datasets efficiently and discover meaningful insights.</p>
 
 
 

@@ -1,10 +1,10 @@
-# Step 18: Conducting Experiments Online and Basic Web Development
+# Step 18
 
 Up until this point, our course has focused on learning Python. While Python absolutely could be used to build an online research study, as we will see in this Step of the learning path, there are tools better suited to conducting online research.
 
 In this step, we will explore how behavioral science experiments can be conducted on the web. We’ll look at a few web technologies that make this possible, such as `jsPsych`, HTML, CSS, and JavaScript, and provide you with code examples you can try out. We will also introduce tools that allow for online research without requiring any coding (Google Forms).
 
-> Note: This step is meant to conceptually introduce you to a different programming language, specifically JavaScript and web development lanugages (HTML and CSS). The plan is to not dive further into these languages beyond this programming step, but I'm excited to show you alternatives to Python for conducting online research!
+> Note: This step is meant to conceptually introduce you to a different programming language, specifically JavaScript and web development lanugages (HTML and CSS). We will take a slightly deeper dive into JavaScript in Step 20 when we look at `jsPsych`!
 
 ---
 
@@ -193,13 +193,16 @@ This code adds a button that, when clicked, shows an alert message.
 
 ---
 
-## 3. Introducing `jsPsych`
+## 3. Play with Web Development Tools
 
-`jsPsych` is a JavaScript framework designed to create and run psychology experiments online. It handles timing, displays stimuli, and records responses, making it ideal for controlled experiments.
+Now that you've seen the basics of HTML, CSS, and JavaScript, let’s practice combining them to create a simple interactive page.
 
-### Example of `jsPsych`
+*Try out the coding exercise below to experiment with web development tools.*
 
-This basic `jsPsych` setup displays a text trial where participants press a key to continue.
+#### 3.1 **Create an HTML file** in VSCode and add the following code:
+  
+   - This code has HTML, CSS, and JavaScript sections, all within the same file.
+   - Run the code using **Live Server** to see the results immediately in your browser.
 
 ```html
 <!DOCTYPE html>
@@ -207,25 +210,53 @@ This basic `jsPsych` setup displays a text trial where participants press a key 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jsPsych Experiment</title>
-    <script src="https://cdn.jsdelivr.net/npm/jspsych@6/jspsych.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jspsych@6/css/jspsych.css">
+    <title>Interactive Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
+    <h1>Play with Web Development!</h1>
+    <p>Click the button to see a message.</p>
+    <button onclick="displayMessage()">Click Me!</button>
+    <p id="message"></p>
+
     <script>
-        var welcome = {
-            type: 'html-keyboard-response',
-            stimulus: '<p>Welcome to this online experiment!</p><p>Press any key to continue.</p>'
-        };
-        jsPsych.init({
-            timeline: [welcome]
-        });
+        function displayMessage() {
+            document.getElementById("message").innerHTML = "Hello, you're interacting with JavaScript!";
+        }
     </script>
 </body>
 </html>
 ```
 
-This script sets up a `jsPsych` trial that waits for any keypress to continue. You can expand on this example by adding more complex instructions or additional trials.
+
+#### 3.2 **Experiment** by changing the following elements:
+
+   - **CSS Colors**: Adjust colors in the CSS styles for `h1`, `body`, or `button`.
+   - **Message Text**: Modify the message text in the JavaScript function `displayMessage()`.
+
+This gives you a chance to experiment with the main elements of web development in one file. By changing CSS properties, HTML structure, and JavaScript functions, you’ll start to see how these tools work together.
+
+!!! Tip "`jsPsych` in Step 20"
+    When we get to Step 20, we'll take a look of `jsPsych` - but this is a good enough intro for now!
 
 ---
 
@@ -244,7 +275,7 @@ To learn more about designing surveys, visit [How to Design a UX Research Survey
 ## Summary
 
 - **HTML, CSS, and JavaScript** allow us to create and style web-based experiments.
-- **`jsPsych`** is a flexible tool for building online experiments, allowing for precise control over timing and data collection.
+- **Playing with web development tools** helps you learn through hands-on practice, experimenting with colors, structure, and interactivity.
 - **Google Forms** and other no-code tools provide options for collecting data without needing to write code.
 - **Survey design** is crucial in psychology and UX research to capture reliable and meaningful data from participants.
 

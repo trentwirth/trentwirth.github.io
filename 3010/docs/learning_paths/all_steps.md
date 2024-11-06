@@ -3456,3 +3456,462 @@ In this step, you learned:
 - How to combine multiple widgets to create rich, interactive visualizations.
 
 Adding interactivity to data visualization lets you explore data more deeply, helping you to uncover trends and patterns more easily. You can apply these techniques to create interactive visualizations for research and data exploration, making it easier to gain insights from your data.
+
+# Step 18: Conducting Experiments Online and Basic Web Development
+
+Up until this point, our course has focused on learning Python. While Python absolutely could be used to build an online research study, as we will see in this Step of the learning path, there are tools better suited to conducting online research.
+
+In this step, we will explore how behavioral science experiments can be conducted on the web. We’ll look at a few web technologies that make this possible, such as `jsPsych`, HTML, CSS, and JavaScript, and provide you with code examples you can try out. We will also introduce tools that allow for online research without requiring any coding (Google Forms).
+
+> Note: This step is meant to conceptually introduce you to a different programming language, specifically JavaScript and web development lanugages (HTML and CSS). We will take a slightly deeper dive into JavaScript in Step 20 when we look at `jsPsych`!
+
+---
+
+## 1. Experiments on the Web
+
+Conducting experiments online allows researchers to reach a broader audience and collect data efficiently. While programming tools like `PsychoPy` (Python) can be used to design experiments, another accessible tool, **`jsPsych`**, simplifies the process of running experiments directly in a web browser.
+
+### What is `jsPsych`?
+
+`jsPsych` is a JavaScript library specifically designed for creating experiments that participants can complete online. It’s flexible, widely used in psychology research, and makes it easier to control and collect data from web-based studies.
+
+### What is JavaScript?
+
+**JavaScript** is a programming language used to create interactive elements on web pages. It’s essential for building dynamic websites and web applications. JavaScript can handle user interactions, animations, and data processing in real-time. 
+
+Have you ever noticed a button change color on a website, or text appear when you hover over an image? These are examples of JavaScript in action!
+
+JavaScript is incredibly versitile for all things on the web, and can be used to create interactive elements, animations, and more. One of my favorite uses of JavaScript is called "ThreeJS" which is a library that allows you to create 3D graphics in the browser! You can check out some examples [here](https://threejs.org/).
+
+---
+
+## 2. Basics of Web Development: HTML, CSS, and JavaScript
+
+To understand how `jsPsych` functions, we’ll cover some core components of web development. Below, we’ll explore HTML, CSS, and JavaScript and provide examples you can try in **VSCode**.
+
+??? Tip "Web Development?"
+    Web development can be defined as the process of building websites and web applications. It involves writing code in languages like HTML, CSS, and JavaScript to create interactive and visually appealing web pages. These technologies work together to structure content, style elements, and add interactivity to web pages.
+
+### 2.1. Install Live Server in VSCode
+
+   In the Extensions sidebar, search for **Live Server** and install it. We'll use this extension to run our HTML files in a live server.
+
+---
+
+### 2.2. HTML (HyperText Markup Language)
+
+HTML is the standard language for creating web pages. It allows you to structure content using "tags." A "tag" is a keyword surrounded by angle brackets, like `<tag>`. Tags are used to define elements such as headings, paragraphs, images, and links. A sample of a common tag is `<h1>`, which defines a top-level heading. To close a tag, use a forward slash, like `</h1>`.
+
+
+Here’s a basic HTML structure:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Experiment</title>
+</head>
+<body>
+    <h1>Welcome to My Experiment!</h1>
+    <p>This is an experiment example using HTML, CSS, and JavaScript.</p>
+</body>
+</html>
+```
+
+> Notice the tags like `<html>`, `<head>`, `<title>`, `<body>`, `<h1>`, and `<p>`. These tags structure the content and define the appearance of the webpage. `<h1>` is a top-level heading, and `<p>` is a paragraph.
+
+This code creates a basic webpage with a title and heading. Copy and paste this code into a new file with an `.html` extension, calling the file `index.html`.
+
+You can open this file in VSCode and use the **Live Server** extension to view it in your browser. To do so, right-click on the HTML file and select **Open with Live Server**.
+
+This will open up a new tab in your browser displaying the HTML content!
+
+---
+
+### 2.3. CSS (Cascading Style Sheets)
+
+CSS styles your HTML content, making it look visually appealing. You can add color, align elements, and much more.
+
+Add the following CSS to your HTML file within a `<style>` tag in the `<head>` section:
+
+```html
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        text-align: center;
+    }
+    h1 {
+        color: #4682b4;
+    }
+    p {
+        color: #2f4f4f;
+    }
+</style>
+```
+
+??? Tip "The full HTML file should now look like this:"
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Experiment</title>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f8ff;
+                text-align: center;
+            }
+            h1 {
+                color: #4682b4;
+            }
+            p {
+                color: #2f4f4f;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1>Welcome to My Experiment!</h1>
+        <p>This is an experiment example using HTML, CSS, and JavaScript.</p>
+    </body>
+
+    </html>
+    ```
+
+This CSS changes the background color, centers the text, and applies colors to the heading and paragraph.
+
+---
+
+### 2.4. JavaScript
+
+JavaScript adds interactivity to your webpage, such as reacting to user inputs or displaying alerts.
+
+Include this script inside your HTML file’s `<body>` or `<head>` tags:
+
+```html
+<script>
+    function showAlert() {
+        alert("Welcome to the experiment!");
+    }
+</script>
+
+<button onclick="showAlert()">Click Me</button>
+```
+
+This code adds a button that, when clicked, shows an alert message.
+
+
+??? Tip "Your full HTML file should now look like this:"
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Experiment</title>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f8ff;
+                text-align: center;
+            }
+            h1 {
+                color: #4682b4;
+            }
+            p {
+                color: #2f4f4f;
+            }
+        </style>
+
+        <script>
+            function showAlert() {
+                alert("Welcome to the experiment!");
+            }
+        </script>
+
+        <button onclick="showAlert()">Click Me</button>
+
+
+    </head>
+    <body>
+        <h1>Welcome to My Experiment!</h1>
+        <p>This is an experiment example using HTML, CSS, and JavaScript.</p>
+    </body>
+
+    </html>
+    ```
+
+---
+
+## 3. Play with Web Development Tools
+
+Now that you've seen the basics of HTML, CSS, and JavaScript, let’s practice combining them to create a simple interactive page.
+
+*Try out the coding exercise below to experiment with web development tools.*
+
+#### 3.1 **Create an HTML file** in VSCode and add the following code:
+  
+   - This code has HTML, CSS, and JavaScript sections, all within the same file.
+   - Run the code using **Live Server** to see the results immediately in your browser.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Play with Web Development!</h1>
+    <p>Click the button to see a message.</p>
+    <button onclick="displayMessage()">Click Me!</button>
+    <p id="message"></p>
+
+    <script>
+        function displayMessage() {
+            document.getElementById("message").innerHTML = "Hello, you're interacting with JavaScript!";
+        }
+    </script>
+</body>
+</html>
+```
+
+
+#### 3.2 **Experiment** by changing the following elements:
+
+   - **CSS Colors**: Adjust colors in the CSS styles for `h1`, `body`, or `button`.
+   - **Message Text**: Modify the message text in the JavaScript function `displayMessage()`.
+
+This gives you a chance to experiment with the main elements of web development in one file. By changing CSS properties, HTML structure, and JavaScript functions, you’ll start to see how these tools work together.
+
+!!! Tip "`jsPsych` in Step 20"
+    When we get to Step 20, we'll take a look of `jsPsych` - but this is a good enough intro for now!
+
+---
+
+## 4. Using Non-Programming Tools for Online Research
+
+For researchers who prefer not to code, tools like **Google Forms** are useful for creating and distributing online surveys. These tools are widely used in psychological and behavioral research to gather self-report data or feedback from participants.
+
+### Designing Effective User Surveys
+
+A **user survey** is a structured way of gathering data about participants' thoughts, behaviors, or experiences. Well-designed surveys can reveal valuable insights into how people feel or think about a topic.
+
+To learn more about designing surveys, visit [How to Design a UX Research Survey](https://dscout.com/people-nerds/how-to-design-a-ux-research-survey), which covers practical tips and best practices for creating effective surveys.
+
+---
+
+## Summary
+
+- **HTML, CSS, and JavaScript** allow us to create and style web-based experiments.
+- **Playing with web development tools** helps you learn through hands-on practice, experimenting with colors, structure, and interactivity.
+- **Google Forms** and other no-code tools provide options for collecting data without needing to write code.
+- **Survey design** is crucial in psychology and UX research to capture reliable and meaningful data from participants.
+
+This step gives you the tools to start exploring web-based research and consider how online experiments can expand your reach and capabilities in behavioral science research.
+
+
+# Step 19
+
+In this step, we’ll explore **Pandas**, a powerful Python library for data manipulation and analysis. Pandas provides tools to explore, manipulate, and analyze datasets efficiently, which is essential for behavioral scientists working with real-world data.
+
+We’ll use a CSV file named `happiness correlation data-2.csv`, which you can download below. Each row represents data from one participant, with columns capturing various aspects like age, work hours, GPA, life satisfaction, and more.
+
+## 0. Download the Dataset
+
+[Click this link to donload the data](<files/happiness correlation data-2.csv>)
+
+!!! Tip "Familiar?"
+    This data was pulled from Stats 2002, a course at UC. If this data is familiar, it's probably because you've seen this before!
+
+**IMPORTANT**: Make sure to place the downloaded CSV file in the same directory as your notebook or script!
+
+## 1. Getting Started with Pandas
+
+### Installing and Importing Pandas
+To use Pandas, ensure it’s installed in your Python environment. You can install it by running:
+
+```python
+!pip install pandas
+```
+
+!!! Tip "`%pip install`"
+    If the code above doesn't work, try using `%pip install` instead of `!pip install`.
+
+Then, import Pandas at the beginning of your notebook or script:
+
+```python
+import pandas as pd
+```
+
+### Loading the Data
+Load the CSV file into a DataFrame, which is Pandas’ primary data structure for handling data tables.
+
+```python
+# Load the data from the your directory
+file_path = 'happiness correlation data-2.csv'
+df = pd.read_csv(file_path)
+```
+
+### Viewing the Data
+Use `head()` to see the first few rows and get a feel for the structure.
+
+```python
+df.head()
+```
+
+---
+
+## 2. Exploring the Dataset
+
+This dataset has columns capturing the following participant information:
+
+- **age**: Participant's age
+- **hours_work_week**: Hours worked per week
+- **gpa**: Participant's GPA
+- **life_satisfaction**: Self-reported life satisfaction score
+- **desire_to_achieve**: Self-reported desire to achieve
+- **number_drinks**: Number of alcoholic drinks consumed per week
+- **stress**: Self-reported stress level
+
+### Basic Data Information
+
+To get a quick summary of the dataset, including column names, data types, and any missing values:
+
+```python
+df.info()
+```
+
+To get basic descriptive statistics (mean, median, etc.) for each column:
+
+```python
+df.describe()
+```
+
+---
+
+## 3. Analyzing Specific Columns
+
+### Calculating the Mean Age of Participants
+Let’s calculate the average age of participants.
+
+```python
+mean_age = df['age'].mean()
+print("Average Age:", mean_age)
+```
+
+### Distribution of Life Satisfaction Scores
+To understand the distribution of `life_satisfaction` scores, we can use Pandas to plot a histogram (requires `matplotlib` library).
+
+```python
+import matplotlib.pyplot as plt
+
+df['life_satisfaction'].plot(kind='hist', title='Life Satisfaction Distribution')
+plt.xlabel('Life Satisfaction')
+plt.show()
+```
+
+### Exploring Correlations
+We may want to see how different variables relate to each other. For example, are work hours correlated with stress?
+
+```python
+correlation = df[['hours_work_week', 'stress']].corr()
+print("Correlation between hours worked and stress:\n", correlation)
+```
+
+### Grouping Data
+We can group data to find insights, such as average Stress level by different levels of `desire_to_achieve`.
+
+```python
+avg_stress_by_achievement = df.groupby('desire_to_achieve')['stress'].mean()
+print("Stress by Desire to Achieve:\n", avg_stress_by_achievement)
+```
+
+---
+
+## 4. Data Cleaning and Manipulation
+
+### Calculating Letter Grades
+Add a new column to the dataset that calculates the letter grade for each student's GPA:
+
+```python
+def calculate_letter_grade(gpa):
+    if gpa >= 3.7:
+        return 'A'
+    elif gpa >= 3.0:
+        return 'B'
+    elif gpa >= 2.0:
+        return 'C'
+    elif gpa >= 1.0:
+        return 'D'
+    else:
+        return 'F'
+
+df['letter_grade'] = df['gpa'].apply(calculate_letter_grade)
+```
+
+### Create a Bar Graph of Letter Grades 
+
+To visualize the distribution of letter grades, we can create a bar graph:
+
+```python
+grade_counts = df['letter_grade'].value_counts()
+grade_counts.plot(kind='bar', title='Letter Grade Distribution')
+plt.xlabel('Letter Grade')
+plt.ylabel('Count')
+plt.show()
+```
+
+---
+
+## 5. Saving Processed Data
+
+After adding a new column, it’s often useful to save the processed dataset. Here’s how to save it to a new CSV file:
+
+```python
+df.to_csv('letter_grades_added_happiness_data.csv', index=False)
+```
+
+---
+
+## Summary
+
+In this step, you learned:
+
+- **Loading** a CSV file into a Pandas DataFrame
+- **Exploring** the data using basic summary and statistical methods
+- **Analyzing** specific columns and relationships between them
+- **Cleaning** data by handling missing values
+- **Saving** processed data to a new CSV file
+
+Pandas is a powerful tool for data analysis in Python, allowing you to work with datasets efficiently and discover meaningful insights.
