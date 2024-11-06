@@ -60,6 +60,8 @@ nav:
     - Step 15 - Data Structures II: learning_paths/Step_15.md
     - Step 16 - Intro to Data Vis: learning_paths/Step_16.md
     - Step 17 - Interactive Data Vis: learning_paths/Step_17.md
+    - Step 18 - Online Experimentation: learning_paths/Step_18.md
+    - Step 19 - The Pandas Library: learning_paths/Step_19.md
   - Side Quests:
     - Side Quests: side_quests/index.md
     - F-Strings: side_quests/bonus_printing.md
