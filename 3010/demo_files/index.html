@@ -23,6 +23,12 @@
         button:hover {
             background-color: #45a049;
         }
+        ul {
+            list-style-type: disc;
+            padding-left: 0;
+            text-align: left;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -30,6 +36,12 @@
     <p>Click the button to see a message.</p>
     <button onclick="displayMessage()">Click Me!</button>
     <p id="message"></p>
+
+    <ul>
+        <li>this</li>
+        <li>that</li>
+        <li>the other</li>
+    </ul>
 
     <script>
         function displayMessage() {
