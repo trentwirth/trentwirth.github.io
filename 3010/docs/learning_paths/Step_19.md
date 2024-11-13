@@ -6,7 +6,7 @@ We’ll use a CSV file named `happiness correlation data-2.csv`, which you can d
 
 ## 0. Download the Dataset
 
-[Click this link to donload the data](<files/happiness correlation data-2.csv>)
+[Click this link to download the data](<files/happiness correlation data-2.csv>)
 
 !!! Tip "Familiar?"
     This data was pulled from Stats 2002, a course at UC. If this data is familiar, it's probably because you've seen this before!
