@@ -11,21 +11,25 @@
         <link rel="canonical" href="https://trentwirth.github.io/3010/learning_paths/Step_21/">
       
       
+        <link rel="prev" href="../Step_20/">
+      
+      
+        <link rel="next" href="../../side_quests/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
-        <title>Step 21 - PSYC 3010 - Programming for Behavioral Scientists</title>
+        <title>Step 21 - Analyzing Data - PSYC 3010 - Programming for Behavioral Scientists</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -72,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#step-21" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Step 21
+              Step 21 - Analyzing Data
             
           </span>
         </div>
@@ -222,10 +231,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -386,9 +397,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
       
-        
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
         
         
@@ -407,7 +422,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_1">
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -453,6 +469,8 @@
       
   
   
+    
+  
   
     
     
@@ -501,15 +519,21 @@
       
         
       
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
@@ -524,13 +548,14 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_2">
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Learning Path
@@ -939,6 +964,175 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Step 21 - Analyzing Data
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Step 21 - Analyzing Data
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-download-the-zip-file" class="md-nav__link">
+    0: Download the Zip File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-load-and-unzip-the-data" class="md-nav__link">
+    1: Load and Unzip the Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-load-csv-files-into-a-pandas-dataframe" class="md-nav__link">
+    2: Load CSV Files into a Pandas DataFrame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-clean-and-visualize-reaction-time-data" class="md-nav__link">
+    3: Clean and Visualize Reaction Time Data
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Clean and Visualize Reaction Time Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3a-histogram-of-reaction-time-data" class="md-nav__link">
+    3a. Histogram of Reaction Time Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3b-box-plot-of-mean-reaction-times-by-accuracy" class="md-nav__link">
+    3b. Box Plot of Mean Reaction Times by Accuracy
+  </a>
+  
+    <nav class="md-nav" aria-label="3b. Box Plot of Mean Reaction Times by Accuracy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#think-about-the-data" class="md-nav__link">
+    Think about the data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-aggregate-mean-reaction-times-by-participantsubject" class="md-nav__link">
+    4: Aggregate Mean Reaction Times by Participant/Subject
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-visualize-mean-reaction-time-data" class="md-nav__link">
+    5: Visualize Mean Reaction Time Data
+  </a>
+  
+    <nav class="md-nav" aria-label="5: Visualize Mean Reaction Time Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5a-histogram-of-mean-reaction-times" class="md-nav__link">
+    5a. Histogram of Mean Reaction Times
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5b-scatterplot-of-reaction-time-and-true-responses" class="md-nav__link">
+    5b. Scatterplot of Reaction Time and % "True" Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-have-fun-with-it" class="md-nav__link">
+    6. Have fun with it!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-review" class="md-nav__link">
+    7. Review
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -968,9 +1162,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
       
-        
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
         
         
@@ -989,7 +1187,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_3">
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1107,9 +1306,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
       
-        
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
         
         
@@ -1128,7 +1331,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_4">
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1190,9 +1394,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
       
-        
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
         
         
@@ -1211,7 +1419,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_5">
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1307,9 +1516,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
       
-        
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
         
         
@@ -1363,6 +1576,125 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-download-the-zip-file" class="md-nav__link">
+    0: Download the Zip File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-load-and-unzip-the-data" class="md-nav__link">
+    1: Load and Unzip the Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-load-csv-files-into-a-pandas-dataframe" class="md-nav__link">
+    2: Load CSV Files into a Pandas DataFrame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-clean-and-visualize-reaction-time-data" class="md-nav__link">
+    3: Clean and Visualize Reaction Time Data
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Clean and Visualize Reaction Time Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3a-histogram-of-reaction-time-data" class="md-nav__link">
+    3a. Histogram of Reaction Time Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3b-box-plot-of-mean-reaction-times-by-accuracy" class="md-nav__link">
+    3b. Box Plot of Mean Reaction Times by Accuracy
+  </a>
+  
+    <nav class="md-nav" aria-label="3b. Box Plot of Mean Reaction Times by Accuracy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#think-about-the-data" class="md-nav__link">
+    Think about the data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-aggregate-mean-reaction-times-by-participantsubject" class="md-nav__link">
+    4: Aggregate Mean Reaction Times by Participant/Subject
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-visualize-mean-reaction-time-data" class="md-nav__link">
+    5: Visualize Mean Reaction Time Data
+  </a>
+  
+    <nav class="md-nav" aria-label="5: Visualize Mean Reaction Time Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5a-histogram-of-mean-reaction-times" class="md-nav__link">
+    5a. Histogram of Mean Reaction Times
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5b-scatterplot-of-reaction-time-and-true-responses" class="md-nav__link">
+    5b. Scatterplot of Reaction Time and % "True" Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-have-fun-with-it" class="md-nav__link">
+    6. Have fun with it!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-review" class="md-nav__link">
+    7. Review
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1380,9 +1712,168 @@
   
 
 
-  <h1>Step 21</h1>
+<h1 id="step-21">Step 21<a class="headerlink" href="#step-21" title="Permanent link">&para;</a></h1>
+<p>In this step, we will analyze the reaction time data we collected in <code>Step 20</code> using Pandas! We will get this data from a zip file containing many <code>.csv</code> files, where each file contains data from a participant in a reaction time experiment. </p>
+<p>You will learn to:</p>
+<ol>
+<li>Load a zip file of data into Python.</li>
+<li>Extract and load all <code>.csv</code> files into a single pandas DataFrame.</li>
+<li>Clean the data to isolate relevant variables.</li>
+<li>Visualize patterns in the reaction time data.</li>
+<li>Aggregate data by participant and analyze mean reaction times.</li>
+</ol>
+<h2 id="0-download-the-zip-file">0: Download the Zip File<a class="headerlink" href="#0-download-the-zip-file" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>What's a Zip File? A zip file is a compressed folder that contains one or more files. It's a common way to package and share multiple files together.</p>
+</blockquote>
+<p><a href="../files/reaction_time_data.zip">Click here to download the reaction time <code>.zip</code> file</a></p>
+<h2 id="1-load-and-unzip-the-data">1: Load and Unzip the Data<a class="headerlink" href="#1-load-and-unzip-the-data" title="Permanent link">&para;</a></h2>
+<p>To begin, ensure you have downloaded the zip file. You can unzip it manually or programmatically within Python. Here’s how to do it in Python:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="kn">import</span> <span class="nn">os</span>
 
+<span class="c1"># Define file paths</span>
+<span class="n">zip_path</span> <span class="o">=</span> <span class="s1">&#39;reaction_time_data.zip&#39;</span> <span class="c1"># If you&#39;ve put your file in the same directory as the notebook you&#39;re working in, your path is just the file name. If not, you&#39;ll need to include the path to the file.</span>
+<span class="n">extract_path</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span> <span class="c1"># This will extract the files to the current directory</span>
 
+<span class="c1"># Unzip the file</span>
+<span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+    <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">extract_path</span><span class="p">)</span>
+</code></pre></div>
+<p>After running this code, you should see the extracted <code>.csv</code> files in the specified directory - this will be a lot of files!</p>
+<h2 id="2-load-csv-files-into-a-pandas-dataframe">2: Load CSV Files into a Pandas DataFrame<a class="headerlink" href="#2-load-csv-files-into-a-pandas-dataframe" title="Permanent link">&para;</a></h2>
+<p>With the files extracted, we can load each <code>.csv</code> file into a DataFrame. Each row in the final DataFrame will represent a trial, with columns for relevant data.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Path to the directory containing extracted .csv files</span>
+<span class="n">csv_files</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">extract_path</span><span class="p">,</span> <span class="s1">&#39;*.csv&#39;</span><span class="p">))</span>
+
+<span class="c1"># Initialize an empty list to store DataFrames</span>
+<span class="n">dfs</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Loop through and read each csv file</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">file</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">csv_files</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+
+    <span class="c1"># Extract relevant rows and columns</span>
+    <span class="c1"># Filter rows where &#39;trial_type&#39; is &#39;response&#39; (indicating a reaction time trial)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;trial_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;image-keyboard-response&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Select and rename relevant columns</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="s1">&#39;stimulus&#39;</span><span class="p">,</span> <span class="s1">&#39;response&#39;</span><span class="p">,</span> <span class="s1">&#39;correct&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;rt&#39;</span><span class="p">:</span> <span class="s1">&#39;reaction_time&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;stimulus&#39;</span><span class="p">:</span> <span class="s1">&#39;circle_color&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;response&#39;</span><span class="p">:</span> <span class="s1">&#39;key_pressed&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;correct&#39;</span><span class="p">:</span> <span class="s1">&#39;accuracy&#39;</span>
+    <span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Clean up &#39;circle_color&#39; to extract only color names</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;circle_color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;circle_color&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;images/(\w+).png&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># Add subject_id column</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;subject_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="c1"># Reorder columns to make &#39;subject_id&#39; the first column</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;subject_id&#39;</span><span class="p">,</span> <span class="s1">&#39;reaction_time&#39;</span><span class="p">,</span> <span class="s1">&#39;circle_color&#39;</span><span class="p">,</span> <span class="s1">&#39;key_pressed&#39;</span><span class="p">,</span> <span class="s1">&#39;accuracy&#39;</span><span class="p">]]</span>
+
+    <span class="c1"># Append the processed DataFrame</span>
+    <span class="n">dfs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># Concatenate all DataFrames</span>
+<span class="n">all_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">dfs</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="3-clean-and-visualize-reaction-time-data">3: Clean and Visualize Reaction Time Data<a class="headerlink" href="#3-clean-and-visualize-reaction-time-data" title="Permanent link">&para;</a></h2>
+<p>Now that we have all trials loaded into a DataFrame, we can start visualizing the reaction time data.</p>
+<h3 id="3a-histogram-of-reaction-time-data">3a. Histogram of Reaction Time Data<a class="headerlink" href="#3a-histogram-of-reaction-time-data" title="Permanent link">&para;</a></h3>
+<p>Use a histogram to explore the distribution of reaction times. Adjust the bin width with an interactive widget.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+
+<span class="k">def</span> <span class="nf">plot_histogram</span><span class="p">(</span><span class="n">bin_width</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="n">bin_width</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Histogram of Reaction Times&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Reaction Time (ms)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">widgets</span><span class="o">.</span><span class="n">interactive</span><span class="p">(</span><span class="n">plot_histogram</span><span class="p">,</span> <span class="n">bin_width</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">20</span><span class="p">))</span>
+</code></pre></div>
+<h3 id="3b-box-plot-of-mean-reaction-times-by-accuracy">3b. Box Plot of Mean Reaction Times by Accuracy<a class="headerlink" href="#3b-box-plot-of-mean-reaction-times-by-accuracy" title="Permanent link">&para;</a></h3>
+<p>A box and whisker plot can show differences in reaction times between "true" (correct) and "false" (incorrect) responses.</p>
+<div class="admonition tip">
+<p class="admonition-title">Seaborn</p>
+<p>Seaborn is a Python data visualization library based on Matplotlib. It provides a high-level interface for creating attractive and informative statistical graphics. You can install Seaborn using <code>pip install seaborn</code>.</p>
+<p>In your notebook, you might want to run <code>%pip install seaborn</code> to install Seaborn, instead of the normal pip install.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># Plot box and whisker plot for reaction times by accuracy</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">all_data</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Reaction Times by Accuracy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Accuracy (True or False)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Reaction Time (ms)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p>It's great to have a visualization, but it will probably be good to know the means and standard deviation values of these plots as well, let's use Pandas to calculate those!</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Assuming &#39;all_data&#39; is your DataFrame</span>
+<span class="n">true_responses</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+<span class="n">false_responses</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">]</span>
+
+<span class="n">true_mean</span> <span class="o">=</span> <span class="n">true_responses</span><span class="p">[</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">true_sd</span> <span class="o">=</span> <span class="n">true_responses</span><span class="p">[</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="n">false_mean</span> <span class="o">=</span> <span class="n">false_responses</span><span class="p">[</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">false_sd</span> <span class="o">=</span> <span class="n">false_responses</span><span class="p">[</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="c1"># Print the mean and standard deviation values, and the counts of each group</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;True responses - Mean: </span><span class="si">{</span><span class="n">true_mean</span><span class="si">}</span><span class="s2">, SD: </span><span class="si">{</span><span class="n">true_sd</span><span class="si">}</span><span class="s2">, Count: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">true_responses</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;False responses - Mean: </span><span class="si">{</span><span class="n">false_mean</span><span class="si">}</span><span class="s2">, SD: </span><span class="si">{</span><span class="n">false_sd</span><span class="si">}</span><span class="s2">, Count: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">false_responses</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="think-about-the-data">Think about the data<a class="headerlink" href="#think-about-the-data" title="Permanent link">&para;</a></h4>
+<p>Look at the means and standard deviations. What do you think a paired t-test would show? What problem arrises when we look at the "Count" of each data type?</p>
+<h2 id="4-aggregate-mean-reaction-times-by-participantsubject">4: Aggregate Mean Reaction Times by Participant/Subject<a class="headerlink" href="#4-aggregate-mean-reaction-times-by-participantsubject" title="Permanent link">&para;</a></h2>
+<p>Next, let’s condense the data to calculate each subject's mean reaction time and the number of "true" (correct) trials out of 50.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Calculate mean reaction times and true trial counts</span>
+<span class="n">subject_summary</span> <span class="o">=</span> <span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;subject_id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">mean_reaction_time</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">),</span>
+    <span class="n">true_count</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="5-visualize-mean-reaction-time-data">5: Visualize Mean Reaction Time Data<a class="headerlink" href="#5-visualize-mean-reaction-time-data" title="Permanent link">&para;</a></h2>
+<h3 id="5a-histogram-of-mean-reaction-times">5a. Histogram of Mean Reaction Times<a class="headerlink" href="#5a-histogram-of-mean-reaction-times" title="Permanent link">&para;</a></h3>
+<p>Plot a histogram of mean reaction times for each participant.</p>
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">subject_summary</span><span class="p">[</span><span class="s1">&#39;mean_reaction_time&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Histogram of Mean Reaction Times by subject&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Mean Reaction Time (ms)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="5b-scatterplot-of-reaction-time-and-true-responses">5b. Scatterplot of Reaction Time and % "True" Responses<a class="headerlink" href="#5b-scatterplot-of-reaction-time-and-true-responses" title="Permanent link">&para;</a></h3>
+<p>Plot a scatterplot to explore the relationship between subjects’ mean reaction times and their accuracy rate.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Calculate accuracy percentage</span>
+<span class="n">subject_summary</span><span class="p">[</span><span class="s1">&#39;true_percentage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">subject_summary</span><span class="p">[</span><span class="s1">&#39;true_count&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">50</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Scatterplot of mean reaction time vs. true percentage</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">subject_summary</span><span class="p">[</span><span class="s1">&#39;mean_reaction_time&#39;</span><span class="p">],</span> <span class="n">subject_summary</span><span class="p">[</span><span class="s1">&#39;true_percentage&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Mean Reaction Time vs. % True Responses&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Mean Reaction Time (ms)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;% True Responses&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="6-have-fun-with-it">6. Have fun with it!<a class="headerlink" href="#6-have-fun-with-it" title="Permanent link">&para;</a></h2>
+<p>Take time to play with <a href="https://seaborn.pydata.org/">Seaborn</a> and <a href="https://matplotlib.org/">Matplotlib</a> to create more visualizations and explore the data further. You can also experiment with different data transformations and analysis techniques to gain deeper insights!</p>
+<p>Dig into the Pandas dataframe, look at the data, and see if you can find any interesting patterns or relationships.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Display the first few rows of the DataFrame</span>
+<span class="n">all_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<p>You can grab different columns and plot them against each other to see if there are any relationships. For example, you could plot the reaction time against the color of the circle that was shown to the participant.</p>
+<h2 id="7-review">7. Review<a class="headerlink" href="#7-review" title="Permanent link">&para;</a></h2>
+<p>In this step, you’ve learned how to handle, clean, and visualize reaction time data using pandas, matplotlib, and seaborn. In a future step, we'll look at how to analyze this data statistically to draw meaningful conclusions!</p>
 
 
 
@@ -1398,10 +1889,10 @@
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Back to top
-          </button>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -1428,10 +1919,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
     
   </body>

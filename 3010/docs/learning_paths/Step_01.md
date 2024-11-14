@@ -4,7 +4,7 @@
 
 ### **What is a Computer?**
 
-If you think about it, you computer is a magic rock (aren't we all?)! It's a rock that can do math, remember things, and even talk to other rocks!
+If you think about it, your computer is a magic rock (aren't we all?)! It's a rock that can do math, remember things, and even talk to other rocks!
 
 Your computer is composed of two main components: Hardware and Software.
 

@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
@@ -22,10 +22,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -391,9 +391,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
       
-        
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
         
         
@@ -412,7 +416,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_1">
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -506,11 +511,17 @@
       
         
       
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
         
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
         
         
@@ -529,7 +540,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_2">
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -944,6 +956,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_21/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Step 21 - Analyzing Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -973,9 +1005,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
       
-        
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
         
         
@@ -994,7 +1030,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_3">
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1112,9 +1149,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
       
-        
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
         
         
@@ -1133,7 +1174,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_4">
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1195,9 +1237,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
       
-        
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
         
         
@@ -1216,7 +1262,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_5">
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1312,9 +1359,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
       
-        
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
         
         
@@ -4658,6 +4709,119 @@ Each line has some text.
 <li><strong>Saving</strong> processed data to a new CSV file</li>
 </ul>
 <p>Pandas is a powerful tool for data analysis in Python, allowing you to work with datasets efficiently and discover meaningful insights.</p>
+<h1 id="step-20">Step 20<a class="headerlink" href="#step-20" title="Permanent link">&para;</a></h1>
+<p>In this step, we’ll break down the components of the <code>reaction-time.html</code> file used to create a reaction time experiment that you will participate in for class! Then in step 21, we'll use Pandas to analyze the data we collect.</p>
+<p>The reaction time experiment is implemented in JavaScript using the <a href="https://www.jspsych.org/">jsPsych library</a>, designed to help researchers conduct behavioral science experiments in a web browser.</p>
+<p><a download="reaction-time.html" href="../files/reaction-time.html">Click this link to download the <code>reaction-time.html</code> file</a></p>
+<p>In order to read this file, you'll want to move it to a folder in VSCode, and open it there.</p>
+<p>Throughout this step, <strong>I don't expect you to be learning JavaScript or jsPsych</strong>. Instead, I want you to see how the principles you've learned in Python programming apply to other languages and tools. By examining the experiment’s structure and components, you’ll see how programming concepts you’ve learned in Python are used in a different context.</p>
+<p>We'll also need to cover some basic concepts of experimental design, we'll do that before we dive into the code.</p>
+<h2 id="general-principles-of-experimental-design">General Principles of Experimental Design<a class="headerlink" href="#general-principles-of-experimental-design" title="Permanent link">&para;</a></h2>
+<p>Let's take a moment to recall (or learn for the first time!) the concepts of the Independent Variable and Dependent Variables in an experiment.</p>
+<h3 id="independent-variable-iv">Independent Variable (IV)<a class="headerlink" href="#independent-variable-iv" title="Permanent link">&para;</a></h3>
+<p>The indepdent variable in the experiment is the thing that is being man<strong>I</strong>pulated - I personally remember this by thinking of the "I" in IV. In the reaction time experiement, the independent variable is the color of the circle that is displayed, which requires a specific key press response from the participant depending on the color of the circle.</p>
+<h3 id="dependent-variable-dv">Dependent Variable (DV)<a class="headerlink" href="#dependent-variable-dv" title="Permanent link">&para;</a></h3>
+<p>The dependent variable in the experiment is the thing that is being measured - in other words, the thing that <em>depends</em> on the manipulated (independent variable). In the reaction time experiment, the dependent variable is the time it takes for the participant to press the correct key after the circle is displayed.</p>
+<h3 id="control-variables">Control Variables<a class="headerlink" href="#control-variables" title="Permanent link">&para;</a></h3>
+<p>Control variables are variables that are kept constant throughout the experiment. In the reaction time experiment, the control variables include the size of the circle, the position of the circle on the screen, and the key press that is required for each color.</p>
+<h3 id="data-collection">Data Collection<a class="headerlink" href="#data-collection" title="Permanent link">&para;</a></h3>
+<p>When programming an experiment, it's critical to think about how you're collecting your data. We'll look at how the data is collected in the reaction time experiment in the code breakdown.</p>
+<h3 id="random-and-blocked-designs">Random and Blocked Designs<a class="headerlink" href="#random-and-blocked-designs" title="Permanent link">&para;</a></h3>
+<p>In the reaction time experiment, there are two different trial types, trials where the circle is blue and trials where the circle is orange. These trials are presented in randomized order, which is a common design in psychology experiments to prevent participants from anticipating the next stimulus.</p>
+<p>If you wanted to understand how color similarity might make people respond more slowly, you could have an additional "block" of trials within the experiment where blue and - let's say, a blue-ish purple - are presented as competing colors. This would allow you to examine the difference in reaction time between the two color pairs of blue and purple, and blue and orange.</p>
+<h2 id="jumping-into-the-javascript">Jumping into the JavaScript<a class="headerlink" href="#jumping-into-the-javascript" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Important code blocks will be highlighted in the following sections, but feel free to explore the entire file! If you want to know how the entire code block works, you give the file to ChatGPT or Copilot and ask the chatbot to explain it to you!</p>
+</blockquote>
+<p>Many of the decisions for the experiment are made <em>outside</em> of the code. For example, in this experiment, the colors were chosen to be blue and orange. While we will load images into the experiment to show these colors to the participant when we want to display them, the actual color of the circle is not defined in the code. This is a design decision that was made before the experiment was programmed.</p>
+<p>Similarly, it's not written into the code that the color is the IV, and that reaction time is the DV. These are concepts that are understood by the researcher before the experiment is programmed.</p>
+<p>Now we'll dive into the pieces of the code that make the experiment run.</p>
+<h3 id="test-procedure">Test Procedure<a class="headerlink" href="#test-procedure" title="Permanent link">&para;</a></h3>
+<p>Below is a block of code within the <code>JavaScript</code> called "<code>test_procedure</code>", let's break it down:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">test_procedure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">timeline</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">fixation</span><span class="p">,</span><span class="w"> </span><span class="nx">test</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">timeline_variables</span><span class="o">:</span><span class="w"> </span><span class="nx">test_stimuli</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">repetitions</span><span class="o">:</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">randomize_order</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">};</span>
+</code></pre></div>
+<ul>
+<li><code>timeline</code><ul>
+<li>The <code>timeline</code> parameter is an array of objects that represent the sequence of events in the experiment. Here, the <code>test_procedure</code> consists of two components: <code>fixation</code> and <code>test</code>. The <code>fixation</code> object displays a fixation cross, while the <code>test</code> object presents the colored circle for the participant to respond to.</li>
+</ul>
+</li>
+<li><code>timeline_variables</code><ul>
+<li>The <code>timeline_variables</code> parameter specifies the stimuli to be used in the experiment. In this case, <code>test_stimuli</code> is an array of objects containing the <em>color of the circle</em> and the correct response key for each trial.</li>
+</ul>
+</li>
+<li><code>repetitions</code><ul>
+<li>The <code>repetitions</code> parameter determines how many times the <code>test_procedure</code> is repeated. With 25 repetitions, it tells the experiment to show the orange and blue circles 25 times each, meaning that there will be 50 trials in total.</li>
+</ul>
+</li>
+<li><code>randomize_order</code><ul>
+<li>The <code>randomize_order</code> parameter specifies whether the order of trials should be randomized. When set to <code>true</code>, the order of trials is randomized to prevent participants from anticipating the next stimulus.</li>
+</ul>
+</li>
+</ul>
+<h3 id="loading-images">Loading Images<a class="headerlink" href="#loading-images" title="Permanent link">&para;</a></h3>
+<p>This experiment uses two images, preloaded at the start to prevent delays during trials. Preloading is crucial when images need to display instantly. Other designs, like experiments requiring many images or complex visuals, may benefit from a more dynamic image-loading approach.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">preload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="nx">jsPsychPreload</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">images</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;images/blue.png&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;images/orange.png&#39;</span><span class="p">]</span>
+<span class="p">};</span>
+<span class="nx">timeline</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">preload</span><span class="p">);</span>
+</code></pre></div>
+<p>In simpler terms, this code gets the images ready to be shown at a moment's notice. The <code>jsPsychPreload</code> function is used to preload the images, ensuring they are ready for display when needed.</p>
+<h3 id="data-storage-and-csv-export">Data Storage and CSV Export<a class="headerlink" href="#data-storage-and-csv-export" title="Permanent link">&para;</a></h3>
+<p>Data in this experiment is stored in memory by jsPsych, including response accuracy and reaction times. At the experiment’s end, participants see a summary with accuracy and average reaction time. The <code>jsPsych.data.get().csv()</code> method then generates a CSV file of the collected data, downloadable via a button.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">jsPsych</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">initJsPsych</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">on_finish</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">jsPsych</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">displayData</span><span class="p">();</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;download-csv&#39;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;block&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;download-csv&#39;</span><span class="p">).</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">csv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsPsych</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">get</span><span class="p">().</span><span class="nx">csv</span><span class="p">();</span>
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">blob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Blob</span><span class="p">([</span><span class="nx">csv</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;text/csv&#39;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">a</span><span class="p">.</span><span class="nx">href</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">url</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">a</span><span class="p">.</span><span class="nx">download</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;reaction_time_data.csv&#39;</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">a</span><span class="p">.</span><span class="nx">click</span><span class="p">();</span>
+<span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">revokeObjectURL</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Let's break down the significant parts of the code block above:</p>
+<ul>
+<li><code>jsPsych.data.displayData()</code><ul>
+<li>This function displays the data collected during the experiment, showing participants their accuracy and average reaction time.</li>
+</ul>
+</li>
+<li><code>var csv = jsPsych.data.get().csv();</code><ul>
+<li>This line generates a CSV file containing the data collected during the experiment.</li>
+</ul>
+</li>
+<li><code>var blob = new Blob([csv], { type: 'text/csv' });</code><ul>
+<li>This code block creates a Blob object, which is a file-like object of raw data. In this case, it's a CSV file. A "Blob" is a way to store data that can be downloaded as a file.</li>
+</ul>
+</li>
+<li><code>a.download = 'reaction_time_data.csv';</code><ul>
+<li>This line sets the <code>download</code> attribute of the anchor element to the desired filename for the downloaded CSV file. This allows the participant to download the data as a CSV file named <code>reaction_time_data.csv</code>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="connecting-javascript-and-jspsych-to-python-principles">Connecting JavaScript and jsPsych to Python Principles<a class="headerlink" href="#connecting-javascript-and-jspsych-to-python-principles" title="Permanent link">&para;</a></h2>
+<p>This experiment may be in JavaScript, but it uses many programming concepts you've learned in Python, let's think through them:</p>
+<ul>
+<li><strong>Functions and Initialization</strong>: The function <code>initJsPsych()</code> initializes the experiment, just as you've used Python functions to set up programs and prepare data structures.</li>
+<li><strong>Control Structures (Loops and Conditions)</strong>: The timeline configuration is structured similarly to Python dictionaries and lists. jsPsych uses objects to store multiple settings (analogous to Python’s dictionaries). Loops and conditional logic, like <code>randomize_order: true</code>, create flexible procedures, just as you’ve seen in Python loops and conditionals.</li>
+<li><strong>Trial Data Collection</strong>: The way trial data is collected and stored in <code>jsPsych.data.get()</code> is similar to Python data management libraries (like <code>Pandas</code>), where you collect, process, and export data. Here, we export as CSV, a format you’ve worked with for storing and analyzing data in Python.</li>
+<li><strong>Parameter Setting and Modularity</strong>: Each <code>timeline</code> component is modular and configured with specific parameters, similar to defining functions with arguments in Python. This modularity in design is essential for scalability and reusability in behavioral science programming.</li>
+</ul>
+<p>In summary, although this experiment is in JavaScript, it reinforces core programming concepts: initializing structures, using loops and conditions to control flow, collecting data, and organizing code modularly. </p>
+<p>These are skills you’ll carry into any programming language, allowing you to adapt tools like jsPsych confidently for experimental design.</p>
+<h2 id="looking-for-more">Looking for more?<a class="headerlink" href="#looking-for-more" title="Permanent link">&para;</a></h2>
+<p>Check out the jsPSych documentation website to learn more about how to use jsPsych for your own experiments: <a href="https://www.jspsych.org/">https://www.jspsych.org/</a>. </p>
 
 
 
@@ -4673,10 +4837,10 @@ Each line has some text.
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Back to top
-          </button>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -4703,10 +4867,11 @@ Each line has some text.
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
     
   </body>
