@@ -63,7 +63,7 @@ nav:
     - Step 18 - Online Experimentation: learning_paths/Step_18.md
     - Step 19 - The Pandas Library: learning_paths/Step_19.md
     - Step 20 - Short Dive into jsPsych: learning_paths/Step_20.md
-    - Step 21 - Analyzing Data: learning_paths/Step_21.md
+    - Step 21 - Processing Data with Pandas: learning_paths/Step_21.md
   - Side Quests:
     - Side Quests: side_quests/index.md
     - F-Strings: side_quests/bonus_printing.md

@@ -1,14 +1,14 @@
 # Step 21
 
-In this step, we will analyze the reaction time data we collected in `Step 20` using Pandas! We will get this data from a zip file containing many `.csv` files, where each file contains data from a participant in a reaction time experiment. 
+In this step, we will process and visualize the reaction time data we collected in `Step 20` using Pandas! We will get this data from a zip file containing many `.csv` files, where each file contains data from a participant in a reaction time experiment. 
 
 You will learn to:
 
 1. Load a zip file of data into Python.
 2. Extract and load all `.csv` files into a single pandas DataFrame.
-3. Clean the data to isolate relevant variables.
-4. Visualize patterns in the reaction time data.
-5. Aggregate data by participant and analyze mean reaction times.
+3. Clean the data to isolate relevant variables. Visualize "raw" reaction time data.
+4. Aggregate data by participant and analyze mean reaction times.
+5. Visualize aggregated data.
 
 ## 0: Download the Zip File
 
