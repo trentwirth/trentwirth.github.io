@@ -1,0 +1,1655 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://trentwirth.github.io/3010/learning_paths/Step_22/">
+      
+      
+        <link rel="prev" href="../Step_21/">
+      
+      
+        <link rel="next" href="../../side_quests/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
+    
+    
+      
+        <title>Step 22 - Basic Stats - PSYC 3010 - Programming for Behavioral Scientists</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#step-22" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PSYC 3010 - Programming for Behavioral Scientists" class="md-header__button md-logo" aria-label="PSYC 3010 - Programming for Behavioral Scientists" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PSYC 3010 - Programming for Behavioral Scientists
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Step 22 - Basic Stats
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/trentwirth/trentwirth.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Learning Path
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../side_quests/" class="md-tabs__link">
+        Side Quests
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../assistance/" class="md-tabs__link">
+        Assistance
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../coding_assignments/" class="md-tabs__link">
+        Coding Assignments
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../licenses/" class="md-tabs__link">
+        Licenses
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PSYC 3010 - Programming for Behavioral Scientists" class="md-nav__button md-logo" aria-label="PSYC 3010 - Programming for Behavioral Scientists" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    PSYC 3010 - Programming for Behavioral Scientists
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/trentwirth/trentwirth.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">Home</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Learning Path</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Learning Path
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_01/" class="md-nav__link">
+        Step 1 - Your Computer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_02/" class="md-nav__link">
+        Step 2 - Intro to Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_03/" class="md-nav__link">
+        Step 3 - Using Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_04/" class="md-nav__link">
+        Step 4 - Operators & Expressions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_05/" class="md-nav__link">
+        Step 5 - Conditionals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_06/" class="md-nav__link">
+        Step 6 - Control Structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_07/" class="md-nav__link">
+        Step 7 - Functions I
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_08/" class="md-nav__link">
+        Step 8 - Functions II
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_09/" class="md-nav__link">
+        Step 9 - Debugging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_10/" class="md-nav__link">
+        Step 10 - OOP I
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_11/" class="md-nav__link">
+        Step 11 - OOP II
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_12/" class="md-nav__link">
+        Step 12 - Modularity & File I/O I
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_13/" class="md-nav__link">
+        Step 13 - Modularity & File I/O II
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_14/" class="md-nav__link">
+        Step 14 - Data Structures I
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_15/" class="md-nav__link">
+        Step 15 - Data Structures II
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_16/" class="md-nav__link">
+        Step 16 - Intro to Data Vis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_17/" class="md-nav__link">
+        Step 17 - Interactive Data Vis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_18/" class="md-nav__link">
+        Step 18 - Online Experimentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_19/" class="md-nav__link">
+        Step 19 - The Pandas Library
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_20/" class="md-nav__link">
+        Step 20 - Short Dive into jsPsych
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Step_21/" class="md-nav__link">
+        Step 21 - Processing Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Step 22 - Basic Stats
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Step 22 - Basic Stats
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-statistics" class="md-nav__link">
+    Basic Statistics
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    Objectives
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-establish-the-dataset" class="md-nav__link">
+    1: Establish the Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-descriptives-and-paired-samples-t-test-preparation" class="md-nav__link">
+    2: Descriptives and Paired Samples T-Test Preparation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-perform-the-paired-samples-t-test" class="md-nav__link">
+    3: Perform the Paired Samples T-Test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-add-previous-circle-color-variable" class="md-nav__link">
+    4: Add Previous Circle Color Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-another-paired-samples-t-test" class="md-nav__link">
+    5: Another Paired Samples T-Test
+  </a>
+  
+    <nav class="md-nav" aria-label="5: Another Paired Samples T-Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#some-snags-in-the-plan" class="md-nav__link">
+    Some Snags in the Plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixing-the-issue" class="md-nav__link">
+    Fixing the Issue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-two-way-anova" class="md-nav__link">
+    6: Two-Way ANOVA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../side_quests/">Side Quests</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Side Quests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/bonus_printing/" class="md-nav__link">
+        F-Strings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/oop/" class="md-nav__link">
+        Week 6 - OOP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/pseudocode/" class="md-nav__link">
+        Week 8 - Pseudocode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/design_patterns/" class="md-nav__link">
+        Week 10 - Design Patterns
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../assistance/">Assistance</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assistance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assistance/copilot/" class="md-nav__link">
+        Setting up GitHub Co-Pilot for Students
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../coding_assignments/">Coding Assignments</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Coding Assignments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coding_assignments/coding_assignment_01/" class="md-nav__link">
+        Coding Assignment 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coding_assignments/coding_assignment_02/" class="md-nav__link">
+        Coding Assignment 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coding_assignments/coding_assignment_03/" class="md-nav__link">
+        Coding Assignment 3
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../licenses/">Licenses</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Licenses
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-statistics" class="md-nav__link">
+    Basic Statistics
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    Objectives
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-establish-the-dataset" class="md-nav__link">
+    1: Establish the Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-descriptives-and-paired-samples-t-test-preparation" class="md-nav__link">
+    2: Descriptives and Paired Samples T-Test Preparation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-perform-the-paired-samples-t-test" class="md-nav__link">
+    3: Perform the Paired Samples T-Test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-add-previous-circle-color-variable" class="md-nav__link">
+    4: Add Previous Circle Color Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-another-paired-samples-t-test" class="md-nav__link">
+    5: Another Paired Samples T-Test
+  </a>
+  
+    <nav class="md-nav" aria-label="5: Another Paired Samples T-Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#some-snags-in-the-plan" class="md-nav__link">
+    Some Snags in the Plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixing-the-issue" class="md-nav__link">
+    Fixing the Issue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-two-way-anova" class="md-nav__link">
+    6: Two-Way ANOVA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="step-22">Step 22<a class="headerlink" href="#step-22" title="Permanent link">&para;</a></h1>
+<h2 id="basic-statistics"><strong>Basic Statistics</strong><a class="headerlink" href="#basic-statistics" title="Permanent link">&para;</a></h2>
+<p>In this step, we'll apply statistical methods to the reaction time dataset generated in the previous steps. This dataset includes data related to reaction times for trials where the independent variable (IV) is the color of a circle. Here's what we aim to accomplish:</p>
+<h3 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Establish the dataset.</li>
+<li>Compute basic descriptives and create plots suitable for a paired samples t-test.</li>
+<li>Perform and interpret a paired samples t-test.</li>
+<li>Manipulate the dataset to add an additional variable, <em>previous circle color</em>.</li>
+<li>Set up and run a two-way ANOVA to investigate interactions between the current circle color and the previous circle color.</li>
+</ol>
+<hr />
+<h3 id="1-establish-the-dataset">1: Establish the Dataset<a class="headerlink" href="#1-establish-the-dataset" title="Permanent link">&para;</a></h3>
+<p>We will start with the <code>all_data</code> dataset generated in Step 21. This dataset contains reaction times for trials where the circle color is the independent variable.</p>
+<p>Go back to Step 21 to get the <code>all_data</code> dataframe, when you do you should be able to run the code below and get the following result.</p>
+<p>Code:</p>
+<div class="highlight"><pre><span></span><code><span class="n">all_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<p>Result:
+<div class="highlight"><pre><span></span><code>    <span class="n">subject_id</span>  <span class="n">reaction_time</span>   <span class="n">circle_color</span>    <span class="n">key_pressed</span> <span class="n">accuracy</span>
+<span class="mi">0</span>       <span class="mi">1</span>           <span class="mf">445.0</span>           <span class="n">orange</span>          <span class="n">j</span>          <span class="kc">True</span>
+<span class="mi">1</span>       <span class="mi">1</span>           <span class="mf">386.0</span>           <span class="n">blue</span>            <span class="n">f</span>          <span class="kc">True</span>
+<span class="mi">2</span>       <span class="mi">1</span>           <span class="mf">366.0</span>           <span class="n">blue</span>            <span class="n">f</span>          <span class="kc">True</span>
+<span class="mi">3</span>       <span class="mi">1</span>           <span class="mf">374.0</span>           <span class="n">orange</span>          <span class="n">j</span>          <span class="kc">True</span>
+<span class="mi">4</span>       <span class="mi">1</span>           <span class="mf">409.0</span>           <span class="n">orange</span>          <span class="n">j</span>          <span class="kc">True</span>
+</code></pre></div></p>
+<hr />
+<h3 id="2-descriptives-and-paired-samples-t-test-preparation">2: Descriptives and Paired Samples T-Test Preparation<a class="headerlink" href="#2-descriptives-and-paired-samples-t-test-preparation" title="Permanent link">&para;</a></h3>
+<p>To prepare for the paired samples t-test:
+- Compute summary statistics for each circle color.
+- Visualize the data with plots to check assumptions like normality.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># Group by circle color and calculate summary statistics</span>
+<span class="n">descriptives</span> <span class="o">=</span> <span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;circle_color&#39;</span><span class="p">)[</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+
+<span class="c1"># Boxplot to visualize reaction times by circle color</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;circle_color&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">all_data</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Reaction Times by Circle Color&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Print descriptive statistics</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">descriptives</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h3 id="3-perform-the-paired-samples-t-test">3: Perform the Paired Samples T-Test<a class="headerlink" href="#3-perform-the-paired-samples-t-test" title="Permanent link">&para;</a></h3>
+<p>A paired samples t-test compares reaction times between two conditions.</p>
+<div class="admonition tip">
+<p class="admonition-title">pip install <code>scipy</code></p>
+<p>At this point you'll most likely need to install the <code>scipy</code> package. You can do this by running <code>%pip install scipy</code> in your notebook.</p>
+<p>What's <code>scipy</code>? Think of it as "scientific Python" - it's a library that provides many user-friendly and efficient numerical routines andf functions that are commonly used in scientific and engineering applications.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">ttest_rel</span>
+
+<span class="c1"># Perform paired t-test</span>
+<span class="n">group1</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;circle_color&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;orange&#39;</span><span class="p">][</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">]</span> <span class="c1"># Orange circle</span>
+<span class="n">group2</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;circle_color&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;blue&#39;</span><span class="p">][</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">]</span> <span class="c1"># Blue circle</span>
+
+<span class="n">t_stat</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">ttest_rel</span><span class="p">(</span><span class="n">group1</span><span class="p">,</span> <span class="n">group2</span><span class="p">)</span>
+
+<span class="c1"># Display results</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Paired Samples T-Test:</span><span class="se">\n</span><span class="s2">T-Statistic = </span><span class="si">{</span><span class="n">t_stat</span><span class="si">}</span><span class="s2">, p-value = </span><span class="si">{</span><span class="n">p_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Interpretation:</strong> Based on the p-value, determine if there is a significant difference between reaction times for orange and blue circles.</p>
+<details class="tip"><summary>Check your results</summary><p>If you ran it correctly, you should get the following output:
+<div class="highlight"><pre><span></span><code><span class="c1"># Paired Samples T-Test:</span>
+<span class="c1"># T-Statistic = -0.2520879211177987, p-value = 0.8010674499745879</span>
+</code></pre></div>
+The p-value is greater than 0.05, indicating that there is no significant difference between reaction times for orange and blue circles.</p>
+<p>Is this surprising? No not really! The data didn't appear to be significantly different in the boxplot, and we don't have a good reason to think that the color of the circle alone would affect reaction times.</p>
+</details>
+<hr />
+<h3 id="4-add-previous-circle-color-variable">4: Add <em>Previous Circle Color</em> Variable<a class="headerlink" href="#4-add-previous-circle-color-variable" title="Permanent link">&para;</a></h3>
+<p>To explore potential effects of <em>previous circle color</em>, add this column to the dataset. The first trial is excluded as it lacks a "previous" circle.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Shift the &#39;circle_color&#39; column to create the &#39;previous_circle_color&#39; column</span>
+<span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;previous_circle_color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;circle_color&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Remove the first trial or row of data from every subject</span>
+<span class="n">all_data</span> <span class="o">=</span> <span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;subject_id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Display the updated dataset</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">all_data</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Lambda Functions</p>
+<p>In the code above, we used a lambda function to remove the first trial or row of data from every subject. Lambda functions are small, anonymous functions that can have any number of arguments but only one expression. They are often used in situations where a function is needed for a short period of time.</p>
+<p>Be on the lookout for a "Side Quest" where you can learn more about lambda functions!</p>
+</div>
+<p>I have a hypothesis; if the previous circle color was the same as the current circle color, the reaction time will be faster. Let's see if this is true!</p>
+<p>To make our live's easier, we'll create a new column to include a new variable, <code>repeat_color</code>, which will be <code>True</code> if the previous circle color is the same as the current circle color, and <code>False</code> otherwise.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a new column &#39;same_color&#39; to indicate if the previous circle color is the same as the current circle color</span>
+<span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;repeat_color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;circle_color&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;previous_circle_color&#39;</span><span class="p">]</span>
+<span class="n">all_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<p>In the next part, we'll perform an additional t-test to see if there is a significant difference in reaction times between trials where the previous circle color is the same as the current circle color and trials where it is different.</p>
+<hr />
+<h3 id="5-another-paired-samples-t-test">5: Another Paired Samples T-Test<a class="headerlink" href="#5-another-paired-samples-t-test" title="Permanent link">&para;</a></h3>
+<p>Based on the code in part 3, I'd like for you to look at the code and then think about how you'd set it up yourself. After you think/test it, continue reading below.</p>
+<h4 id="some-snags-in-the-plan">Some Snags in the Plan<a class="headerlink" href="#some-snags-in-the-plan" title="Permanent link">&para;</a></h4>
+<p>A problem arrises if you simply group the data by <code>repeat_color</code> and then run the t-test. The issue is that we no longer have equal sample sizes for each group, this is because, randomly, we ended up with 250 trials where the previous circle color was the same as the current circle color, and 828 trials where they were different.</p>
+<p>Run the following code and you'll get an <code>ValueError: unequal length arrays</code> error.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Perform paired t-test</span>
+<span class="n">group1</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;repeat_color&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">][</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">]</span>  <span class="c1"># Repeat color is True</span>
+<span class="n">group2</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;repeat_color&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">][</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">]</span>  <span class="c1"># Repeat color is False</span>
+
+<span class="n">t_stat</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">ttest_rel</span><span class="p">(</span><span class="n">group1</span><span class="p">,</span> <span class="n">group2</span><span class="p">)</span>
+
+<span class="c1"># Display results</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Paired Samples T-Test:</span><span class="se">\n</span><span class="s2">T-Statistic = </span><span class="si">{</span><span class="n">t_stat</span><span class="si">}</span><span class="s2">, p-value = </span><span class="si">{</span><span class="n">p_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Boxplot visualization</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;repeat_color&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">all_data</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Reaction Time by Repeat Color&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Repeat Color&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Reaction Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p>We can run this block of code below to demonstrate that the two arrays are indeed unequal lengths:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">group1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">group2</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="fixing-the-issue">Fixing the Issue<a class="headerlink" href="#fixing-the-issue" title="Permanent link">&para;</a></h4>
+<p>One way to fix the problem (an imperfect, but fine way for quick data visualization and exploration) is to randomly sample 250 trials from the <code>repeat_color == False</code> group. This way, we'll have equal sample sizes for both groups.</p>
+<p>Let's do that below, and then perform the t-test and plot the results.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Randomly sample 250 trials from the &#39;repeat_color&#39; == False group</span>
+
+<span class="n">group2_sample</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;repeat_color&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">]</span>
+
+<span class="n">t_stat</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">ttest_rel</span><span class="p">(</span><span class="n">group1</span><span class="p">,</span> <span class="n">group2_sample</span><span class="p">)</span>
+
+<span class="c1"># Display results</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Paired Samples T-Test:</span><span class="se">\n</span><span class="s2">T-Statistic = </span><span class="si">{</span><span class="n">t_stat</span><span class="si">}</span><span class="s2">, p-value = </span><span class="si">{</span><span class="n">p_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Get descriptive statistics</span>
+<span class="n">group1_desc</span> <span class="o">=</span> <span class="n">group1</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="n">group2_desc</span> <span class="o">=</span> <span class="n">group2_sample</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Descriptive Statistics for Group 1 (Repeat Color is True):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">group1_desc</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Descriptive Statistics for Group 2 (Repeat Color is False):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">group2_desc</span><span class="p">)</span>
+
+<span class="c1"># Boxplot visualization</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;repeat_color&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">all_data</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Reaction Time by Repeat Color&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Repeat Color&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Reaction Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p>By making the random_state equal to 1, we ensure that the random sample is the same every time we run the code. This way, we can reproduce the results and compare them across different runs.</p>
+<p>This should also mean you see the same result that I do: it looks like there is no significant difference between reaction times when the previous circle color is the same as the current circle color compared to when they are different. It was a cool idea though, right?!</p>
+<h3 id="6-two-way-anova">6: Two-Way ANOVA<a class="headerlink" href="#6-two-way-anova" title="Permanent link">&para;</a></h3>
+<p>There's one more thing that I'd like for us to explore: the possible effect and interaction between subjects...</p>
+<p>We can set up a two-way ANOVA to investigate the effects of the current circle color, the previous circle color, and their interaction on reaction times.</p>
+<div class="admonition tip">
+<p class="admonition-title">%pip install statsmodels</p>
+<p>To run the two-way ANOVA, you'll need to install the <code>statsmodels</code> package. You can do this by running <code>%pip install statsmodels</code> in your notebook.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">from</span> <span class="nn">statsmodels.formula.api</span> <span class="kn">import</span> <span class="n">ols</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># Fit the two-way ANOVA model</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;reaction_time ~ C(subject_id) + C(circle_color) + C(subject_id):C(circle_color)&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">all_data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">anova_table</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">anova_lm</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">typ</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Display the ANOVA table</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">anova_table</span><span class="p">)</span>
+
+<span class="c1"># Boxplot visualization</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;circle_color&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;subject_id&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">all_data</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Reaction Time by Circle Color and Subject ID&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Circle Color&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Reaction Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Subject ID&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p>If everything has gone smoothly, your resulting ANOVA table should look like this:
+<div class="highlight"><pre><span></span><code>                                     sum_sq      df          F        PR(&gt;F)
+C(subject_id)                  3.327539e+06    21.0  11.095641  1.533542e-33
+C(circle_color)                1.209871e+03     1.0   0.084720  7.710580e-01
+C(subject_id):C(circle_color)  2.686349e+05    21.0   0.895760  5.971599e-01
+Residual                       1.476631e+07  1034.0        NaN           NaN
+</code></pre></div></p>
+<p>The last column is your p-value in scientific notation; we can see that the only significant effect is the subject ID. This is not surprising, as we would expect that different subjects would have different reaction times.</p>
+<p>What does this mean? It means that the color of the circle and the interaction between the color of the circle and the subject ID do not have a significant effect on reaction times, but different people do have different reaction times.</p>
+<p>Now you've run a two-way ANOVA in Python! This is a powerful tool for analyzing the effects of multiple factors on a dependent variable.</p>
+<hr />
+<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
+<p>In this step, we:</p>
+<ul>
+<li>Established the reaction time dataset and computed basic statistics.</li>
+<li>Conducted a paired samples t-test to evaluate differences between orange and blue circles.</li>
+<li>Introduced a new variable (<em>same circle color</em>), and randomly sampled to ensure equal sample sizes for a second t-test.</li>
+<li>Performed a two-way ANOVA and visualized all of the data.</li>
+</ul>
+<p>What are some things we didn't do?</p>
+<ul>
+<li>We didn't check for normality or homogeneity of variance in the t-tests or ANOVA.</li>
+<li>We didn't explore other statistical tests or models that could be applied to this dataset (Logistic Regression would be great, for example).</li>
+<li>We didn't remove outliers, this could have changed the results of the t-tests and ANOVA.</li>
+</ul>
+<p>Take a moment to think about what else you'd like to explore with this dataset. What other statistical tests or models could be applied? What additional variables could be included to enhance the analysis? If you're brave enough, try to implement some of these ideas!</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>
