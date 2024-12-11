@@ -71,9 +71,9 @@ nav:
   - Side Quests:
     - Side Quests: side_quests/index.md
     - F-Strings: side_quests/bonus_printing.md
-    - Week 6 - OOP : side_quests/oop.md
-    - Week 8 - Pseudocode: side_quests/pseudocode.md
-    - Week 10 - Design Patterns: side_quests/design_patterns.md
+    - Object Oriented Programming: side_quests/oop.md
+    - Pseudocode: side_quests/pseudocode.md
+    - Design Patterns: side_quests/design_patterns.md
   - Assistance:
     - assistance/index.md
     - assistance/copilot.md

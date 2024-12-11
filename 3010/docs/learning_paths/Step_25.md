@@ -1,4 +1,4 @@
-# Step 25, What next?
+# Step 25 - What Next?
 
 By now, you should have completed your programming journey and the content of this course!
 

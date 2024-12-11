@@ -1,4 +1,4 @@
-# Step 24: Fine-Tuning Figures in Matplotlib
+# Step 24
 
 In this step, we explore fine-tuning Matplotlib visualizations for enhanced customizability. We'll use the `all_data` dataset generated in Step 21 to create overlapping histograms with Probability Density Functions (PDFs) and legends. Along the way, we'll explain specific parts of the code you'll modify or customize in each section.
 
