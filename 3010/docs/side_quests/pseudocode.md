@@ -16,6 +16,7 @@ Pseudocode is useful because it allows you to focus on the **logic** and **struc
 ## How to Write Pseudocode
 
 When writing pseudocode:
+
 1. Use simple, plain language.
 2. Focus on the logical flow of the problem.
 3. Break tasks into small, manageable steps.
