@@ -815,6 +815,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-print-statements-to-understand-control-flow" class="md-nav__link">
+    Using Print Statements to Understand Control Flow
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Print Statements to Understand Control Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-tracking-a-number" class="md-nav__link">
+    Example: Tracking a Number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    Example Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    Reflection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise-problem-solving-with-control-structures" class="md-nav__link">
     Exercise: Problem-Solving with Control Structures
   </a>
@@ -1297,8 +1331,6 @@
       
         
       
-        
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1335,26 +1367,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../side_quests/bonus_printing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    F-Strings
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -1807,6 +1819,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-print-statements-to-understand-control-flow" class="md-nav__link">
+    Using Print Statements to Understand Control Flow
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Print Statements to Understand Control Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-tracking-a-number" class="md-nav__link">
+    Example: Tracking a Number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    Example Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    Reflection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise-problem-solving-with-control-structures" class="md-nav__link">
     Exercise: Problem-Solving with Control Structures
   </a>
@@ -1962,6 +2008,33 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> is odd&quot;</span><span class="p">)</span>
 </code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">What the f?</p>
+<p>The <code>f</code> before the string in the print statement indicates that it is an f-string. F-strings allow you to embed expressions inside string literals, using curly braces <code>{}</code>. This makes it easy to format strings with variable values.</p>
+<p>For example, <code>f"{i} is even"</code> will replace <code>{i}</code> with the value of <code>i</code> when printing.</p>
+<p>We'll talk more about f-strings in <code>Step 9</code> because they're very useful for Debugging -- the focus of <code>Step 9</code>.</p>
+</div>
+<h2 id="using-print-statements-to-understand-control-flow">Using Print Statements to Understand Control Flow<a class="headerlink" href="#using-print-statements-to-understand-control-flow" title="Permanent link">&para;</a></h2>
+<p>You might have noticed above that we used print statements to understand how our code is working. Print statements are a simple yet powerful tool to track the flow of your program and understand how variables change over time.</p>
+<h3 id="example-tracking-a-number">Example: Tracking a Number<a class="headerlink" href="#example-tracking-a-number" title="Permanent link">&para;</a></h3>
+<p>Let's start with a simple example where we print a number, perform an operation on it, and then print it again to see the output.</p>
+<h3 id="example-code">Example Code<a class="headerlink" href="#example-code" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Initial number:&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+
+<span class="c1"># Perform an operation</span>
+<span class="n">number</span> <span class="o">+=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After adding 5:&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+
+<span class="c1"># Perform another operation</span>
+<span class="n">number</span> <span class="o">*=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After multiplying by 2:&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="reflection">Reflection<a class="headerlink" href="#reflection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>What did the output look like?</li>
+<li>Did you see how the number changed after each operation?</li>
+</ul>
 <h2 id="exercise-problem-solving-with-control-structures">Exercise: Problem-Solving with Control Structures<a class="headerlink" href="#exercise-problem-solving-with-control-structures" title="Permanent link">&para;</a></h2>
 <p>Now it's time to practice using loops and conditional statements to solve problems. You can do this in your own Colab Notebook, in an <code>.ipynb</code> file in VSCode, or in a Python file in VSCode.</p>
 <h3 id="exercise-1-simple-loops">Exercise 1: Simple Loops<a class="headerlink" href="#exercise-1-simple-loops" title="Permanent link">&para;</a></h3>

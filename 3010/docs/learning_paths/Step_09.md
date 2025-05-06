@@ -73,6 +73,33 @@ When an error occurs, VSCode will display an error message in the terminal or ou
 1. **Error Message**: The error message will tell you what went wrong and where it happened. For example, `ZeroDivisionError: division by zero` indicates that you tried to divide a number by zero.
 2. **Traceback**: The traceback shows the sequence of function calls that led to the error. This can help you pinpoint where the error occurred in your code.
 
+## Using F-Strings 
+
+While Debugging, "F-strings" (formatted string literals) are a more readable and concise way to include variable values in your print statements. They were introduced in Python 3.6 and have become a popular way to format strings.
+
+### Example: Using F-Strings
+
+Let's rewrite the previous example using f-strings.
+
+### Example Code
+
+```python
+number = 10
+print(f"Initial number: {number}")
+
+# Perform an operation
+number += 5
+print(f"After adding 5: {number}")
+
+# Perform another operation
+number *= 2
+print(f"After multiplying by 2: {number}")
+```
+
+### Reflection
+- How does the use of f-strings improve the readability of the code?
+- Did you find it easier to understand the output with f-strings?
+
 ## Exercises
 
 Now, let's practice debugging with some exercises. Each exercise contains code with intentional errors. Your task is to find and fix the errors.
@@ -139,6 +166,8 @@ print(f"The sum of the list is: {result}")
     Set a breakpoint inside the loop and inspect the value of `total` at each iteration.
 
     You've likely funtionally done this with print statements before, but this is a more efficient and less permanent way to do it.
+
+    *If you want to get a little fancy,* try adding an f-string after the `total += number` line to print the value of the total -- notice how you can get similar information without having to set a breakpoint.
 
 ### Exercise 5: Reading Error Outputs
 Goal: Read, understand, and fix the (new) error.

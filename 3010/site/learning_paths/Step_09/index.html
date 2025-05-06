@@ -828,6 +828,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-f-strings" class="md-nav__link">
+    Using F-Strings
+  </a>
+  
+    <nav class="md-nav" aria-label="Using F-Strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-using-f-strings" class="md-nav__link">
+    Example: Using F-Strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    Example Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    Reflection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercises" class="md-nav__link">
     Exercises
   </a>
@@ -1250,8 +1284,6 @@
       
         
       
-        
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1288,26 +1320,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../side_quests/bonus_printing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    F-Strings
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -1713,6 +1725,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-f-strings" class="md-nav__link">
+    Using F-Strings
+  </a>
+  
+    <nav class="md-nav" aria-label="Using F-Strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-using-f-strings" class="md-nav__link">
+    Example: Using F-Strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    Example Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    Reflection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercises" class="md-nav__link">
     Exercises
   </a>
@@ -1884,6 +1930,27 @@
 <li><strong>Error Message</strong>: The error message will tell you what went wrong and where it happened. For example, <code>ZeroDivisionError: division by zero</code> indicates that you tried to divide a number by zero.</li>
 <li><strong>Traceback</strong>: The traceback shows the sequence of function calls that led to the error. This can help you pinpoint where the error occurred in your code.</li>
 </ol>
+<h2 id="using-f-strings">Using F-Strings<a class="headerlink" href="#using-f-strings" title="Permanent link">&para;</a></h2>
+<p>While Debugging, "F-strings" (formatted string literals) are a more readable and concise way to include variable values in your print statements. They were introduced in Python 3.6 and have become a popular way to format strings.</p>
+<h3 id="example-using-f-strings">Example: Using F-Strings<a class="headerlink" href="#example-using-f-strings" title="Permanent link">&para;</a></h3>
+<p>Let's rewrite the previous example using f-strings.</p>
+<h3 id="example-code">Example Code<a class="headerlink" href="#example-code" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initial number: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Perform an operation</span>
+<span class="n">number</span> <span class="o">+=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After adding 5: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Perform another operation</span>
+<span class="n">number</span> <span class="o">*=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After multiplying by 2: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="reflection">Reflection<a class="headerlink" href="#reflection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>How does the use of f-strings improve the readability of the code?</li>
+<li>Did you find it easier to understand the output with f-strings?</li>
+</ul>
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
 <p>Now, let's practice debugging with some exercises. Each exercise contains code with intentional errors. Your task is to find and fix the errors.</p>
 <h3 id="exercise-1-syntax-error">Exercise 1: Syntax Error<a class="headerlink" href="#exercise-1-syntax-error" title="Permanent link">&para;</a></h3>
@@ -1938,6 +2005,7 @@
 <summary>Hint</summary>
 <p>Set a breakpoint inside the loop and inspect the value of <code>total</code> at each iteration.</p>
 <p>You've likely funtionally done this with print statements before, but this is a more efficient and less permanent way to do it.</p>
+<p><em>If you want to get a little fancy,</em> try adding an f-string after the <code>total += number</code> line to print the value of the total -- notice how you can get similar information without having to set a breakpoint.</p>
 </details>
 <h3 id="exercise-5-reading-error-outputs">Exercise 5: Reading Error Outputs<a class="headerlink" href="#exercise-5-reading-error-outputs" title="Permanent link">&para;</a></h3>
 <p>Goal: Read, understand, and fix the (new) error.</p>

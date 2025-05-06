@@ -1079,8 +1079,6 @@
       
         
       
-        
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1117,26 +1115,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../side_quests/bonus_printing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    F-Strings
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -2294,6 +2272,33 @@ pip<span class="w"> </span>install<span class="w"> </span>numpy
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> is odd&quot;</span><span class="p">)</span>
 </code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">What the f?</p>
+<p>The <code>f</code> before the string in the print statement indicates that it is an f-string. F-strings allow you to embed expressions inside string literals, using curly braces <code>{}</code>. This makes it easy to format strings with variable values.</p>
+<p>For example, <code>f"{i} is even"</code> will replace <code>{i}</code> with the value of <code>i</code> when printing.</p>
+<p>We'll talk more about f-strings in <code>Step 9</code> because they're very useful for Debugging -- the focus of <code>Step 9</code>.</p>
+</div>
+<h2 id="using-print-statements-to-understand-control-flow">Using Print Statements to Understand Control Flow<a class="headerlink" href="#using-print-statements-to-understand-control-flow" title="Permanent link">&para;</a></h2>
+<p>You might have noticed above that we used print statements to understand how our code is working. Print statements are a simple yet powerful tool to track the flow of your program and understand how variables change over time.</p>
+<h3 id="example-tracking-a-number">Example: Tracking a Number<a class="headerlink" href="#example-tracking-a-number" title="Permanent link">&para;</a></h3>
+<p>Let's start with a simple example where we print a number, perform an operation on it, and then print it again to see the output.</p>
+<h3 id="example-code">Example Code<a class="headerlink" href="#example-code" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Initial number:&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+
+<span class="c1"># Perform an operation</span>
+<span class="n">number</span> <span class="o">+=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After adding 5:&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+
+<span class="c1"># Perform another operation</span>
+<span class="n">number</span> <span class="o">*=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After multiplying by 2:&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="reflection">Reflection<a class="headerlink" href="#reflection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>What did the output look like?</li>
+<li>Did you see how the number changed after each operation?</li>
+</ul>
 <h2 id="exercise-problem-solving-with-control-structures">Exercise: Problem-Solving with Control Structures<a class="headerlink" href="#exercise-problem-solving-with-control-structures" title="Permanent link">&para;</a></h2>
 <p>Now it's time to practice using loops and conditional statements to solve problems. You can do this in your own Colab Notebook, in an <code>.ipynb</code> file in VSCode, or in a Python file in VSCode.</p>
 <h3 id="exercise-1-simple-loops">Exercise 1: Simple Loops<a class="headerlink" href="#exercise-1-simple-loops" title="Permanent link">&para;</a></h3>
@@ -2920,6 +2925,27 @@ of course, the above code has the 0 edge case... but hopefully this gives you an
 <li><strong>Error Message</strong>: The error message will tell you what went wrong and where it happened. For example, <code>ZeroDivisionError: division by zero</code> indicates that you tried to divide a number by zero.</li>
 <li><strong>Traceback</strong>: The traceback shows the sequence of function calls that led to the error. This can help you pinpoint where the error occurred in your code.</li>
 </ol>
+<h2 id="using-f-strings">Using F-Strings<a class="headerlink" href="#using-f-strings" title="Permanent link">&para;</a></h2>
+<p>While Debugging, "F-strings" (formatted string literals) are a more readable and concise way to include variable values in your print statements. They were introduced in Python 3.6 and have become a popular way to format strings.</p>
+<h3 id="example-using-f-strings">Example: Using F-Strings<a class="headerlink" href="#example-using-f-strings" title="Permanent link">&para;</a></h3>
+<p>Let's rewrite the previous example using f-strings.</p>
+<h3 id="example-code_1">Example Code<a class="headerlink" href="#example-code_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initial number: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Perform an operation</span>
+<span class="n">number</span> <span class="o">+=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After adding 5: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Perform another operation</span>
+<span class="n">number</span> <span class="o">*=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After multiplying by 2: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="reflection_1">Reflection<a class="headerlink" href="#reflection_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>How does the use of f-strings improve the readability of the code?</li>
+<li>Did you find it easier to understand the output with f-strings?</li>
+</ul>
 <h2 id="exercises_3">Exercises<a class="headerlink" href="#exercises_3" title="Permanent link">&para;</a></h2>
 <p>Now, let's practice debugging with some exercises. Each exercise contains code with intentional errors. Your task is to find and fix the errors.</p>
 <h3 id="exercise-1-syntax-error">Exercise 1: Syntax Error<a class="headerlink" href="#exercise-1-syntax-error" title="Permanent link">&para;</a></h3>
@@ -2974,6 +3000,7 @@ of course, the above code has the 0 edge case... but hopefully this gives you an
 <summary>Hint</summary>
 <p>Set a breakpoint inside the loop and inspect the value of <code>total</code> at each iteration.</p>
 <p>You've likely funtionally done this with print statements before, but this is a more efficient and less permanent way to do it.</p>
+<p><em>If you want to get a little fancy,</em> try adding an f-string after the <code>total += number</code> line to print the value of the total -- notice how you can get similar information without having to set a breakpoint.</p>
 </details>
 <h3 id="exercise-5-reading-error-outputs">Exercise 5: Reading Error Outputs<a class="headerlink" href="#exercise-5-reading-error-outputs" title="Permanent link">&para;</a></h3>
 <p>Goal: Read, understand, and fix the (new) error.</p>
@@ -2999,6 +3026,9 @@ of course, the above code has the 0 edge case... but hopefully this gives you an
 <li>Reading and understanding error outputs.</li>
 </ul>
 <p>Understanding these concepts is essential for becoming a proficient programmer and writing reliable code.</p>
+<h2 id="bonus_1">Bonus<a class="headerlink" href="#bonus_1" title="Permanent link">&para;</a></h2>
+<p>Because of time pressure, we can only spend on class day focused on debugging. I've created a bonus coding assignment that you can work on to practice - this will not be graded but you can ask me questions about it.</p>
+<p>You can download the file following this link: <a href="../../files/bonus_debugging.ipynb">Debugging Bonus Assignment</a></p>
 <h1 id="step-10-oop-introduction-to-classes-and-objects">Step 10: OOP - Introduction to Classes and Objects<a class="headerlink" href="#step-10-oop-introduction-to-classes-and-objects" title="Permanent link">&para;</a></h1>
 <p>Welcome to Step 10, where we take a significant conceptual leap into <strong>Object-Oriented Programming (OOP)</strong>. So far, you've been learning how to write Python code using variables, functions, loops, and control structures. Now, we will explore a new way of organizing and structuring your code: by using <strong>classes</strong> and <strong>objects</strong>.</p>
 <h2 id="what-is-object-oriented-programming-oop">What is Object-Oriented Programming (OOP)?<a class="headerlink" href="#what-is-object-oriented-programming-oop" title="Permanent link">&para;</a></h2>
@@ -5681,6 +5711,48 @@ Residual                       1.476631e+07  1034.0        NaN           NaN
 <h3 id="summary_2">Summary<a class="headerlink" href="#summary_2" title="Permanent link">&para;</a></h3>
 <p>In this <em>final</em> step of our learning path, we've explored fine-tuning Matplotlib visualizations to create publication-quality figures. By layering histograms, PDFs, and annotations, we've enhanced the clarity and visual appeal of our data representations. These techniques can be applied to a wide range of datasets and research questions, allowing you to create compelling visualizations that effectively communicate your findings.</p>
 <p>Now you should have everything you need to create a publication-quality figure in Python!</p>
+<h1 id="step-25-what-next">Step 25 - What Next?<a class="headerlink" href="#step-25-what-next" title="Permanent link">&para;</a></h1>
+<p>By now, you should have completed your programming journey and the content of this course!</p>
+<p>Take a moment to congratulate yourself on your hard work and dedication. You have learned a lot and should be proud of your accomplishments!</p>
+<h1 id="first-thank-you">First, Thank you<a class="headerlink" href="#first-thank-you" title="Permanent link">&para;</a></h1>
+<p>Being able to build and share this course material with you means a lot to me - the journey of learning to enjoy programming is exciting for me! A special thanks to the students who signed up for my first 3010 class. Without you, this wouldn't exist.</p>
+<p>I don't expect all of you to fall in love with programming like I have, but I hope that at least you've learned about and have grown to appreciate the role that programming plays in your life.</p>
+<h1 id="looking-for-more_1">Looking for more?<a class="headerlink" href="#looking-for-more_1" title="Permanent link">&para;</a></h1>
+<p>There will be likely those among you who have experienced the "spark" of programming - that feeling of excitement when you build something that works. If you're one of those people, I want to encourage you to keep learning and growing as a programmer. This can be self-directed, and as fast or slow as you want it to be!</p>
+<p>The feeling like you can <em>build anything</em> is incredibly exciting. In the sections below, I'm sharing the resources for learning I've found over the years. I've only been able to use a small fraction of them, but all of these places are there for you to go, learn, and dream!</p>
+<h2 id="javascript">JavaScript<a class="headerlink" href="#javascript" title="Permanent link">&para;</a></h2>
+<p>You might want to dig into JavaScript if you like the idea of building something awesome that lives on the web. JavaScript is the language of the web, and it's a great place to start if you want to build websites, web apps, or even mobile apps.</p>
+<p>To learn about JavaScript, I'd recommend you first go to Mozilla's Developer Network (MDN) and check out their <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a>. It's a fantastic place to start.</p>
+<p>If you get the hang of JavaScript, you might want to check out <a href="https://reactjs.org/">React</a>, a JavaScript library for building user interfaces. It's a great way to build interactive web apps - and many of the apps you've used run on React.</p>
+<h2 id="more-python">More Python<a class="headerlink" href="#more-python" title="Permanent link">&para;</a></h2>
+<p>If you want to keep learning Python, I'd recommend you check out the <a href="https://docs.python.org/3/">Python documentation</a>. It's a great place to learn more about the language and its features.</p>
+<p>There are really great libraries you can dig into as well for diving into some interesting topics in Python - one of which is Django, a web framework for building web applications. You can check out the <a href="https://docs.djangoproject.com/en/3.0/">Django documentation</a> to learn more. </p>
+<h2 id="data-science">Data Science<a class="headerlink" href="#data-science" title="Permanent link">&para;</a></h2>
+<p>If you're interested in data science, you might want to check out <a href="https://www.kaggle.com/">Kaggle</a>. It's a great place to learn about data science and machine learning, and they have a lot of great resources to help you get started.</p>
+<h3 id="machine-learning">Machine Learning<a class="headerlink" href="#machine-learning" title="Permanent link">&para;</a></h3>
+<p>Related to Data Science, if you're interested in machine learning, you might want to check out <a href="https://www.tensorflow.org/">TensorFlow</a>. It's a great library for building machine learning models, and they have a lot of great resources to help you get started.</p>
+<p>For something a bit more "wild west", check out any of the following links:</p>
+<ul>
+<li><a href="https://platform.openai.com">OpenAI's API</a></li>
+<li><a href="https://huggingface.co/">Hugging Face</a></li>
+<li><a href="https://www.fast.ai/">Fast.ai</a></li>
+<li><a href="https://opencv.org/">OpenCV</a> </li>
+</ul>
+<h2 id="game-development">Game Development<a class="headerlink" href="#game-development" title="Permanent link">&para;</a></h2>
+<p>If you're interested in game development, you might want to check out <a href="https://unity.com/">Unity</a>. It's a great platform for building games, and they have a lot of great resources to help you get started - I've used and coached students through their tutorials and they're fantastic, check those out here: <a href="https://learn.unity.com/">Unity Learn</a>.</p>
+<p>If you're interested in a slightly more difficult game development platform, you might want to check out <a href="https://www.unrealengine.com/">Unreal Engine</a>. It's a great platform for building games, and they have a lot of great resources to help you get started.</p>
+<h2 id="mobile-apps-with-flutter">Mobile Apps with Flutter<a class="headerlink" href="#mobile-apps-with-flutter" title="Permanent link">&para;</a></h2>
+<p>If you're interested in building mobile apps, you might want to check out <a href="https://flutter.dev/">Flutter</a>. It's a great platform for building mobile apps, and they have a lot of great resources to help you get started.</p>
+<p>Flutter runs on the Dart programming language, a python-like language that's easy to learn, developed by Google. You can check out the <a href="https://dart.dev/guides">Dart documentation</a> to learn more.</p>
+<h2 id="take-on-the-universe-with-rust">Take on the Universe with Rust<a class="headerlink" href="#take-on-the-universe-with-rust" title="Permanent link">&para;</a></h2>
+<p>If you're interested in a language that's a bit more challenging, you might want to check out <a href="https://www.rust-lang.org/">Rust</a>. It's a great language for building systems software, and it's designed to be safe, concurrent, and practical.</p>
+<p>Rust is absolutely one of the most important programming languages of the future, and if you're really excited about coding, I'd definitely recommend you check it out!</p>
+<p>If you want to dive into learning, check out <a href="https://doc.rust-lang.org/book/">the book</a>. </p>
+<h1 id="finally-free-and-open-source">Finally: Free and Open Source<a class="headerlink" href="#finally-free-and-open-source" title="Permanent link">&para;</a></h1>
+<p>A final thought I want to leave you with is the power of free and open source software. The programming community - the world - is built on top of free and open source software. It's a powerful idea that anyone can use, modify, and distribute software for free.</p>
+<p>Check out the <a href="https://www.gnu.org/philosophy/philosophy.html">GNU Operating System's Philosophy page</a> and <a href="https://www.gnu.org/licenses/why-affero-gpl.html">the GNU GPL 3 license "why" page</a>. These both provide detailed and practical explanations of why free and open source software is so important.</p>
+<p>The story of working in the open source space is fascinating to me, if it sounds interesting to you, I highly recommend checking out this book, <a href="https://www.amazon.com/Working-Public-Making-Maintenance-Software/dp/0578675862">Working in Public</a>. </p>
+<p>If you want to contribute to the open source community, check out <a href="https://github.com">GitHub</a>.</p>
 
 
 

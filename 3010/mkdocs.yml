@@ -70,7 +70,6 @@ nav:
     - Step 25 - What Next?: learning_paths/Step_25.md
   - Side Quests:
     - Side Quests: side_quests/index.md
-    - F-Strings: side_quests/bonus_printing.md
     - Object Oriented Programming: side_quests/oop.md
     - Pseudocode: side_quests/pseudocode.md
     - Design Patterns: side_quests/design_patterns.md

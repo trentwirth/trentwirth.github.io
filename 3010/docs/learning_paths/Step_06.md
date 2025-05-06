@@ -103,6 +103,40 @@ for i in numbers_list:
         print(f"{i} is odd")
 ```
 
+!!! Tip "What the f?"
+    The `f` before the string in the print statement indicates that it is an f-string. F-strings allow you to embed expressions inside string literals, using curly braces `{}`. This makes it easy to format strings with variable values.
+
+    For example, `f"{i} is even"` will replace `{i}` with the value of `i` when printing.
+
+    We'll talk more about f-strings in `Step 9` because they're very useful for Debugging -- the focus of `Step 9`.
+
+## Using Print Statements to Understand Control Flow
+
+You might have noticed above that we used print statements to understand how our code is working. Print statements are a simple yet powerful tool to track the flow of your program and understand how variables change over time.
+
+### Example: Tracking a Number
+
+Let's start with a simple example where we print a number, perform an operation on it, and then print it again to see the output.
+
+### Example Code
+
+```python
+number = 10
+print("Initial number:", number)
+
+# Perform an operation
+number += 5
+print("After adding 5:", number)
+
+# Perform another operation
+number *= 2
+print("After multiplying by 2:", number)
+```
+
+### Reflection
+- What did the output look like?
+- Did you see how the number changed after each operation?
+
 ## Exercise: Problem-Solving with Control Structures
 
 Now it's time to practice using loops and conditional statements to solve problems. You can do this in your own Colab Notebook, in an `.ipynb` file in VSCode, or in a Python file in VSCode.
@@ -218,6 +252,7 @@ Write a Python program that generates a multiplication table for numbers 1-5, us
     ```
 
     This solution uses nested `for` loops to generate the multiplication table for numbers 1-5. The outer loop iterates over the numbers 1-5 for the first multiplier, and the inner loop iterates over the numbers 1-5 again for the second number, generating a table of all multiplication results.
+
 
 ## Reflect
 

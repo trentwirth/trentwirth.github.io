@@ -867,6 +867,40 @@ for i in numbers_list:
         print(f"{i} is odd")
 ```
 
+!!! Tip "What the f?"
+    The `f` before the string in the print statement indicates that it is an f-string. F-strings allow you to embed expressions inside string literals, using curly braces `{}`. This makes it easy to format strings with variable values.
+
+    For example, `f"{i} is even"` will replace `{i}` with the value of `i` when printing.
+
+    We'll talk more about f-strings in `Step 9` because they're very useful for Debugging -- the focus of `Step 9`.
+
+## Using Print Statements to Understand Control Flow
+
+You might have noticed above that we used print statements to understand how our code is working. Print statements are a simple yet powerful tool to track the flow of your program and understand how variables change over time.
+
+### Example: Tracking a Number
+
+Let's start with a simple example where we print a number, perform an operation on it, and then print it again to see the output.
+
+### Example Code
+
+```python
+number = 10
+print("Initial number:", number)
+
+# Perform an operation
+number += 5
+print("After adding 5:", number)
+
+# Perform another operation
+number *= 2
+print("After multiplying by 2:", number)
+```
+
+### Reflection
+- What did the output look like?
+- Did you see how the number changed after each operation?
+
 ## Exercise: Problem-Solving with Control Structures
 
 Now it's time to practice using loops and conditional statements to solve problems. You can do this in your own Colab Notebook, in an `.ipynb` file in VSCode, or in a Python file in VSCode.
@@ -982,6 +1016,7 @@ Write a Python program that generates a multiplication table for numbers 1-5, us
     ```
 
     This solution uses nested `for` loops to generate the multiplication table for numbers 1-5. The outer loop iterates over the numbers 1-5 for the first multiplier, and the inner loop iterates over the numbers 1-5 again for the second number, generating a table of all multiplication results.
+
 
 ## Reflect
 
@@ -1639,6 +1674,33 @@ When an error occurs, VSCode will display an error message in the terminal or ou
 1. **Error Message**: The error message will tell you what went wrong and where it happened. For example, `ZeroDivisionError: division by zero` indicates that you tried to divide a number by zero.
 2. **Traceback**: The traceback shows the sequence of function calls that led to the error. This can help you pinpoint where the error occurred in your code.
 
+## Using F-Strings 
+
+While Debugging, "F-strings" (formatted string literals) are a more readable and concise way to include variable values in your print statements. They were introduced in Python 3.6 and have become a popular way to format strings.
+
+### Example: Using F-Strings
+
+Let's rewrite the previous example using f-strings.
+
+### Example Code
+
+```python
+number = 10
+print(f"Initial number: {number}")
+
+# Perform an operation
+number += 5
+print(f"After adding 5: {number}")
+
+# Perform another operation
+number *= 2
+print(f"After multiplying by 2: {number}")
+```
+
+### Reflection
+- How does the use of f-strings improve the readability of the code?
+- Did you find it easier to understand the output with f-strings?
+
 ## Exercises
 
 Now, let's practice debugging with some exercises. Each exercise contains code with intentional errors. Your task is to find and fix the errors.
@@ -1706,6 +1768,8 @@ print(f"The sum of the list is: {result}")
 
     You've likely funtionally done this with print statements before, but this is a more efficient and less permanent way to do it.
 
+    *If you want to get a little fancy,* try adding an f-string after the `total += number` line to print the value of the total -- notice how you can get similar information without having to set a breakpoint.
+
 ### Exercise 5: Reading Error Outputs
 Goal: Read, understand, and fix the (new) error.
 
@@ -1735,6 +1799,12 @@ In this step, we learned about:
 - Reading and understanding error outputs.
 
 Understanding these concepts is essential for becoming a proficient programmer and writing reliable code.
+
+## Bonus
+
+Because of time pressure, we can only spend on class day focused on debugging. I've created a bonus coding assignment that you can work on to practice - this will not be graded but you can ask me questions about it.
+
+You can download the file following this link: [Debugging Bonus Assignment](../files/bonus_debugging.ipynb)
 
 
 # Step 10: OOP - Introduction to Classes and Objects
