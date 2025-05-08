@@ -11,13 +11,11 @@ In step 2, we have two objectives:
 
 Visual Studio Code (VSCode) is a powerful code editor. If you didn't install it yet, go back to `Step 1` and follow the instructions.
 
-Here's a quick overview of its main components:
+Here's a quick overview of the main components we're concerned with:
 
-- **Activity Bar**: Located on the far left, it lets you switch between views and gives you access to different features.
 - **Side Bar**: Shows different views like the Explorer, Search, Source Control, etc.
 - **Editor**: The main area where you edit your files.
-- **Panel**: Located at the bottom, it shows output, terminal, problems, etc.
-- **Status Bar**: Displays information about the opened project and the current file.
+- **Bottom Panel**: Located at the bottom, it shows output, terminal, problems, etc.
 
 ### **Open up a new terminal**
 
