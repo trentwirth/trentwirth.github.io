@@ -656,6 +656,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#some-more-basic-terminal-commands" class="md-nav__link">
+    Some more basic terminal commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#navigate-to-the-a_folder_is_a_directory-directory-in-the-vscode-file-explorer" class="md-nav__link">
     Navigate to the a_folder_is_a_directory directory in the VSCode file explorer
   </a>
@@ -1742,6 +1749,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#some-more-basic-terminal-commands" class="md-nav__link">
+    Some more basic terminal commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#navigate-to-the-a_folder_is_a_directory-directory-in-the-vscode-file-explorer" class="md-nav__link">
     Navigate to the a_folder_is_a_directory directory in the VSCode file explorer
   </a>
@@ -1936,6 +1950,7 @@ This will show you the path to your current directory, remember this is like the
 <p class="admonition-title">Code Blocks</p>
 <p>Above, you'll notice a gray box with text inside. This is a code block. You can copy the text inside the block with the "copy" button on the far right of the box, and paste it into your terminal to run the command.</p>
 </div>
+<h3 id="some-more-basic-terminal-commands">Some more basic terminal commands<a class="headerlink" href="#some-more-basic-terminal-commands" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p><strong>Get to know your directory structure in the terminal</strong>:
@@ -1944,8 +1959,7 @@ Use the <code>ls</code> command to list the contents of your current directory:
 </code></pre></div></p>
 </li>
 <li>
-<p><strong>Create a new directory called <code>a_folder_is_a_directory</code></strong>:
-Use the <code>mkdir</code> command:
+<p>Use the <code>mkdir</code> command:
      <div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>a_folder_is_a_directory
 </code></pre></div></p>
 <blockquote>
@@ -1966,12 +1980,18 @@ Use the <code>mkdir</code> command again:
 Use the <code>New-Item</code> command:
      <div class="highlight"><pre><span></span><code>New-Item<span class="w"> </span>-Name<span class="w"> </span><span class="s2">&quot;test_1.md&quot;</span><span class="w"> </span>-ItemType<span class="w"> </span>File
 </code></pre></div></p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Are you using a Mac?</p>
+<p>If you are on a Mac, the command to create a new file is slightly different. Use the <code>touch</code> command instead:
+ <div class="highlight"><pre><span></span><code>touch<span class="w"> </span>test_1.md
+</code></pre></div></p>
+</div>
 <blockquote>
 <p><code>New-Item</code> is a command that tells the computer we want to make a new file. <code>-Name</code> and <code>-ItemType</code> are both parameters that you need to feed the <code>New-Item</code> command in order for it to work. In this case, we feed each parameter an "argument" in the space after it is presented, where "test_1.md" is the argument for the parameter <code>-Name</code> that specifies the file name.</p>
 <p>By default, this will create the file in your current directory. You can add an input parameter called "<code>-Path</code>" if you want to create a file in a particular location, like this: -Path <code>"C:\Users\wirthtd\downloads"</code>  </p>
 </blockquote>
-</li>
-</ol>
 <h3 id="navigate-to-the-a_folder_is_a_directory-directory-in-the-vscode-file-explorer"><strong>Navigate to the <code>a_folder_is_a_directory</code> directory in the VSCode file explorer</strong><a class="headerlink" href="#navigate-to-the-a_folder_is_a_directory-directory-in-the-vscode-file-explorer" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Open the Explorer</strong>:</li>

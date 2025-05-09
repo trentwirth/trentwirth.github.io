@@ -35,31 +35,39 @@ This will show you the path to your current directory, remember this is like the
 !!! Tip "Code Blocks"
     Above, you'll notice a gray box with text inside. This is a code block. You can copy the text inside the block with the "copy" button on the far right of the box, and paste it into your terminal to run the command.
     
-3. **Get to know your directory structure in the terminal**:
+### Some more basic terminal commands
+
+1. **Get to know your directory structure in the terminal**:
 Use the `ls` command to list the contents of your current directory:
      ```sh
      ls
      ```
 
-4. **Create a new directory called `a_folder_is_a_directory`**:
-Use the `mkdir` command:
+2. Use the `mkdir` command:
      ```sh
      mkdir a_folder_is_a_directory
      ```
 > `mkdir` stands for "make directory" and is used to create new directories (or, "folders").
 
-5. **Create a new directory called `a_folder_is_a_directory/this_is_a_directory_within_a_directory`**:
+3. **Create a new directory called `a_folder_is_a_directory/this_is_a_directory_within_a_directory`**:
 Use the `mkdir` command again:
      ```sh
      mkdir a_folder_is_a_directory/this_is_a_directory_within_a_directory
      ```
 > This creates a directory within a directory, also known as a subdirectory.
 
-6. **Create a file called `test_1.md` in the `this_is_a_directory_within_a_directory` directory**:
+4. **Create a file called `test_1.md` in the `this_is_a_directory_within_a_directory` directory**:
 Use the `New-Item` command:
      ```sh
      New-Item -Name "test_1.md" -ItemType File
      ```
+
+!!! Warning "Are you using a Mac?"
+     If you are on a Mac, the command to create a new file is slightly different. Use the `touch` command instead:
+     ```sh
+     touch test_1.md
+     ```
+
 > `New-Item` is a command that tells the computer we want to make a new file. `-Name` and `-ItemType` are both parameters that you need to feed the `New-Item` command in order for it to work. In this case, we feed each parameter an "argument" in the space after it is presented, where "test_1.md" is the argument for the parameter `-Name` that specifies the file name.
 >
 > By default, this will create the file in your current directory. You can add an input parameter called "`-Path`" if you want to create a file in a particular location, like this: -Path `"C:\Users\wirthtd\downloads"`  
