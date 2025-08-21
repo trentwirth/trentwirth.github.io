@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Memory Experiment</title>
+  <!-- Load jsPsych library -->
+  <script src="https://unpkg.com/jspsych@7.3.3"></script>
+  <!-- Load jsPsych plugins -->
+  <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-survey-text@1.1.2"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.2"></script>
+  <!-- Load jsPsych CSS -->
+  <link href="https://unpkg.com/jspsych@7.3.3/css/jspsych.css" rel="stylesheet" type="text/css" />
+  <style>
+    /* Add some basic styling for better presentation */
+    .jspsych-content {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .prompt {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body></body>
+<script>
+
+  // Initialize jsPsych
+  const jsPsych = initJsPsych({
+    on_finish: function() {
+      // At the end of the experiment, save the data to a CSV file
+      // Reaction time is automatically saved in the 'rt' column
+      jsPsych.data.get().localSave('csv', 'recognition_memory_data.csv');
+    }
+  });
+
+  // --- STIMULI DEFINITION ---
+
+  // Words for the encoding (study) phase
+  const study_words = [
+    { word: 'sadness', valence: 'emotional' },
+    { word: 'anger', valence: 'emotional' },
+    { word: 'grief', valence: 'emotional' },
+    { word: 'hate', valence: 'emotional' },
+    { word: 'stress', valence: 'emotional' },
+    { word: 'panic', valence: 'emotional' },
+    { word: 'shame', valence: 'emotional' },
+    { word: 'guilt', valence: 'emotional' },
+    { word: 'dread', valence: 'emotional' },
+    { word: 'doom', valence: 'emotional' },
+    { word: 'clock', valence: 'neutral' },
+    { word: 'folder', valence: 'neutral' },
+    { word: 'handle', valence: 'neutral' },
+    { word: 'street', valence: 'neutral' },
+    { word: 'button', valence: 'neutral' },
+    { word: 'pocket', valence: 'neutral' },
+    { word: 'curtain', valence: 'neutral' },
+    { word: 'pencil', valence: 'neutral' },
+    { word: 'paper', valence: 'neutral' },
+    { word: 'bottle', valence: 'neutral' }
+  ];
+
+  // Lure (new) words for the recognition phase
+  const lure_words = [
+    { word: 'chaos', valence: 'emotional' },
+    { word: 'threat', valence: 'emotional' },
+    { word: 'agony', valence: 'emotional' },
+    { word: 'despair', valence: 'emotional' },
+    { word: 'terror', valence: 'emotional' },
+    { word: 'rage', valence: 'emotional' },
+    { word: 'pain', valence: 'emotional' },
+    { word: 'ruin', valence: 'emotional' },
+    { word: 'loss', valence: 'emotional' },
+    { word: 'void', valence: 'emotional' },
+    { word: 'carpet', valence: 'neutral' },
+    { word: 'stapler', valence: 'neutral' },
+    { word: 'mirror', valence: 'neutral' },
+    { word: 'towel', valence: 'neutral' },
+    { word: 'basket', valence: 'neutral' },
+    { word: 'shelf', valence: 'neutral' },
+    { word: 'frame', valence: 'neutral' },
+    { word: 'ticket', valence: 'neutral' },
+    { word: 'ribbon', valence: 'neutral' },
+    { word: 'coaster', valence: 'neutral' }
+  ];
+  
+  // Math problems for the distractor task
+  const math_problems = [
+    { problem: '7 + 12 = ?', answer: '19' },
+    { problem: '19 - 7 = ?', answer: '12' },
+    { problem: '8 + 5 = ?', answer: '13' },
+    { problem: '22 - 9 = ?', answer: '13' },
+    { problem: '15 + 6 = ?', answer: '21' },
+    { problem: '13 - 4 = ?', answer: '9' },
+    { problem: '9 + 9 = ?', answer: '18' },
+    { problem: '18 - 11 = ?', answer: '7' },
+    { problem: '11 + 3 = ?', answer: '14' },
+    { problem: '25 - 14 = ?', answer: '11' }
+  ];
+
+  // --- TIMELINE CREATION ---
+  let timeline = [];
+
+  // --- PHASE 1: Demographics (Optional, but good practice) ---
+  const participant_id_trial = {
+    type: jsPsychSurveyText,
+    questions: [{prompt: 'Please enter your UC email address:', name: 'participant_id', required: true}],
+    on_finish: function(data) {
+      jsPsych.data.addProperties({participant_id: data.response.participant_id});
+    }
+  };
+  timeline.push(participant_id_trial);
+
+  // --- PHASE 2: Encoding ---
+
+  // Instructions for the encoding phase
+  const encoding_instructions = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+      <p>Welcome to the experiment.</p>
+      <p>In the first phase, you will see a series of words, one at a time.</p>
+      <p>You will be asked if you remember these words later in the experiment.</p>
+      <p>Press any key to begin.</p>
+    `,
+    post_trial_gap: 500
+  };
+  timeline.push(encoding_instructions);
+
+  // Define the encoding trial structure
+  const encoding_trial = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: () => `<div class="prompt">${jsPsych.timelineVariable('word')}</div>`,
+    choices: "NO_KEYS", // Participant just views the word
+    trial_duration: 2000, // Show each word for 2 seconds
+    prompt: '<p>&nbsp;</p>', // Placeholder to keep layout consistent
+    data: {
+      phase: 'encoding',
+      word: jsPsych.timelineVariable('word'),
+      valence: jsPsych.timelineVariable('valence')
+    }
+  };
+
+  // Create the full encoding procedure with randomized trials
+  const encoding_procedure = {
+    timeline: [encoding_trial],
+    timeline_variables: study_words,
+    randomize_order: true
+  };
+  timeline.push(encoding_procedure);
+  
+  // --- PHASE 3: Distractor Task ---
+
+  // Instructions for the math distractor task
+  const distractor_instructions = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+      <p>Next, you will complete a brief math task.</p>
+      <p>You will see a series of simple arithmetic problems.</p>
+      <p>Please type your answer in the box and press Enter to continue.</p>
+      <p>Press any key to begin.</p>
+    `,
+    post_trial_gap: 500
+  };
+  timeline.push(distractor_instructions);
+
+  // Define the math trial structure
+  const math_trial = {
+    type: jsPsychSurveyText,
+    questions: () => [{prompt: `<div class="prompt">${jsPsych.timelineVariable('problem')}</div>`, name: 'math_answer', required: true}],
+    data: {
+      phase: 'math',
+      problem: jsPsych.timelineVariable('problem'),
+      correct_answer: jsPsych.timelineVariable('answer')
+    },
+    on_finish: function(data) {
+      // Score the math problem
+      data.response_value = data.response.math_answer;
+      data.correct = data.response_value === data.correct_answer;
+    }
+  };
+
+  // Create the full distractor procedure
+  const distractor_procedure = {
+    timeline: [math_trial],
+    timeline_variables: math_problems,
+    randomize_order: true
+  };
+  timeline.push(distractor_procedure);
+
+  // --- PHASE 4: Recall (Recognition) ---
+
+  // Instructions for the recall phase
+  const recall_instructions = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+      <p>Now in this final part of the experiment, you will see words one at a time.</p> 
+      <p>Some words you see will be <strong>new</strong>, and others you will have <strong>seen</strong> before.</p>
+      <p>Press <strong>F</strong> if you HAVE NOT seen the word before.</p>
+      <p>Press <strong>J</strong> if you HAVE seen the word before.</p>
+      <p>Please respond as quickly and accurately as possible.</p>
+      <p>Press any key to begin.</p>
+    `,
+    post_trial_gap: 500
+  };
+  timeline.push(recall_instructions);
+
+  // Prepare the recognition word list with UPDATED correct responses
+  const old_items = study_words.map(item => ({...item, status: 'old', correct_response: 'j'}));
+  const new_items = lure_words.map(item => ({...item, status: 'new', correct_response: 'f'}));
+  const recognition_words = old_items.concat(new_items);
+  
+  // Define the recall trial
+  const recall_trial = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: () => `<div class="prompt">${jsPsych.timelineVariable('word')}</div>`,
+    choices: ['f', 'j'],
+    prompt: '<p>NEW (F) or SEEN (J)?</p>',
+    data: {
+      phase: 'recall',
+      word: jsPsych.timelineVariable('word'),
+      valence: jsPsych.timelineVariable('valence'),
+      status: jsPsych.timelineVariable('status'),
+      correct_response: jsPsych.timelineVariable('correct_response')
+    },
+    on_finish: function(data) {
+      data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
+    }
+  };
+
+  // Create the full recall procedure with randomized trials
+  const recall_procedure = {
+    timeline: [recall_trial],
+    timeline_variables: recognition_words,
+    randomize_order: true
+  };
+  timeline.push(recall_procedure);
+
+  // --- END OF EXPERIMENT ---
+
+  // Final debriefing message
+  const debrief = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+      <p>Thank you for participating!</p>
+      <p>The experiment is now complete.</p>
+      <p>Your data will be downloaded automatically as a CSV file.</p>
+      <p>You may now close this window.</p>
+    `
+  };
+  timeline.push(debrief);
+
+  // --- RUN EXPERIMENT ---
+  jsPsych.run(timeline);
+
+</script>
+</html>
