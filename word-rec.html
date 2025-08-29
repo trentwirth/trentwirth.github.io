@@ -291,7 +291,9 @@
       <p>The experiment is now complete.</p>
       <p>Your data will be downloaded automatically as a CSV file.</p>
       <p>You may now close this window.</p>
-    `
+    `,
+    choices: "NO_KEYS", // Does not wait for a key press
+    trial_duration: 3000 // Ends trial automatically after 3 seconds
   };
   timeline.push(debrief);
 
@@ -300,3 +302,4 @@
 
 </script>
 </html>
+
