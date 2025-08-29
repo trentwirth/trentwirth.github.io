@@ -38,8 +38,9 @@
 
   // --- STIMULI DEFINITION ---
 
-  // Words for the encoding (study) phase
+  // Words for the encoding (study) phase - 40 total
   const study_words = [
+    // Emotional Words (20)
     { word: 'sadness', valence: 'emotional' },
     { word: 'anger', valence: 'emotional' },
     { word: 'grief', valence: 'emotional' },
@@ -50,6 +51,17 @@
     { word: 'guilt', valence: 'emotional' },
     { word: 'dread', valence: 'emotional' },
     { word: 'doom', valence: 'emotional' },
+    { word: 'misery', valence: 'emotional' },
+    { word: 'horror', valence: 'emotional' },
+    { word: 'threat', valence: 'emotional' },
+    { word: 'trauma', valence: 'emotional' },
+    { word: 'crisis', valence: 'emotional' },
+    { word: 'danger', valence: 'emotional' },
+    { word: 'attack', valence: 'emotional' },
+    { word: 'scream', valence: 'emotional' },
+    { word: 'wound', valence: 'emotional' },
+    { word: 'nightmare', valence: 'emotional' },
+    // Neutral Words (20)
     { word: 'clock', valence: 'neutral' },
     { word: 'folder', valence: 'neutral' },
     { word: 'handle', valence: 'neutral' },
@@ -59,13 +71,23 @@
     { word: 'curtain', valence: 'neutral' },
     { word: 'pencil', valence: 'neutral' },
     { word: 'paper', valence: 'neutral' },
-    { word: 'bottle', valence: 'neutral' }
+    { word: 'bottle', valence: 'neutral' },
+    { word: 'platform', valence: 'neutral' },
+    { word: 'device', valence: 'neutral' },
+    { word: 'system', valence: 'neutral' },
+    { word: 'channel', valence: 'neutral' },
+    { word: 'network', valence: 'neutral' },
+    { word: 'circuit', valence: 'neutral' },
+    { word: 'engine', valence: 'neutral' },
+    { word: 'machine', valence: 'neutral' },
+    { word: 'gadget', valence: 'neutral' },
+    { word: 'instrument', valence: 'neutral' }
   ];
 
-  // Lure (new) words for the recognition phase
+  // Lure (new) words for the recognition phase - 40 total
   const lure_words = [
+    // Emotional Lure Words (20)
     { word: 'chaos', valence: 'emotional' },
-    { word: 'threat', valence: 'emotional' },
     { word: 'agony', valence: 'emotional' },
     { word: 'despair', valence: 'emotional' },
     { word: 'terror', valence: 'emotional' },
@@ -74,6 +96,18 @@
     { word: 'ruin', valence: 'emotional' },
     { word: 'loss', valence: 'emotional' },
     { word: 'void', valence: 'emotional' },
+    { word: 'calamity', valence: 'emotional' },
+    { word: 'torment', valence: 'emotional' },
+    { word: 'anguish', valence: 'emotional' },
+    { word: 'violence', valence: 'emotional' },
+    { word: 'assault', valence: 'emotional' },
+    { word: 'menace', valence: 'emotional' },
+    { word: 'peril', valence: 'emotional' },
+    { word: 'venom', valence: 'emotional' },
+    { word: 'curse', valence: 'emotional' },
+    { word: 'plague', valence: 'emotional' },
+    { word: 'ordeal', valence: 'emotional' },
+    // Neutral Lure Words (20)
     { word: 'carpet', valence: 'neutral' },
     { word: 'stapler', valence: 'neutral' },
     { word: 'mirror', valence: 'neutral' },
@@ -83,7 +117,17 @@
     { word: 'frame', valence: 'neutral' },
     { word: 'ticket', valence: 'neutral' },
     { word: 'ribbon', valence: 'neutral' },
-    { word: 'coaster', valence: 'neutral' }
+    { word: 'coaster', valence: 'neutral' },
+    { word: 'lever', valence: 'neutral' },
+    { word: 'pulley', valence: 'neutral' },
+    { word: 'widget', valence: 'neutral' },
+    { word: 'component', valence: 'neutral' },
+    { word: 'module', valence: 'neutral' },
+    { word: 'segment', valence: 'neutral' },
+    { word: 'element', valence: 'neutral' },
+    { word: 'factor', valence: 'neutral' },
+    { word: 'aspect', valence: 'neutral' },
+    { word: 'feature', valence: 'neutral' }
   ];
   
   // Math problems for the distractor task
