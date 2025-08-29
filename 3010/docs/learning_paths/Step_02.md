@@ -56,11 +56,15 @@ Use the `mkdir` command again:
      ```
 > This creates a directory within a directory, also known as a subdirectory.
 
-4. **Create a file called `test_1.md` in the `this_is_a_directory_within_a_directory` directory**:
+4. **Create a file called `test_1.md` next to the `this_is_a_directory_within_a_directory` directory**:
 Use the `New-Item` command:
      ```sh
      New-Item -Name "test_1.md" -ItemType File
      ```
+> If you want to create the file inside of a particular directory, you can specify the path like this:
+```sh
+New-Item -Name "a_folder_is_a_directory/this_is_a_directory_within_a_directory/test_1.md" -ItemType File
+```
 
 !!! Warning "Are you using a Mac?"
      If you are on a Mac, the command to create a new file is slightly different. Use the `touch` command instead:
