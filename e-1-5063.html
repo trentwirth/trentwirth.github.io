@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Memory Experiment</title>
+  <!-- Load jsPsych library -->
+  <script src="https://unpkg.com/jspsych@7.3.3"></script>
+  <!-- Load jsPsych plugins -->
+  <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-survey-text@1.1.2"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.2"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.2"></script>
+  <!-- Load jsPsych CSS -->
+  <link href="https://unpkg.com/jspsych@7.3.3/css/jspsych.css" rel="stylesheet" type="text/css" />
+  <style>
+    /* Add some basic styling for better presentation */
+    .jspsych-content {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .prompt {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body></body>
+<script>
+
+  // Initialize jsPsych
+  const jsPsych = initJsPsych({
+    on_finish: function() {
+      // At the end of the experiment, save the data to a CSV file
+      // Reaction time is automatically saved in the 'rt' column
+      jsPsych.data.get().localSave('csv', 'recognition_memory_data.csv');
+    }
+  });
+
+  // --- STIMULI DEFINITION ---
+
+  // Words for the encoding (study) phase - 40 total
+  const study_words = [
+    // Emotional Words (20)
+    { word: 'sadness', valence: 'emotional' },
+    { word: 'anger', valence: 'emotional' },
+    { word: 'grief', valence: 'emotional' },
+    { word: 'hate', valence: 'emotional' },
+    { word: 'stress', valence: 'emotional' },
+    { word: 'panic', valence: 'emotional' },
+    { word: 'shame', valence: 'emotional' },
+    { word: 'guilt', valence: 'emotional' },
+    { word: 'dread', valence: 'emotional' },
+    { word: 'doom', valence: 'emotional' },
+    { word: 'misery', valence: 'emotional' },
+    { word: 'horror', valence: 'emotional' },
+    { word: 'threat', valence: 'emotional' },
+    { word: 'trauma', valence: 'emotional' },
+    { word: 'crisis', valence: 'emotional' },
+    { word: 'danger', valence: 'emotional' },
+    { word: 'attack', valence: 'emotional' },
+    { word: 'scream', valence: 'emotional' },
+    { word: 'wound', valence: 'emotional' },
+    { word: 'nightmare', valence: 'emotional' },
+    // Neutral Words (20)
+    { word: 'clock', valence: 'neutral' },
+    { word: 'folder', valence: 'neutral' },
+    { word: 'handle', valence: 'neutral' },
+    { word: 'street', valence: 'neutral' },
+    { word: 'button', valence: 'neutral' },
+    { word: 'pocket', valence: 'neutral' },
+    { word: 'curtain', valence: 'neutral' },
+    { word: 'pencil', valence: 'neutral' },
+    { word: 'paper', valence: 'neutral' },
+    { word: 'bottle', valence: 'neutral' },
+    { word: 'platform', valence: 'neutral' },
+    { word: 'device', valence: 'neutral' },
+    { word: 'system', valence: 'neutral' },
+    { word: 'channel', valence: 'neutral' },
+    { word: 'network', valence: 'neutral' },
+    { word: 'circuit', valence: 'neutral' },
+    { word: 'engine', valence: 'neutral' },
+    { word: 'machine', valence: 'neutral' },
+    { word: 'gadget', valence: 'neutral' },
+    { word: 'instrument', valence: 'neutral' }
+  ];
+
+  // Lure (new) words for the recognition phase - 40 total
+  const lure_words = [
+    // Emotional Lure Words (20)
+    { word: 'chaos', valence: 'emotional' },
+    { word: 'agony', valence: 'emotional' },
+    { word: 'despair', valence: 'emotional' },
+    { word: 'terror', valence: 'emotional' },
+    { word: 'rage', valence: 'emotional' },
+    { word: 'pain', valence: 'emotional' },
+    { word: 'ruin', valence: 'emotional' },
+    { word: 'loss', valence: 'emotional' },
+    { word: 'void', valence: 'emotional' },
+    { word: 'calamity', valence: 'emotional' },
+    { word: 'torment', valence: 'emotional' },
+    { word: 'anguish', valence: 'emotional' },
+    { word: 'violence', valence: 'emotional' },
+    { word: 'assault', valence: 'emotional' },
+    { word: 'menace', valence: 'emotional' },
+    { word: 'peril', valence: 'emotional' },
+    { word: 'venom', valence: 'emotional' },
+    { word: 'curse', valence: 'emotional' },
+    { word: 'plague', valence: 'emotional' },
+    { word: 'ordeal', valence: 'emotional' },
+    // Neutral Lure Words (20)
+    { word: 'carpet', valence: 'neutral' },
+    { word: 'stapler', valence: 'neutral' },
+    { word: 'mirror', valence: 'neutral' },
+    { word: 'towel', valence: 'neutral' },
+    { word: 'basket', valence: 'neutral' },
+    { word: 'shelf', valence: 'neutral' },
+    { word: 'frame', valence: 'neutral' },
+    { word: 'ticket', valence: 'neutral' },
+    { word: 'ribbon', valence: 'neutral' },
+    { word: 'coaster', valence: 'neutral' },
+    { word: 'lever', valence: 'neutral' },
+    { word: 'pulley', valence: 'neutral' },
+    { word: 'widget', valence: 'neutral' },
+    { word: 'component', valence: 'neutral' },
+    { word: 'module', valence: 'neutral' },
+    { word: 'segment', valence: 'neutral' },
+    { word: 'element', valence: 'neutral' },
+    { word: 'factor', valence: 'neutral' },
+    { word: 'aspect', valence: 'neutral' },
+    { word: 'feature', valence: 'neutral' }
+  ];
+  
+  // Math problems for the distractor task
+  const math_problems = [
+    { problem: '7 + 12 = ?', answer: '19' },
+    { problem: '19 - 7 = ?', answer: '12' },
+    { problem: '8 + 5 = ?', answer: '13' },
+    { problem: '22 - 9 = ?', answer: '13' },
+    { problem: '15 + 6 = ?', answer: '21' },
+    { problem: '13 - 4 = ?', answer: '9' },
+    { problem: '9 + 9 = ?', answer: '18' },
+    { problem: '18 - 11 = ?', answer: '7' },
+    { problem: '11 + 3 = ?', answer: '14' },
+    { problem: '25 - 14 = ?', answer: '11' },
+    { problem: '6 + 8 = ?', answer: '14' },
+    { problem: '20 - 8 = ?', answer: '12' },
+    { problem: '10 + 4 = ?', answer: '14' },
+    { problem: '17 - 6 = ?', answer: '11' },
+    { problem: '12 + 7 = ?', answer: '19' },
+    { problem: '14 - 5 = ?', answer: '9' },
+    { problem: '8 + 6 = ?', answer: '14' },
+    { problem: '21 - 13 = ?', answer: '8' },
+    { problem: '9 + 4 = ?', answer: '13' },
+    { problem: '16 - 7 = ?', answer: '9' }
+  ];
+
+  // --- TIMELINE CREATION ---
+  let timeline = [];
+
+  // --- PHASE 1: Demographics (Optional, but good practice) ---
+  const participant_id_trial = {
+    type: jsPsychSurveyText,
+    questions: [{prompt: 'Please enter your UC email address, or the email address of the UC student is having your do this experiment', name: 'participant_id', required: true}],
+    on_finish: function(data) {
+      jsPsych.data.addProperties({participant_id: data.response.participant_id});
+    }
+  };
+  timeline.push(participant_id_trial);
+
+  // --- PHASE 2: Encoding ---
+
+  // Instructions for the encoding phase
+  const encoding_instructions = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+  <p>Welcome to the experiment.</p>
+  <p>In the first phase, you will rate a series of words as either <strong>abstract</strong> or <strong>concrete</strong>.</p>
+  <p>Press any key to begin.</p>
+    `,
+    post_trial_gap: 500
+  };
+  timeline.push(encoding_instructions);
+
+  // Define the encoding trial structure
+  const encoding_trial = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: () => `<div class="prompt">${jsPsych.timelineVariable('word')}</div>`,
+    choices: ['Abstract', 'Concrete'], // left = Abstract, right = Concrete
+    button_html: '<button class="jspsych-btn">%choice%</button>',
+    trial_duration: null,
+    data: {
+      phase: 'encoding',
+      word: jsPsych.timelineVariable('word'),
+      valence: jsPsych.timelineVariable('valence')
+    },
+    on_finish: function(data) {
+      // record which button was pressed
+      const choiceIndex = data.response; // 0 = Abstract, 1 = Concrete
+      data.encoding_response = choiceIndex === null ? null : (choiceIndex === 0 ? 'abstract' : 'concrete');
+    }
+  };
+
+  // Create the full encoding procedure with randomized trials
+  const encoding_procedure = {
+    timeline: [encoding_trial],
+    timeline_variables: study_words,
+    randomize_order: true
+  };
+  timeline.push(encoding_procedure);
+  
+  // --- PHASE 3: Distractor Task ---
+
+  // Instructions for the math distractor task
+  const distractor_instructions = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+      <p>Next, you will complete a brief math task.</p>
+      <p>You will see a series of simple arithmetic problems.</p>
+      <p>Please type your answer in the box and press Enter to continue.</p>
+      <p>Press any key to begin.</p>
+    `,
+    post_trial_gap: 500
+  };
+  timeline.push(distractor_instructions);
+
+  // Define the math trial structure
+  const math_trial = {
+    type: jsPsychSurveyText,
+    questions: () => [{prompt: `<div class="prompt">${jsPsych.timelineVariable('problem')}</div>`, name: 'math_answer', required: true}],
+    data: {
+      phase: 'math',
+      problem: jsPsych.timelineVariable('problem'),
+      correct_answer: jsPsych.timelineVariable('answer')
+    },
+    on_finish: function(data) {
+      // Score the math problem
+      data.response_value = data.response.math_answer;
+      data.correct = data.response_value === data.correct_answer;
+    }
+  };
+
+  // Create the full distractor procedure
+  const distractor_procedure = {
+    timeline: [math_trial],
+    timeline_variables: math_problems,
+    randomize_order: true
+  };
+  timeline.push(distractor_procedure);
+
+  // --- TIMER & SKIP MECHANISM ---
+  // We'll record when the math/distractor phase starts, start a 10-minute countdown,
+  // keep it invisible during the math trials, and then show a centered countdown message
+  // after the math procedure finishes. The experimenter can press 'x' twice to skip the
+  // remaining countdown.
+
+  // Timer state
+  const TEN_MINUTES_MS = 10 * 60 * 1000;
+  let math_phase_start_time = null; // timestamp in ms
+  let countdown_end_time = null; // timestamp in ms
+  let skip_count = 0; // counts quick 'x' presses
+  let skip_timer = null; // timer to reset skip_count
+
+  // When the distractor (math) procedure begins, set the start time.
+  // We'll add a small helper trial to mark the start of the math phase.
+  const mark_math_start = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: '<div style="display:none"></div>',
+    choices: "NO_KEYS",
+    trial_duration: 1,
+    on_start: function() {
+      math_phase_start_time = Date.now();
+      countdown_end_time = math_phase_start_time + TEN_MINUTES_MS;
+      // ensure skip state reset
+      skip_count = 0;
+      if (skip_timer) { clearTimeout(skip_timer); skip_timer = null; }
+    },
+    data: { marker: 'math_phase_start' }
+  };
+
+  // Insert this marker immediately before the distractor procedure in the timeline
+  // Find index of distractor_instructions in timeline and insert before distractor_procedure
+  // For simplicity (and because we control timeline construction), push marker then procedure replacement
+  // Remove the last two pushes and re-push with marker before procedure.
+  // ...existing code...
+
+  // Insert the math start marker immediately before the distractor procedure in the timeline.
+  const distractorIndex = timeline.indexOf(distractor_procedure);
+  if (distractorIndex !== -1) {
+    timeline.splice(distractorIndex, 0, mark_math_start);
+  } else {
+    // fallback (shouldn't normally happen): append marker then procedure
+    timeline.push(mark_math_start);
+    timeline.push(distractor_procedure);
+  }
+
+  // After the math distractor completes, we want to show the countdown screen until the
+  // countdown_end_time is reached or the experimenter double-presses 'x'. We'll implement
+  // a looping trial that checks remaining time every second.
+
+  // Visible countdown trial (initially invisible until invoked). We'll build it so that
+  // the trial will display remaining time centered and will end only when time <= 0 or skipped.
+  const countdown_trial = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: function() {
+      // compute remaining time
+      const now = Date.now();
+      const remaining = Math.max(0, countdown_end_time - now);
+      const minutes = Math.floor(remaining / 60000);
+      const seconds = Math.floor((remaining % 60000) / 1000).toString().padStart(2, '0');
+      return `<div style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);font-size:28px;text-align:center;">the experiment will resume in ${minutes}:${seconds}, please hang tight until the experiment is ready to continue</div>`;
+    },
+    choices: 'NO_KEYS',
+    trial_duration: 1000,
+    on_start: function() {
+      // Make sure the trial is visible: nothing because stimulus supplies content when invoked.
+    },
+    on_finish: function(data) {
+      // nothing here; the loop controller will check time/skip
+    }
+  };
+
+  // Invisible placeholder to trigger the visible countdown loop only after math finishes.
+  // We'll create a timeline that runs a loop which repeatedly shows countdown_trial while
+  // remaining time > 0 and skip_count < 2.
+  const countdown_loop = {
+    timeline: [countdown_trial],
+    loop_function: function(data) {
+      const now = Date.now();
+      const remaining = Math.max(0, countdown_end_time - now);
+      if (skip_count >= 2) {
+        return false; // stop looping (skip activated)
+      }
+      if (remaining <= 0) {
+        return false; // time's up
+      }
+      return true; // continue looping
+    }
+  };
+
+  // Insert the countdown loop immediately after the distractor procedure so it runs before recall.
+  const newDistractorIndex = timeline.indexOf(distractor_procedure);
+  if (newDistractorIndex !== -1) {
+    timeline.splice(newDistractorIndex + 1, 0, countdown_loop);
+  } else {
+    // fallback: append it
+    timeline.push(countdown_loop);
+  }
+
+  // Only allow skip counting while the countdown is active to avoid accidental pre-arming.
+  let skip_active = false;
+  // When countdown_trial starts, enable skip counting; when loop ends it will stop being effective.
+  const original_countdown_on_start = countdown_trial.on_start;
+  countdown_trial.on_start = function() {
+    skip_active = true;
+    if (original_countdown_on_start) original_countdown_on_start();
+  };
+  // When the loop ends, we should reset skip state. We add a small cleanup by listening for
+  // when the timeline reaches the recall_instructions marker and then disabling skip.
+  document.addEventListener('keydown', function(e) {
+    if (!skip_active) return;
+    if (e.key && e.key.toLowerCase() === 'x') {
+      skip_count += 1;
+      if (skip_timer) { clearTimeout(skip_timer); }
+      // reset the skip count after 1 second
+      skip_timer = setTimeout(function() { skip_count = 0; skip_timer = null; }, 1000);
+    }
+  });
+
+  // After the countdown loop finishes (either time up or skip), disable skip_active so further
+  // 'x' presses don't affect things. We'll add an on_finish to the countdown_loop by wrapping
+  // it in a small controller trial that runs after the loop to reset skip_active.
+  const countdown_cleanup = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: '<div style="display:none"></div>',
+    choices: 'NO_KEYS',
+    trial_duration: 1,
+    on_start: function() {
+      skip_active = false;
+      skip_count = 0;
+      if (skip_timer) { clearTimeout(skip_timer); skip_timer = null; }
+    }
+  };
+  // Insert the cleanup directly after the countdown_loop if we successfully inserted it.
+  const countdownIndex = timeline.indexOf(countdown_loop);
+  if (countdownIndex !== -1) {
+    timeline.splice(countdownIndex + 1, 0, countdown_cleanup);
+  } else {
+    timeline.push(countdown_cleanup);
+  }
+
+
+  // --- PHASE 4: Recall (Recognition) ---
+
+  // Instructions for the recall phase
+  const recall_instructions = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+  <p>Now that you've rated words, this final part is a memory test.</p>
+  <p>Some words you will see are the same ones you rated earlier; others are new.</p>
+  <p>Please indicate whether you have seen each word before.</p>
+  <p>Press <strong>F</strong> if you have <strong>NOT</strong> seen the word before (new).</p>
+  <p>Press <strong>J</strong> if you <strong>HAVE</strong> seen the word before (seen).</p>
+  <p>Try to be as quick and accurate as possible. Press any key to begin.</p>
+    `,
+    post_trial_gap: 500
+  };
+  timeline.push(recall_instructions);
+
+  // Prepare the recognition word list with UPDATED correct responses
+  const old_items = study_words.map(item => ({...item, status: 'old', correct_response: 'j'}));
+  const new_items = lure_words.map(item => ({...item, status: 'new', correct_response: 'f'}));
+  const recognition_words = old_items.concat(new_items);
+  
+  // Define the recall trial
+  const recall_trial = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: () => `<div class="prompt">${jsPsych.timelineVariable('word')}</div>`,
+    choices: ['f', 'j'],
+    prompt: '<p>NEW (F) or SEEN (J)?</p>',
+    data: {
+      phase: 'recall',
+      word: jsPsych.timelineVariable('word'),
+      valence: jsPsych.timelineVariable('valence'),
+      status: jsPsych.timelineVariable('status'),
+      correct_response: jsPsych.timelineVariable('correct_response')
+    },
+    on_finish: function(data) {
+      data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
+    }
+  };
+
+  // Create the full recall procedure with randomized trials
+  const recall_procedure = {
+    timeline: [recall_trial],
+    timeline_variables: recognition_words,
+    randomize_order: true
+  };
+  timeline.push(recall_procedure);
+
+  // --- END OF EXPERIMENT ---
+
+  // Final debriefing message
+  const debrief = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+      <p>Thank you for participating!</p>
+      <p>The experiment is now complete.</p>
+      <p>Your data will be downloaded automatically as a CSV file.</p>
+      <p>You may now close this window.</p>
+    `,
+    choices: "NO_KEYS", // Does not wait for a key press
+    trial_duration: 3000 // Ends trial automatically after 3 seconds
+  };
+  timeline.push(debrief);
+
+  // --- RUN EXPERIMENT ---
+  jsPsych.run(timeline);
+
+</script>
+</html>
+
