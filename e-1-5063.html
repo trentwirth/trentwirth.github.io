@@ -167,6 +167,25 @@
     }
   };
   timeline.push(participant_id_trial);
+  
+  // --- ADDITIONAL DEMOGRAPHICS: Age & Gender ---
+  const demographics_trial = {
+    type: jsPsychSurveyText,
+    questions: [
+      { prompt: 'Age:', name: 'age', required: true },
+      { prompt: 'Gender:', name: 'gender', required: true },
+      { prompt: 'Handedness (e.g., right/left/ambidextrous):', name: 'handedness', required: true }
+    ],
+    on_finish: function(data) {
+      // Save demographic responses as experiment-level properties
+      jsPsych.data.addProperties({
+        age: data.response.age,
+        gender: data.response.gender
+        ,handedness: data.response.handedness
+      });
+    }
+  };
+  timeline.push(demographics_trial);
 
   // --- PHASE 2: Encoding ---
 
