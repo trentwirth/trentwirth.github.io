@@ -82,7 +82,7 @@ Type hints allow you to specify the expected data types of function parameters a
 
 ### Syntax
 
-Below is a template for how a functino with type hints would work, note, these are not real types:
+Below is a template for how a function with type hints would work, note, these are not real types:
 
 ```python
 def function_name(parameter: type) -> return_type:
