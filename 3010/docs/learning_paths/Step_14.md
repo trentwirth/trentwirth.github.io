@@ -50,6 +50,7 @@ print(participants)  # Output: ['Alice', 'Barbara', 'David', 'Eve']
 ### List Methods
 
 Here are a few useful methods you can use with lists:
+
 - **`append()`**: Adds an element to the end of the list.
 - **`remove()`**: Removes the first occurrence of an element from the list.
 - **`sort()`**: Sorts the list in place.
@@ -248,7 +249,7 @@ Now that you’ve learned about lists, tuples, dictionaries, and sets, let's wra
     participant_dict = {}
 
     # Dictionary to map participant names to their age and hobby
-    for participant in participant_list:
+    for participant in participants:
         participant_dict[participant.name] = {"age": participant.age, "hobby": participant.hobby}
 
     # Print the list of participants, `\n` is used to print a new line

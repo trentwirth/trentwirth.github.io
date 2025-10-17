@@ -89,6 +89,7 @@ File I/O refers to the process of reading from and writing to files. In Python, 
 ### Working with Files
 
 Python makes it easy to work with files using the `open()` function. When you open a file, you can choose different modes like:
+
 - **'r'**: Read mode (default) – Opens a file for reading.
 - **'w'**: Write mode – Opens a file for writing (creates a new file or overwrites an existing file).
 - **'a'**: Append mode – Opens a file for appending (adds new data at the end of the file).
