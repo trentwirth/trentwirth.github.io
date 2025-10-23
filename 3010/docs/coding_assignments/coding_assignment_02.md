@@ -48,8 +48,6 @@ Write a Python program that checks through two lists: one with letter grades for
 
 The task is to print out all students who got an A or a B using a combination of loops, conditionals, and a function (include appropriate type hints for your function).
 
-> Bonus Point: if you create a new list that only contains the students who got an A or a B, and print out that new list.
-
 I want you to work off of the following code block:
 
 ```python
