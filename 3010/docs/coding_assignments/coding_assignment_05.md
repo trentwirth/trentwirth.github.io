@@ -14,6 +14,13 @@ The instructions to complete the coding assignment are embedded within the `.ipy
 - The notebook first starts by walking you through plotting some complex 3D data, and then you get points in the assignment where you fill in some blanks, make your own plot, and reflect on the process. 
 - This assignment should be fun but also maybe a little weird! Plotting human movement data is second nature to me, but it takes time to develop intuition for what the data means. Ask questions! Follow your curiosity!
 
+!!! Warning "Mime type error; `nbformat`"
+     If your 3D plot isn't working, that is likely due to needing `nbformat` installed in your python environment. You can install it using pip:
+     ```python
+     !pip install nbformat>=4.2.0
+     ```
+     If this doesn't fix it, ask for help!
+
 # When you finish
 
 If you're taking this course for credit, submit the completed `coding_assignment_05.ipynb` file through Canvas, rename it using the following format: 
