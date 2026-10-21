@@ -16,13 +16,6 @@ Stroop Smash is a game, but it's also a tiny experiment. Every time you play, it
 
 **Your job:** get the game running, take a quick tour of the code, then **choose 2 of the 5 upgrades** below and build them.
 
-!!! Warning "No chatbots for this one"
-    In other parts of this course, I encourage you to use AI tools. For this assignment, please don't. Everything you need is on this page: each option has step-by-step instructions, hints you can open one at a time, and a list of common errors with their fixes.
-
-    Here's why. This assignment practices something a chatbot can't do for you: reading code that someone else wrote, finding your way around it, and changing it without breaking it. That's exactly the skill you need every time you check code that a chatbot gives you.
-
-    If you get stuck: re-read the step, open the hints one at a time, look back at the Step of the Learning Path that the option mentions, and ask a classmate or me.
-
 ---
 
 ## Part 1: Get the game running (everyone does this)
