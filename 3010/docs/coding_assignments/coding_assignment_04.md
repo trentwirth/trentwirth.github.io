@@ -1,6 +1,6 @@
-# Coding Assignment 4
+# Coding Assignment 4: Stroop Smash
 
-> Note: For this assignment you'll need Python and VSCode installed on your own computer (Steps 1 and 3), and you'll use ideas from Steps 1–17 of the Learning Path. **This game will not run in Google Colab**, because Colab can't open a game window.
+> Note: For this assignment you'll need Python and VSCode (with the Python extension) installed on your own computer (Steps 1–3), and you'll use ideas from Steps 1–17 of the Learning Path. **This game will not run in Google Colab**, because Colab can't open a game window.
 
 Most people think games are fun! And a lot of those people have wondered to themselves the following questions:
 
@@ -16,36 +16,110 @@ Stroop Smash is a game, but it's also a tiny experiment. Every time you play, it
 
 **Your job:** get the game running, take a quick tour of the code, then **choose 2 of the 5 upgrades** below and build them.
 
+!!! Warning "No chatbots for this one"
+    In other parts of this course, I encourage you to use AI tools. For this assignment, please don't. Everything you need is on this page: each option has step-by-step instructions, hints you can open one at a time, and a list of common errors with their fixes.
+
+    Here's why. This assignment practices something a chatbot can't do for you: reading code that someone else wrote, finding your way around it, and changing it without breaking it. That's exactly the skill you need every time you check code that a chatbot gives you.
+
+    If you get stuck: re-read the step, open the hints one at a time, look back at the Step of the Learning Path that the option mentions, and ask a classmate or me.
+
 ---
 
 ## Part 1: Get the game running (everyone does this)
 
-1. **Install Pygame.** In the VSCode terminal, run:
+1. **Download the game:** [Click here to download Stroop Smash](../files/stroop_smash.zip)
+
+2. **Unzip it**, then in VSCode go to `File > Open Folder...` and choose the `stroop_smash` folder.
+
+    > Choose the `stroop_smash` folder itself, not the folder it's sitting in. You should see `setup_env.py` and `stroop_smash.py` in VSCode's file explorer on the left.
+
+3. **Set up your Python environment.** Remember from Step 2: an *environment* is a Python interpreter plus the libraries installed for it. Stroop Smash needs one library, Pygame, and the file `setup_env.py` installs it for you.
+
+    Open `setup_env.py` and press the Run button (the triangle in the top right corner). Or, type this in the terminal:
 
     ```bash
-    pip install pygame
+    python setup_env.py
     ```
 
-2. **Download the game:** [Click here to download Stroop Smash](../files/stroop_smash.zip). It comes as a zip file called `stroop_smash.zip`.
+    > On a Mac, type `python3` instead of `python`.
 
-3. **Unzip it**, then in VSCode go to `File > Open Folder...` and choose the `stroop_smash` folder.
+    The script asks where to install Pygame. Type `1` or `2` and press Enter:
 
-4. **Run it.** Open `stroop_smash.py` and press the Run button (the triangle in the top right corner), or type this in the terminal:
+    | | **1. Virtual environment** (recommended) | **2. Base Python** |
+    |---|---|---|
+    | **What it does** | Makes a private Python just for this game, in a folder called `.venv` inside `stroop_smash` | Installs Pygame into the Python you've been using all along |
+    | **Choose it if...** | you're not sure, or you've never made a virtual environment before | you've been installing all your libraries into one Python and want to keep doing that |
+    | **After setup** | Tell VSCode to use the `.venv` (step 4 below) | Usually nothing |
+
+    When it's finished, the script prints **ALL SET!** If something goes wrong, it prints **SETUP DIDN'T FINISH** and explains what to do next. It's safe to run more than once.
+
+    > The script installs `pygame-ce`, the community edition of Pygame. It works exactly like regular Pygame, and you still write `import pygame`. Unlike regular Pygame, it works with the newest versions of Python.
+
+4. **If you chose the virtual environment, tell VSCode to use it.** VSCode may pop up a message asking whether to use the new environment. If it does, click **Yes**. If no message appears:
+
+    - Press `Ctrl + Shift + P` (`Cmd + Shift + P` on Mac)
+    - Type `Python: Select Interpreter` and press Enter
+    - Pick the option that mentions `.venv`
+
+    To check, open any `.py` file and look at the bottom-right corner of VSCode. It should mention `.venv`.
+
+5. **Run the game.** Open `stroop_smash.py` and press the Run button.
+
+6. **Play a full game!** When it's over, look at the end screen. What's your Stroop effect?
+
+7. **Find your data.** In VSCode's file explorer, there's now a `data` folder with a CSV file in it. Open it: each row is one trial. Hang on to it, because this is exactly the kind of data we'll analyze in Steps 20–22.
+
+??? Tip "Why use a virtual environment?"
+    Think of a virtual environment as a separate toolbox for each project. The libraries you install for Stroop Smash stay inside its `.venv` folder, so they can't clash with the libraries other projects need.
+
+    It's also easy to undo. If your `.venv` ever gets messed up, delete the folder and run `setup_env.py` again. Nothing else on your computer is affected.
+
+??? Tip "Prefer to set it up yourself? Here are the commands"
+    These do the same thing as `setup_env.py`. Run them in the VSCode terminal, from inside the `stroop_smash` folder.
+
+    **Virtual environment, Windows:**
 
     ```bash
-    python stroop_smash.py
+    python -m venv .venv
+    .venv\Scripts\activate
+    pip install -r requirements.txt
     ```
 
-    > On a Mac, you may need to type `python3` instead of `python`.
+    **Virtual environment, Mac:**
 
-5. **Play a full game!** When it's over, look at the end screen. What's your Stroop effect?
+    ```bash
+    python3 -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
+    ```
 
-6. **Find your data.** In VSCode's file explorer, there's now a `data` folder with a CSV file in it. Open it: each row is one trial. Hang on to it, because this is exactly the kind of data we'll analyze in Steps 20–22.
+    Then tell VSCode to use the `.venv` (step 4 above).
 
-??? Tip "Trouble installing or running Pygame?"
-    - **`ModuleNotFoundError: No module named 'pygame'`, even though you installed it:** your computer probably has more than one Python, and Pygame went into a different one. In the VSCode terminal, run `python -m pip install pygame` (or `python3 -m pip install pygame` on a Mac). This installs Pygame into the same Python that runs your game.
-    - **`pip install pygame` fails with a long error:** try the community edition instead: `pip install pygame-ce`. It works exactly the same, and you don't need to change any code.
-    - **Nothing happens when you press keys:** click on the game window first so it's selected.
+    **Base Python:**
+
+    ```bash
+    python -m pip install -r requirements.txt
+    ```
+
+    (On a Mac, start with `python3` instead of `python`.)
+
+    `requirements.txt` is a list of the libraries a project needs. Sharing one with your code is a common way to share Python projects, because anyone can install everything with a single command.
+
+    > Already installed regular Pygame (`pip install pygame`) in that environment? Then you don't need to install anything. Stroop Smash works with either version. Don't install both in the same environment, because they clash.
+
+??? Tip "Trouble setting up or running the game?"
+    - **The game says "Pygame isn't installed for the Python that's running this game":** VSCode is using a different Python than the one you installed Pygame into. If you chose the virtual environment, do step 4 again. If you chose base Python, select the interpreter whose path matches the one `setup_env.py` printed.
+    - **Typing `python` does nothing, or opens the Microsoft Store (Windows):** try `py setup_env.py` instead, or use the Run button.
+    - **`command not found: python` (Mac):** type `python3` instead.
+    - **A red error saying "running scripts is disabled on this system" appears when you open a terminal (Windows):** Windows blocked VSCode from activating your `.venv` in the terminal. The Run button still works, so you can ignore this message. To fix it for good, run this once in the terminal, then open a new terminal:
+
+        ```bash
+        Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+        ```
+
+    - **Setup says "This Python doesn't allow libraries to be installed into it directly":** run `setup_env.py` again and choose option 1.
+    - **Nothing happens when you press keys in the game:** click on the game window first so it's selected.
+    - **Something is really broken:** delete the `.venv` folder and run `setup_env.py` again.
 
 !!! Tip "Make a backup before you change anything"
     Copy the whole `stroop_smash` folder and name the copy `stroop_smash_original`. If you break your game and can't figure out why, you can compare your files with the originals, or start fresh.
@@ -64,6 +138,8 @@ The game is split into six files, and **each file has one job**:
 | `scoring.py` | How many points each answer is worth. | 2 |
 | `display.py` | Everything drawn on the screen. | 3, 4, 5 |
 | `results.py` | The end-of-game summary, and saving your data to a CSV. | none |
+
+The folder also has three helper files that you'll never need to edit: `setup_env.py` (you ran it in Part 1), `requirements.txt` (the list of libraries it installs), and `make_submission.py` (you'll use it in Part 4).
 
 Splitting code up like this is called **modular programming**, which you first met in Step 12. It means you can change *one* thing, like the scoring rules, without touching the rest of the game. You don't need to understand every line of every file to do this assignment. You only need to understand the parts you change.
 
@@ -474,9 +550,9 @@ Here's the nice part: the feedback screen and the answer checking both ask the t
 
 Submit these on Canvas:
 
-1. **Your game folder, zipped**, named `lastname_firstname_coding_assignment_4.zip`. Include your `data` folder!
-    - Windows: right-click the folder, then choose `Compress to ZIP file` (or `Send to > Compressed (zipped) folder`).
-    - Mac: right-click the folder, then choose `Compress`.
+1. **Your game folder, zipped.** Open `make_submission.py` and press the Run button. It asks for your name, then creates `lastname_firstname_coding_assignment_4.zip` inside your `stroop_smash` folder, with your code and your `data` folder in it.
+
+    It leaves out your `.venv` folder on purpose. That folder is large, and it only works on your own computer, so there's no point submitting it.
 
 2. **One screenshot for each option, showing it working.** For example: your new colors on the start screen, a "+15 points" message, a "Game Over!" screen, a "Too slow!" message, or a boxed word.
     - Windows: `Windows + Shift + S`. Mac: `Cmd + Shift + 4`.
@@ -484,6 +560,14 @@ Submit these on Canvas:
 3. **A short write-up**, a few sentences for each option, answering:
     - Which files did you change, and what did you change in each one? Explain it in your own words.
     - What broke along the way, and how did you fix it? (If nothing broke, what would you try adding next?)
+
+??? Tip "Zipping it yourself instead?"
+    That's fine, but **delete the `.venv` folder first**. (You can always make it again with `setup_env.py`.) On a Mac, Finder hides folders whose names start with a dot, so press `Cmd + Shift + .` (period) to show them.
+
+    - Windows: right-click the folder, then choose `Compress to ZIP file` (or `Send to > Compressed (zipped) folder`).
+    - Mac: right-click the folder, then choose `Compress`.
+
+    Name the zip `lastname_firstname_coding_assignment_4.zip`, and make sure your `data` folder is inside it.
 
 ---
 
